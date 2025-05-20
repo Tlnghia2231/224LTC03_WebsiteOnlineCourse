@@ -1,49 +1,79 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication1</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Learning Platform</title>
+    <link rel="stylesheet" href="~/css/styleStudent.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">Toggle menu</span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+
+                <a href="/homepage" class="logo">EduLearn</a>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="cart.html" class="icon-button">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="sr-only">Cart</span>
+                    </a>
+                    <a href="/signin" class="btn btn-text">Sign In</a>
+                    <a href="/signup" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <div class="mobile-actions">
+                    <a href="cart.html" class="icon-button">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="sr-only">Cart</span>
+                    </a>
+                    <a href="login.html" class="icon-button">
+                        <i class="fas fa-user"></i>
+                        <span class="sr-only">Account</span>
+                    </a>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            &copy; 2025 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="footer-content">
+                <p class="copyright">© 2025 EduLearn. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="terms.html">Terms</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+          document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

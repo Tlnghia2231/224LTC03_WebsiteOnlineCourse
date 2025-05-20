@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+      "PackagePath": "staticwebassets\\css\\styleStudent.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

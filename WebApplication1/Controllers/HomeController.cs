@@ -13,7 +13,9 @@ namespace WebApplication1.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        [Route("/homepage")]
+        public IActionResult HomePage()
         {
             return View();
         }
@@ -27,6 +29,20 @@ namespace WebApplication1.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        [Route("/signin")]
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        [Route("/signup")]
+        public IActionResult SignUp()
+        {
+            return View();
         }
     }
 }

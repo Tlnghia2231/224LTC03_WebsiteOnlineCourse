@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2fPHdWpCnAWvVrMjn+daklVKThWRGggDUjz5CvHGk2U=",
+  "Hash": "J6nXsWIv2cfIPTYF+Ji2gAdQ/KrJ9dzcvuDpDS8t0Uw=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "css/styleStudent#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51epzvphze",
+      "Integrity": "tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styleStudent.css"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
@@ -1399,6 +1420,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleStudent.51epzvphze.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51epzvphze"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styleStudent.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleStudent.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60="
         }
       ]
     },
