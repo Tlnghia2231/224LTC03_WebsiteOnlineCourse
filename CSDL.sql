@@ -21,10 +21,9 @@ CREATE TABLE dbo.KhoaHoc (
     TieuDe              NVARCHAR(300)   NOT NULL,
     DuongDanAnhKhoaHoc  NVARCHAR(1000)  NULL,
     MoTa                NVARCHAR(MAX)   NOT NULL,
-	GiaKhoaHoc			MONEY			NOT NULL DEFAULT 0,
+	GiaKhoaHoc			DECIMAL(10,2)	NOT NULL,
     ThoiHan				INT				NOT NULL DEFAULT 150,  -- đơn vị: ngày
     MaGiaoVien			NVARCHAR(20)    NOT NULL,            -- FK → GiaoVien
-    SoLuongBaiHoc       INT             NOT NULL DEFAULT 0,
     NgayCapNhat         DATETIME        NOT NULL DEFAULT GETDATE(),
     CONSTRAINT FK_KhoaHoc_GiaoVien
       FOREIGN KEY(MaGiaoVien) REFERENCES dbo.GiaoVien(MaGiaoVien)
@@ -69,6 +68,7 @@ GO
 CREATE TABLE dbo.HocSinh (
     MaHocSinh      NVARCHAR(20)   NOT NULL PRIMARY KEY,  -- StudentXXX
     HoTen          NVARCHAR(200)  NOT NULL,
+	DuongDanAnhDaiDien  NVARCHAR(1000)  NULL,
     Email          NVARCHAR(200)  NOT NULL UNIQUE,
     DienThoai      NVARCHAR(50)   NULL,
     NgaySinh       DATE           NULL,
@@ -164,7 +164,7 @@ GO
 GO
 
 -- 6. Trigger INSTEAD OF INSERT cho KhoaHoc
-CREATE TRIGGER trg_KhoaHoc_InsteadOfInsert
+ALTER TRIGGER trg_KhoaHoc_InsteadOfInsert
 ON dbo.KhoaHoc
 INSTEAD OF INSERT
 AS
@@ -177,12 +177,12 @@ BEGIN
     );
 
     INSERT INTO dbo.KhoaHoc
-      (MaKhoaHoc, MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, MaGiaoVien, SoLuongBaiHoc, NgayCapNhat)
+      (MaKhoaHoc, MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien, NgayCapNhat)
     SELECT
       COALESCE(i.MaKhoaHoc,
         'Course' + RIGHT(CAST(@baseMax + ROW_NUMBER() OVER (ORDER BY (SELECT 1)) AS VARCHAR(3)),3)
       ),
-      i.MonHoc, i.TieuDe, i.DuongDanAnhKhoaHoc, i.MoTa, i.MaGiaoVien, 0, GETDATE()
+      i.MonHoc, i.TieuDe, i.DuongDanAnhKhoaHoc, i.MoTa, i.GiaKhoaHoc, i.ThoiHan, i.MaGiaoVien, GETDATE()
     FROM inserted AS i;
 
 END;
@@ -206,16 +206,6 @@ BEGIN
         i.MaKhoaHoc, i.ThuTu, i.TieuDe, i.LinkVideo, GETDATE()
     FROM inserted AS i;
 
-    -- Cập nhật số lượng bài học cho từng khóa học liên quan
-    UPDATE kh
-    SET kh.SoLuongBaiHoc = kh.SoLuongBaiHoc + cnt.SoLuongMoi
-    FROM dbo.KhoaHoc kh
-    JOIN (
-        SELECT MaKhoaHoc, COUNT(*) AS SoLuongMoi
-        FROM inserted
-        GROUP BY MaKhoaHoc
-    ) AS cnt
-    ON kh.MaKhoaHoc = cnt.MaKhoaHoc;
 END;
 GO
 
@@ -268,3 +258,100 @@ select * from GiaoVien
 select * from KhoaHoc
 select * from BaiHoc
 */
+
+----- INSERT GIAOVIEN
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Nguyễn Văn A', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'nguyenvana748@example.com', '0901234567', N'Hơn 10 năm kinh nghiệm trong nghề');
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Trần Thị B', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'tranthib982@example.com', '0912345678', N'Giáo viên nhiệt tình trẻ tuổi');
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Lê Văn C', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'levanc351@example.com', '0923456789', N'Giáo viên nhiệt tình trẻ tuổi');
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Phạm Thị D', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'phamthid623@example.com', '0934567890', N'Giáo viên nhiệt tình trẻ tuổi');
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Hoàng Văn E', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'hoangvane107@example.com', '0945678901', NULL);
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Vũ Thị F', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'vuthif462@example.com', '0956789012', NULL);
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Đặng Văn G', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'dangvang715@example.com', '0967890123', NULL);
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Bùi Thị H', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'buithih289@example.com', '0978901234', NULL);
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Ngô Văn I', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'ngovani390@example.com', '0989012345', NULL);
+
+INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
+VALUES (N'Đỗ Thị K', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'dothik178@example.com', '0990123456', NULL);
+
+SELECT *
+FROM dbo.GiaoVien
+ORDER BY CAST(SUBSTRING(MaGiaoVien, 8, LEN(MaGiaoVien) - 7) AS INT) ASC;
+
+
+----- INSERT KHOAHOC
+
+SELECT * FROM KhoaHoc
+ORDER BY CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT) ASC;
+delete KhoaHoc
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Toán', N'Toán 10 cơ bản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Khóa học toán lớp 10 cơ bản dành cho học sinh phổ thông.', 500000, DEFAULT, 'Teacher1');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Hóa học', N'Hóa học 11 nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Nâng cao kiến thức hóa học lớp 11 với các chuyên đề nâng cao.', 650000, 140, 'Teacher1');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Vật lý', N'Vật lý 10 - Sách bài tập', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Hướng dẫn giải bài tập Vật lý 10 theo chương trình chuẩn.', 400000, DEFAULT, 'Teacher2');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Ngữ văn', N'Ngữ văn 12 ôn thi THPT', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Tổng hợp kiến thức ngữ văn lớp 12 để ôn thi THPT.', 700000, 140, 'Teacher3');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Địa lý', N'Địa lý 12 luyện đề', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Luyện tập các đề thi thử địa lý lớp 12 theo cấu trúc đề thi mới.', 550000, 140, 'Teacher4');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Sinh học', N'Sinh học 10 cơ bản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Tìm hiểu cấu trúc tế bào, sinh học phân tử và di truyền học cơ bản.', 500000, DEFAULT, 'Teacher4');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Tin học', N'Tin học 11 lập trình Pascal', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Khóa học lập trình Pascal cơ bản dành cho học sinh lớp 11.', 600000, DEFAULT, 'Teacher5');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Tiếng Anh', N'Tiếng Anh 10 nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Trọn bộ kiến thức nâng cao tiếng Anh lớp 10, phát âm và giao tiếp.', 750000, DEFAULT, 'Teacher5');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Giáo dục công dân', N'GDCD 12 trọng tâm', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Tổng hợp kiến thức GDCD 12 trọng tâm thi THPT.', 400000, 140, 'Teacher6');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Toán', N'Toán 11 hình học nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Chuyên đề hình học không gian lớp 11 nâng cao.', 600000, DEFAULT, 'Teacher6');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Hóa học', N'Hóa học 12 luyện thi đại học', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Các chuyên đề trọng điểm hóa học 12, luyện thi THPT quốc gia.', 700000, DEFAULT, 'Teacher7');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Vật lý', N'Vật lý 12 lý thuyết trọng tâm', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Các phần lý thuyết quan trọng Vật lý lớp 12, ôn luyện thi.', 500000, 140, 'Teacher7');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Tiếng Anh', N'Tiếng Anh 12 luyện đề', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Khóa luyện đề tiếng Anh 12 chuẩn cấu trúc đề thi quốc gia.', 800000, DEFAULT, 'Teacher8');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Sinh học', N'Sinh học 12 di truyền nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Chuyên đề di truyền và biến dị dành cho học sinh khá giỏi.', 600000, DEFAULT, 'Teacher8');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Ngữ văn', N'Ngữ văn 10 cảm thụ văn học', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Phân tích, cảm nhận tác phẩm văn học lớp 10 theo hướng sáng tạo.', 450000, 140, 'Teacher9');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Lịch sử', N'Lịch sử Việt Nam hiện đại', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Tổng quan lịch sử Việt Nam thế kỷ XX và XXI.', 550000, DEFAULT, 'Teacher9');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Tin học', N'Tin học 12 ứng dụng văn phòng', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Sử dụng Word, Excel, PowerPoint hiệu quả trong học tập và thi cử.', 500000, DEFAULT, 'Teacher10');
+
+INSERT INTO KhoaHoc (MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, GiaKhoaHoc, ThoiHan, MaGiaoVien)
+VALUES (N'Công nghệ', N'Công nghệ 12 - Lâm nghiệp, thuỷ sản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', N'Giới thiệu chung về lâm nghiệp; Trồng và chăm sóc rừng; Bảo vệ và khai thác tài nguyên rừng bền vững; Giới thiệu chung về thuỷ sản; Môi trường nuôi thuỷ sản; Công nghệ giống thuỷ sản; Công nghệ thức ăn thuỷ sản; Công nghệ nuôi thuỷ sản; Phòng, trị bệnh thuỷ sản; Bảo vệ và khai thác nguồn lợi thuỷ sản.', 400000, DEFAULT, 'Teacher6');
+select MonHoc, count(MonHoc) from KhoaHoc group by MonHoc
