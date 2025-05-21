@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Image\HomePageWelcome.png" />
+    <None Include="wwwroot\Image\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.27.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
       <PrivateAssets>all</PrivateAssets>
