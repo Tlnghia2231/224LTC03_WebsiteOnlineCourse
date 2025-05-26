@@ -170,3 +170,5 @@ C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\ne
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\bin\Debug\net8.0\CloudinaryDotNet.dll
+C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\bin\Debug\net8.0\Newtonsoft.Json.dll
