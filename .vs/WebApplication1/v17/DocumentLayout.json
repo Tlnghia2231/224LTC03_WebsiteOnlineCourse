@@ -1,46 +1,110 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\",
+  "WorkspaceRootPath": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\khoahocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\khoahocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\khoahocs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\khoahocs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\controllers\\khoahocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\khoahocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\khoahochocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\khoahochocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\yeucaukhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\yeucaukhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\muctieukhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\muctieukhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\giaoviens\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\giaoviens\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\controllers\\giaovienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\giaovienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\giaoviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\giaoviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\giaoviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\giaoviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\giaoviens\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\giaoviens\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\giaoviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\giaoviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\areas\\admin\\controllers\\giaoviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\admin\\controllers\\giaoviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\giaovien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\giaovien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|d:\\dh\\224\\224ltc#\\pjck\\224ltc03_websiteonlinecourse\\webapplication1\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,129 +114,325 @@
       "DocumentGroups": [
         {
           "DockedWidth": 217,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:25:45.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "KhoaHoc.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\KhoaHoc.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\KhoaHoc.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\KhoaHoc.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\KhoaHoc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:31:04.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CloudinarySettings.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\CloudinarySettings.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\CloudinarySettings.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\CloudinarySettings.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\CloudinarySettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:17:32.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:12:50.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "SignUp.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignUp.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Home\\SignUp.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\SignUp.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignUp.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Home\\SignUp.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\SignUp.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:54:52.546Z"
+              "WhenOpened": "2025-05-21T15:54:52.546Z",
+              "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswDIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:54:37.899Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\KhoaHocs\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\KhoaHocs\\Index.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\KhoaHocs\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\KhoaHocs\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:47:35.982Z",
+              "WhenOpened": "2025-05-26T13:38:52.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CloudinaryService.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Services\\CloudinaryService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Services\\CloudinaryService.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Services\\CloudinaryService.cs",
-              "RelativeToolTip": "WebApplication1\\Services\\CloudinaryService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEgAAABBAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAE0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T13:36:25.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\KhoaHocs\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\KhoaHocs\\Edit.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\KhoaHocs\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\KhoaHocs\\Edit.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T13:14:22.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KhoaHocsController.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\KhoaHocsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\KhoaHocsController.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\KhoaHocsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\KhoaHocsController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T14:59:34.679Z"
+              "WhenOpened": "2025-05-26T13:14:02.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KhoaHocHocSinh.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\KhoaHocHocSinh.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\KhoaHocHocSinh.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\KhoaHocHocSinh.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\KhoaHocHocSinh.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:10:14.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MediaController.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\MediaController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\MediaController.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\MediaController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\MediaController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:59:50.837Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB8AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T19:47:50.473Z"
+              "WhenOpened": "2025-05-26T12:59:49.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "YeuCauKhoaHoc.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\YeuCauKhoaHoc.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\YeuCauKhoaHoc.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\YeuCauKhoaHoc.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\YeuCauKhoaHoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:59:20.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MucTieuKhoaHoc.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\MucTieuKhoaHoc.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\MucTieuKhoaHoc.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\MucTieuKhoaHoc.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\MucTieuKhoaHoc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:59:12.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KhoaHoc.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\KhoaHoc.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\KhoaHoc.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\KhoaHoc.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\KhoaHoc.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:46:05.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T12:09:11.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T12:09:07.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\GiaoViens\\Delete.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Delete.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\GiaoViens\\Delete.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T08:17:11.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\GiaoViens\\Edit.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\GiaoViens\\Edit.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAmwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T08:16:44.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\GiaoViens\\Details.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Details.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\GiaoViens\\Details.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAowI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T08:12:44.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CloudinaryService.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Services\\CloudinaryService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Services\\CloudinaryService.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Services\\CloudinaryService.cs",
+              "RelativeToolTip": "WebApplication1\\Services\\CloudinaryService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwGYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:51:29.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GiaoViensController.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\GiaoViensController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GiaoViensController.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Controllers\\GiaoViensController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\GiaoViensController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:30:11.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:49:52.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-26T07:16:36.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\AppDbContext.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:16:26.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GiaoVien.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\GiaoVien.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\GiaoVien.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Models\\GiaoVien.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\GiaoVien.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA6wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:58:12.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\GiaoViens\\Create.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Create.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\GiaoViens\\Create.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T04:41:33.274Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "HomePage.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\HomePage.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Home\\HomePage.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\HomePage.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\Home\\HomePage.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAuwMQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:48:32.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T03:51:53.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\GiaoViens\\Index.cshtml",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Views\\GiaoViens\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\GiaoViens\\Index.cshtml",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAAANoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T02:20:54.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GiaoVienController.cs",
+              "DocumentMoniker": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Areas\\Admin\\Controllers\\GiaoVienController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Controllers\\GiaoVienController.cs",
+              "ToolTip": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\Areas\\Admin\\Controllers\\GiaoVienController.cs",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Controllers\\GiaoVienController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T02:09:13.373Z"
             }
           ]
         }
