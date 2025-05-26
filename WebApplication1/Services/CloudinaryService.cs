@@ -86,5 +86,31 @@ namespace WebApplication1.Services
                 _ => "others"
             };
         }
+        public string UploadImage(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return null;
+
+            using var stream = file.OpenReadStream();
+            var uploadParams = new ImageUploadParams()
+            {
+                File = new FileDescription(file.FileName, stream)
+            };
+
+            var uploadResult = _cloudinary.Upload(uploadParams);
+            return uploadResult.SecureUrl.ToString();
+        }
+        public async Task<string> UploadImageAsync(IFormFile file)
+        {
+            var uploadParams = new ImageUploadParams
+            {
+                File = new FileDescription(file.FileName, file.OpenReadStream())
+            };
+
+            var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+            return uploadResult.SecureUrl.ToString();
+        }
+
     }
 }
