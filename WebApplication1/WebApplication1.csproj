@@ -7,15 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Student\Views\**" />
-    <Content Remove="Areas\Student\Views\**" />
-    <EmbeddedResource Remove="Areas\Student\Views\**" />
-    <None Remove="Areas\Student\Views\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Areas\Admin\" />
-    <Folder Include="Areas\Student\Controllers\" />
     <Folder Include="Areas\Student\Services\" />
   </ItemGroup>
 

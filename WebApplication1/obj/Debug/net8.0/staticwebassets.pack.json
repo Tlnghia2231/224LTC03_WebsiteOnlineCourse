@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebApplication1.yj6fvmmoe8.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebApplication1.6u0vpnoy9m.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\Image\\HomePageWelcome.png",
@@ -11,6 +11,14 @@
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\Image\\Logo.png",
       "PackagePath": "staticwebassets\\Image\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+      "PackagePath": "staticwebassets\\css\\my-learning.css"
     },
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
@@ -23,6 +31,10 @@
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
+      "PackagePath": "staticwebassets\\js\\LayoutStudent.js"
     },
     {
       "Id": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",

@@ -1,0 +1,332 @@
+﻿@{
+    Layout = "/Areas/Student/Views/Shared/_Layout.cshtml"; // Chỉ định đường dẫn tuyệt đối đến layout ngoài khu vực
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - EduLearn</title>
+    @* <link rel="stylesheet" href="styleStudent.css"> *@
+    <link rel="stylesheet" href="~/css/my-learning.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<main class="my-learning-page">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Trang chủ</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khóa học của tôi</span>
+                </div>
+                <h1>Khóa học của tôi</h1>
+                <p>Tiếp tục hành trình học tập và theo dõi tiến độ của bạn</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Stats -->
+    <section class="learning-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>5</h3>
+                        <p>Khóa học đang học</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>3</h3>
+                        <p>Khóa học hoàn thành</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>24h</h3>
+                        <p>Tổng thời gian học</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>2</h3>
+                        <p>Chứng chỉ đạt được</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Filters -->
+    <section class="course-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                    Tất cả (8)
+                </button>
+                <button class="filter-tab" data-filter="in-progress">
+                    Đang học (5)
+                </button>
+                <button class="filter-tab" data-filter="completed">
+                    Hoàn thành (3)
+                </button>
+                <button class="filter-tab" data-filter="wishlist">
+                    Yêu thích (4)
+                </button>
+            </div>
+            <div class="filter-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm khóa học...">
+                </div>
+                <select class="sort-select">
+                    <option value="recent">Gần đây nhất</option>
+                    <option value="progress">Tiến độ</option>
+                    <option value="name">Tên A-Z</option>
+                    <option value="date">Ngày đăng ký</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Courses -->
+    <section class="my-courses">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Course 1 - In Progress -->
+                <div class="my-course-card" data-status="in-progress">
+                    <div class="course-thumbnail">
+                        <img src="https://placehold.co/300x200" alt="Toán học THPT">
+                        <div class="course-progress-overlay">
+                            <div class="progress-circle">
+                                <svg class="progress-ring" width="60" height="60">
+                                    <circle class="progress-ring-circle" stroke="#2563eb" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" style="stroke-dasharray: 163.36; stroke-dashoffset: 65.34;" />
+                                </svg>
+                                <span class="progress-text">60%</span>
+                            </div>
+                        </div>
+                        <button class="wishlist-btn active">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-category">Toán học</div>
+                        <h3>Toán học THPT - Hình học không gian</h3>
+                        <div class="course-instructor">
+                            <img src="https://placehold.co/30x30" alt="Giảng viên">
+                            <span>Thầy Nguyễn Văn B</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>12/20 bài học</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3.5h đã học</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-player.html" class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Tiếp tục học
+                            </a>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Tài liệu
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 - Completed -->
+                <div class="my-course-card" data-status="completed">
+                    <div class="course-thumbnail">
+                        <img src="https://placehold.co/300x200" alt="Vật lý THPT">
+                        <div class="completion-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Hoàn thành</span>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-category">Vật lý</div>
+                        <h3>Vật lý THPT - Cơ học</h3>
+                        <div class="course-instructor">
+                            <img src="https://placehold.co/30x30" alt="Giảng viên">
+                            <span>Cô Trần Thị C</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>15/15 bài học</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>Đánh giá: 5.0</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="certificate.html" class="btn btn-primary">
+                                <i class="fas fa-certificate"></i>
+                                Xem chứng chỉ
+                            </a>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-redo"></i>
+                                Học lại
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 - In Progress -->
+                <div class="my-course-card" data-status="in-progress">
+                    <div class="course-thumbnail">
+                        <img src="https://placehold.co/300x200" alt="Hóa học THPT">
+                        <div class="course-progress-overlay">
+                            <div class="progress-circle">
+                                <svg class="progress-ring" width="60" height="60">
+                                    <circle class="progress-ring-circle" stroke="#2563eb" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" style="stroke-dasharray: 163.36; stroke-dashoffset: 114.35;" />
+                                </svg>
+                                <span class="progress-text">30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-category">Hóa học</div>
+                        <h3>Hóa học THPT - Hóa hữu cơ</h3>
+                        <div class="course-instructor">
+                            <img src="https://placehold.co/30x30" alt="Giảng viên">
+                            <span>Thầy Lê Văn D</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>6/18 bài học</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2.1h đã học</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-player.html" class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Tiếp tục học
+                            </a>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Tài liệu
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 - Completed -->
+                <div class="my-course-card" data-status="completed">
+                    <div class="course-thumbnail">
+                        <img src="https://placehold.co/300x200" alt="Tiếng Anh THPT">
+                        <div class="completion-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Hoàn thành</span>
+                        </div>
+                        <button class="wishlist-btn active">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-category">Tiếng Anh</div>
+                        <h3>Tiếng Anh THPT - Grammar Foundation</h3>
+                        <div class="course-instructor">
+                            <img src="https://placehold.co/30x30" alt="Giảng viên">
+                            <span>Ms. Sarah Johnson</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>25/25 bài học</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>Đánh giá: 4.8</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="certificate.html" class="btn btn-primary">
+                                <i class="fas fa-certificate"></i>
+                                Xem chứng chỉ
+                            </a>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-redo"></i>
+                                Học lại
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More courses... -->
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="btn btn-outline">
+                    <i class="fas fa-plus"></i>
+                    Xem thêm khóa học
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="recent-activity">
+        <div class="container">
+            <h2>Hoạt động gần đây</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Hoàn thành bài học "Phương trình bậc hai"</h4>
+                        <p>Toán học THPT - Hình học không gian</p>
+                        <span class="activity-time">2 giờ trước</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Nhận chứng chỉ hoàn thành khóa học</h4>
+                        <p>Vật lý THPT - Cơ học</p>
+                        <span class="activity-time">1 ngày trước</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Thêm vào danh sách yêu thích</h4>
+                        <p>Hóa học THPT - Hóa vô cơ</p>
+                        <span class="activity-time">3 ngày trước</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
