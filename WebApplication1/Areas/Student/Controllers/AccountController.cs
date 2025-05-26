@@ -46,10 +46,28 @@ namespace WebApplication1.Areas.Student.Controllers
         }
 
         [HttpGet]
-        [Route("/student/myaccount")]
-        public IActionResult MyAccount()
+        [Route("/student/profile")]
+        public IActionResult Profile()
         {
-            return View();
+            // Lấy MaHocSinh từ claims của người dùng đăng nhập
+            var maHocSinh = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(maHocSinh))
+            {
+                return RedirectToAction("Login", "Account", new { area = "" }); // Chuyển hướng nếu không đăng nhập
+            }
+
+            // Truy vấn thông tin học sinh từ CSDL
+            var hocSinh = _context.HocSinhs
+                .FirstOrDefault(hs => hs.MaHocSinh == maHocSinh);
+
+            if (hocSinh == null)
+            {
+                return NotFound("Không tìm thấy thông tin học sinh.");
+            }
+
+            // Truyền dữ liệu vào View
+            return View(hocSinh);
         }
     }
 }

@@ -28,12 +28,12 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/admin/Desktop/C\#/LTC\#/QLKH/WebApplication1/WebApplication1/Areas/Student/Views/Account/MyAccount.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBY2NvdW50XE15QWNjb3VudC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/admin/Desktop/C\#/LTC\#/QLKH/WebApplication1/WebApplication1/Areas/Student/Views/Account/MyLearning.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBY2NvdW50XE15TGVhcm5pbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/C\#/LTC\#/QLKH/WebApplication1/WebApplication1/Areas/Student/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBY2NvdW50XFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin/Desktop/C\#/LTC\#/QLKH/WebApplication1/WebApplication1/Areas/Student/Views/Course/CoursePage.cshtml]
