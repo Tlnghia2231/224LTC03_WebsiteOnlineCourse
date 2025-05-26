@@ -21,8 +21,6 @@ public partial class KhoaHoc
 
     public string MaGiaoVien { get; set; } = null!;
 
-    public int SoLuongBaiHoc { get; set; }
-
     public DateTime NgayCapNhat { get; set; }
 
     public virtual ICollection<BaiHoc> BaiHocs { get; set; } = new List<BaiHoc>();
