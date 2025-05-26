@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduLearn - Nền tảng học trực tuyến</title>
     <link rel="stylesheet" href="~/css/styleStudent.css">
+    <link rel="stylesheet" href="~/css/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,12 +14,8 @@
     <header class="site-header">
         <div class="container">
             <div class="header-content">
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="fas fa-bars"></i>
-                    <span class="sr-only">Toggle menu</span>
-                </button>
 
-                <a href="/homepage" class="logo"><img width="120" height="40" src="~/Image/Logo.png" alt="EduLearn Logo" class="logo-badge"></a>
+                <a href="/homepage" class="logo"><img width="auto" height="40" src="~/Image/Logo.png" alt="EduLearn Logo" class="logo-badge"></a>
 
                 <nav class="main-nav">
                     <ul>
@@ -30,24 +27,24 @@
                 </nav>
 
                 <div class="header-actions">
-                    <a href="cart.html" class="icon-button">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="sr-only">Cart</span>
-                    </a>
+                    @* <a href="cart.html" class="icon-button"> *@
+                    @*     <i class="fas fa-shopping-cart"></i> *@
+                    @*     <span class="sr-only">Cart</span> *@
+                    @* </a> *@
                     <a href="/signin" class="btn btn-text">Đăng nhập</a>
                     <a href="/signup" class="btn btn-primary">Đăng ký</a>
                 </div>
 
-                <div class="mobile-actions">
-                    <a href="cart.html" class="icon-button">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="sr-only">Cart</span>
-                    </a>
-                    <a href="/signin" class="icon-button">
-                        <i class="fas fa-user"></i>
-                        <span class="sr-only">Account</span>
-                    </a>
-                </div>
+                @* <div class="mobile-actions"> *@
+                @*     <a href="cart.html" class="icon-button"> *@
+                @*         <i class="fas fa-shopping-cart"></i> *@
+                @*         <span class="sr-only">Cart</span> *@
+                @*     </a> *@
+                @*     <a href="/signin" class="icon-button"> *@
+                @*         <i class="fas fa-user"></i> *@
+                @*         <span class="sr-only">Account</span> *@
+                @*     </a> *@
+                @* </div> *@
             </div>
         </div>
     </header>

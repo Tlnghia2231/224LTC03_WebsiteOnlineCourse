@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aplQGvMo712/7O58qpYSgS82kDONExu9aUIiRZoEsPM=",
+  "Hash": "3sBrPDOYRvxNkvXPvHcv6Jo8i3EPHbnN/RjTMlth2WM=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "yj6fvmmoe8",
-      "Integrity": "Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=",
+      "Fingerprint": "6u0vpnoy9m",
+      "Integrity": "/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebApplication1.styles.css"
@@ -52,11 +52,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "yj6fvmmoe8",
-      "Integrity": "Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=",
+      "Fingerprint": "6u0vpnoy9m",
+      "Integrity": "/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "krnl8u9eab",
+      "Integrity": "kLtQEuKD6btKuQK2e0bIuafRVU3bht06YkCl98JRe4w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "css/my-learning#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fm137538pd",
+      "Integrity": "CQpJlP+OoYPdnKK0l8Dicm/tQAxoQfEUORDlePO5Ev0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\my-learning.css"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
@@ -94,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "51epzvphze",
-      "Integrity": "tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=",
+      "Fingerprint": "i08y9nv1nw",
+      "Integrity": "7g0UDLbm11P6Z+uEQPwR1TKTSqRe24id/e1rewPvhzM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styleStudent.css"
@@ -162,6 +204,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "js/LayoutStudent#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tmof7ijiq8",
+      "Integrity": "izZZvGxN/arZvKhzoDL6Cw9DMrKr3XrXFuKf4kBckuA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\LayoutStudent.js"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
@@ -1384,6 +1447,170 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/login.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kLtQEuKD6btKuQK2e0bIuafRVU3bht06YkCl98JRe4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 17:50:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kLtQEuKD6btKuQK2e0bIuafRVU3bht06YkCl98JRe4w="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.krnl8u9eab.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kLtQEuKD6btKuQK2e0bIuafRVU3bht06YkCl98JRe4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 17:50:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "krnl8u9eab"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kLtQEuKD6btKuQK2e0bIuafRVU3bht06YkCl98JRe4w="
+        }
+      ]
+    },
+    {
+      "Route": "css/my-learning.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CQpJlP+OoYPdnKK0l8Dicm/tQAxoQfEUORDlePO5Ev0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 02:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CQpJlP+OoYPdnKK0l8Dicm/tQAxoQfEUORDlePO5Ev0="
+        }
+      ]
+    },
+    {
+      "Route": "css/my-learning.fm137538pd.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CQpJlP+OoYPdnKK0l8Dicm/tQAxoQfEUORDlePO5Ev0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 02:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fm137538pd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/my-learning.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CQpJlP+OoYPdnKK0l8Dicm/tQAxoQfEUORDlePO5Ev0="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1466,51 +1693,6 @@
       ]
     },
     {
-      "Route": "css/styleStudent.51epzvphze.css",
-      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35032"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 19:51:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "51epzvphze"
-        },
-        {
-          "Name": "label",
-          "Value": "css/styleStudent.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60="
-        }
-      ]
-    },
-    {
       "Route": "css/styleStudent.css",
       "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
       "Selectors": [],
@@ -1521,7 +1703,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "35032"
+          "Value": "31779"
         },
         {
           "Name": "Content-Type",
@@ -1529,11 +1711,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60=\""
+          "Value": "\"7g0UDLbm11P6Z+uEQPwR1TKTSqRe24id/e1rewPvhzM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 19:51:30 GMT"
+          "Value": "Mon, 26 May 2025 03:13:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1543,7 +1725,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tz0t90wpRvTQ+Au3WvVKOLErEIg+cxClHOG5bSKzv60="
+          "Value": "sha256-7g0UDLbm11P6Z+uEQPwR1TKTSqRe24id/e1rewPvhzM="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleStudent.i08y9nv1nw.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7g0UDLbm11P6Z+uEQPwR1TKTSqRe24id/e1rewPvhzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 03:13:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i08y9nv1nw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styleStudent.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7g0UDLbm11P6Z+uEQPwR1TKTSqRe24id/e1rewPvhzM="
         }
       ]
     },
@@ -1790,6 +2017,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YWDcOIZMBpX5uGWWDXACj2Cz1IUb8SoQDhqzS2YmNHc="
+        }
+      ]
+    },
+    {
+      "Route": "js/LayoutStudent.js",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"izZZvGxN/arZvKhzoDL6Cw9DMrKr3XrXFuKf4kBckuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 03:16:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-izZZvGxN/arZvKhzoDL6Cw9DMrKr3XrXFuKf4kBckuA="
+        }
+      ]
+    },
+    {
+      "Route": "js/LayoutStudent.tmof7ijiq8.js",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"izZZvGxN/arZvKhzoDL6Cw9DMrKr3XrXFuKf4kBckuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 03:16:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tmof7ijiq8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/LayoutStudent.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-izZZvGxN/arZvKhzoDL6Cw9DMrKr3XrXFuKf4kBckuA="
         }
       ]
     },
@@ -6550,6 +6859,96 @@
       ]
     },
     {
+      "Route": "WebApplication1.6u0vpnoy9m.bundle.scp.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 03:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6u0vpnoy9m"
+        },
+        {
+          "Name": "label",
+          "Value": "WebApplication1.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc="
+        }
+      ]
+    },
+    {
+      "Route": "WebApplication1.6u0vpnoy9m.styles.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebApplication1.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 03:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6u0vpnoy9m"
+        },
+        {
+          "Name": "label",
+          "Value": "WebApplication1.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc="
+        }
+      ]
+    },
+    {
       "Route": "WebApplication1.bundle.scp.css",
       "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
       "Selectors": [],
@@ -6560,7 +6959,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1133"
+          "Value": "2280"
         },
         {
           "Name": "Content-Type",
@@ -6568,11 +6967,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=\""
+          "Value": "\"/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 17:27:35 GMT"
+          "Value": "Mon, 26 May 2025 03:36:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6582,7 +6981,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk="
+          "Value": "sha256-/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc="
         }
       ]
     },
@@ -6597,7 +6996,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1133"
+          "Value": "2280"
         },
         {
           "Name": "Content-Type",
@@ -6605,11 +7004,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=\""
+          "Value": "\"/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 17:27:35 GMT"
+          "Value": "Mon, 26 May 2025 03:36:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6619,97 +7018,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk="
-        }
-      ]
-    },
-    {
-      "Route": "WebApplication1.yj6fvmmoe8.bundle.scp.css",
-      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1133"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 17:27:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yj6fvmmoe8"
-        },
-        {
-          "Name": "label",
-          "Value": "WebApplication1.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk="
-        }
-      ]
-    },
-    {
-      "Route": "WebApplication1.yj6fvmmoe8.styles.css",
-      "AssetFile": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebApplication1.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1133"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 17:27:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yj6fvmmoe8"
-        },
-        {
-          "Name": "label",
-          "Value": "WebApplication1.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ejph5OspmnzpK2cukdzRSThxw067hcPq5OuD1ldyKsk="
+          "Value": "sha256-/op6Qz/6srdQas6Yut2SdK3CO1BSFqpXdfkdEfw3tXc="
         }
       ]
     }
