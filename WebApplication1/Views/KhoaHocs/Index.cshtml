@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication1.Models.KhoaHoc>
+
+@{
+    ViewData["Title"] = "Quản lý Khóa học";
+}
+
+<main>
+    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+
+        <h1>@ViewData["Title"]</h1>
+        <p>Nơi quản lý, tìm kiếm, và thực hiện các thao tác trên tất cả các khóa học.</p>
+        <hr />
+
+        <form asp-action="Index" method="get" class="mb-4 p-3 border rounded">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-5">
+                    <label for="searchString" class="form-label">Tên khóa học</label>
+                    <input type="text" id="searchString" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Nhập tiêu đề khóa học..." />
+                </div>
+                <div class="col-md-5">
+                    <label for="teacherName" class="form-label">Tên giáo viên</label>
+                    <input type="text" id="teacherName" name="teacherName" value="@ViewData["TeacherFilter"]" class="form-control" placeholder="Nhập tên giáo viên..." />
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-search"></i> Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <section class="featured-courses">
+            <div class="course-grid">
+                @foreach (var item in Model)
+                {
+                    // Đổi thẻ <a> bên ngoài thành <div> để chứa nhiều nút
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="@item.DuongDanAnhKhoaHoc" alt="@item.TieuDe">
+                            <span class="badge">@item.MonHoc</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>@item.TieuDe</h3>
+                            <h6 class="text-muted" style="font-weight: normal; font-size: 0.9rem;">GV: @item.MaGiaoVienNavigation.HoTen</h6>
+                            <p>@item.MoTa</p>
+                        </div>
+
+                        <div class="course-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="course-price">Giá : @item.GiaKhoaHoc.ToString("N0")₫</div>
+                                <div class="admin-actions">
+                                    <a asp-action="Details" asp-route-id="@item.MaKhoaHoc" class="btn btn-sm btn-outline-info" title="Chi tiết">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@item.MaKhoaHoc" class="btn btn-sm btn-outline-warning" title="Sửa">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.MaKhoaHoc" class="btn btn-sm btn-outline-danger" title="Xóa">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+
+    </div>
+</main>
