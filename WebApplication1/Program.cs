@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Areas.Student.Middleware;
 using WebApplication1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +42,8 @@ app.UseRouting();
 // Thêm middleware cho Authentication và Authorization
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseUserInfo();
 
 app.MapControllerRoute(
     name: "default",

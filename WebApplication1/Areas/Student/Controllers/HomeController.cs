@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
@@ -29,6 +30,8 @@ namespace WebApplication1.Areas.Student.Controllers
                 .GroupBy(k => k.MonHoc)
                 .Select(g => new { Subject = g.Key, Count = g.Count() })
                 .ToList();
+
+            
 
             var viewModel = new
             {
