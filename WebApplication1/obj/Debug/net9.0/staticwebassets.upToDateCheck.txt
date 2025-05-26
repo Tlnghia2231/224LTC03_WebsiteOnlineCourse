@@ -11,6 +11,7 @@ C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\css\my-learning.css
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\css\profile.css
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\css\login.css
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
@@ -63,6 +64,7 @@ C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 wwwroot\css\login.css
 wwwroot\css\my-learning.css
+wwwroot\css\profile.css
 wwwroot\css\site.css
 wwwroot\css\styleStudent.css
 wwwroot\favicon.ico

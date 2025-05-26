@@ -234,3 +234,4 @@ C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\ne
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net9.0\ref\WebApplication1.dll
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net9.0\compressed\87wud5rj38-eme39q3bbp.gz
 C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net9.0\compressed\l7x41neu2a-x1t2ep9i2w.gz
+C:\Users\admin\Desktop\C#\LTC#\QLKH\WebApplication1\WebApplication1\obj\Debug\net9.0\compressed\74gvudrpty-douq9i810m.gz

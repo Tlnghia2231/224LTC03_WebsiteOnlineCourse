@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\course\\coursepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\course\\coursepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\hocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\hocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,6 +21,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\stylestudent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -50,11 +54,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 217,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "HocSinh.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\HocSinh.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\HocSinh.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\HocSinh.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\HocSinh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T16:39:11.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "profile.css",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\profile.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\profile.css",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\profile.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\profile.css",
+              "ViewState": "AgIAAJcCAAAAAAAAAAAswLkCAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-26T16:18:33.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAAI4AAAAAAAAAAADwv7IAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T16:08:40.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SignIn.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\SignIn.cshtml",
@@ -62,12 +104,11 @@
               "RelativeToolTip": "WebApplication1\\Views\\Home\\SignIn.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T15:51:18.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:51:18.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "my-learning.css",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
               "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\my-learning.css",
@@ -75,38 +116,23 @@
               "RelativeToolTip": "WebApplication1\\wwwroot\\css\\my-learning.css",
               "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-26T15:41:17.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:41:17.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MyLearning.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
               "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
               "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAEoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T15:04:35.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:04:35.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MyAccount.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T14:31:31.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "styleStudent.css",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
               "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\styleStudent.css",
@@ -114,25 +140,24 @@
               "RelativeToolTip": "WebApplication1\\wwwroot\\css\\styleStudent.css",
               "ViewState": "AgIAADMAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-26T14:24:13.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T14:24:13.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwDsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwDsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-26T14:04:23.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
@@ -140,25 +165,11 @@
               "RelativeToolTip": "WebApplication1\\Program.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAMwCsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:02:17.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T14:02:17.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoursePage.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T13:47:34.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
@@ -166,18 +177,17 @@
               "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:47:32.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T13:47:32.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
               "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvy8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T13:47:30.53Z",
               "EditorCaption": ""
