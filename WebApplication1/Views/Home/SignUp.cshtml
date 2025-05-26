@@ -1,4 +1,6 @@
-﻿<main class="auth-page">
+﻿@model WebApplication1.ViewModels.RegisterVM
+
+<main class="auth-page">
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
@@ -6,54 +8,67 @@
                 <p>Tham gia cùng hàng ngàn học viên trên EduLearn.</p>
             </div>
 
-            <!-- User Type Toggle -->
             <div class="user-type-toggle">
-                <div class="toggle-container">
-                    <input type="radio" id="student-signup" name="userType" value="student" checked>
-                    <input type="radio" id="admin-signup" name="userType" value="admin">
+                <div class="toggle-container">                    
+                    <input type="radio" id="student" name="userTypeRadio" value="student" checked>
+                    <input type="radio" id="admin" name="userTypeRadio" value="admin">
                     <div class="toggle-slider"></div>
-                    <label for="student-signup" class="toggle-label">
+                    <label for="student" class="toggle-label">
                         <i class="fas fa-user-graduate"></i>
                         <span>Học Sinh</span>
                     </label>
-                    <label for="admin-signup" class="toggle-label">
+                    <label for="admin" class="toggle-label">
                         <i class="fas fa-user-shield"></i>
                         <span>Admin</span>
                     </label>
                 </div>
             </div>
 
-            <form class="auth-form" id="signupForm">
+            <form asp-action="SignUp" asp-controller="Home" method="post" class="auth-form" id="signupForm">
+                @Html.AntiForgeryToken()
+                <input type="hidden" id="UserType" asp-for="UserType" value="student" />
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="lastName">Họ</label>
+                        <label asp-for="LastName">Họ</label>
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="lastName" name="lastName" placeholder="Nhập họ" required>
+                            <input asp-for="LastName" class="form-control" placeholder="Nhập họ" required>
                         </div>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label for="firstName">Tên</label>
+                        <label asp-for="FirstName">Tên</label>
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="firstName" name="firstName" placeholder="Nhập tên" required>
+                            <input asp-for="FirstName" class="form-control" placeholder="Nhập tên" required>
                         </div>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone-signup">Số điện thoại</label>
+                    <label asp-for="DienThoai">Số điện thoại</label>
                     <div class="input-wrapper">
                         <i class="fas fa-phone"></i>
-                        <input type="tel" id="phone-signup" name="phone" placeholder="Nhập số điện thoại" required>
+                        <input asp-for="DienThoai" class="form-control" id="phone-signup" placeholder="Nhập số điện thoại" required>
                     </div>
+                    <span asp-validation-for="DienThoai" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="password-signup">Mật khẩu</label>
+                    <label asp-for="Email">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input asp-for="Email" class="form-control" placeholder="Nhập email" required>
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Mật khẩu</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="password-signup" name="password" placeholder="Tạo mật khẩu" required>
+                        <input asp-for="Password" type="password" class="form-control" id="password-signup" placeholder="Tạo mật khẩu" required>
                         <button type="button" class="password-toggle" id="togglePasswordSignup">
                             <i class="fas fa-eye"></i>
                         </button>
@@ -64,18 +79,20 @@
                         </div>
                         <span class="strength-text">Mật khẩu yếu</span>
                     </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="confirmPassword">Xác nhận mật khẩu</label>
+                    <label asp-for="ConfirmPassword">Xác nhận mật khẩu</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
                         <button type="button" class="password-toggle" id="toggleConfirmPassword">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
                     <div class="password-match" id="passwordMatch"></div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
 
                 <div class="form-checkbox">
@@ -92,6 +109,7 @@
                         <div class="spinner"></div>
                     </div>
                 </button>
+                <div class="text-danger">@Html.ValidationSummary(false, "", new { @class = "text-danger" })</div>
             </form>
 
             <div class="auth-footer">
@@ -102,9 +120,79 @@
 </main>
 
 <script>
-    // Mobile menu toggle
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.querySelector('.main-nav').classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function () {
+        const studentRadio = document.getElementById('student');
+        const adminRadio = document.getElementById('admin');
+        const userTypeInput = document.getElementById('UserType');
+
+        if (!studentRadio || !adminRadio || !userTypeInput) {
+            console.error('Không tìm thấy các elements cần thiết');
+            return;
+        }
+
+        studentRadio.addEventListener('change', handleToggle);
+        adminRadio.addEventListener('change', handleToggle);
+
+        function handleToggle() {
+
+            if (studentRadio.checked) {
+                document.body.classList.add("student-mode");
+                document.body.classList.remove("admin-mode");
+                userTypeInput.value = "student";
+
+                const authCard = document.querySelector('.auth-card');
+                if (authCard) {
+                    authCard.classList.remove('admin-mode');
+                    authCard.classList.add('student-mode');
+                }
+            }
+            else if (adminRadio.checked) {
+                document.body.classList.add("admin-mode");
+                document.body.classList.remove("student-mode");
+                userTypeInput.value = "admin";
+
+                const authCard = document.querySelector('.auth-card');
+                if (authCard) {
+                    authCard.classList.add('admin-mode');
+                    authCard.classList.remove('student-mode');
+                }
+            }
+        }
+
+        // Khởi động lần đầu
+        handleToggle();
+
+        // Password toggle
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const passwordInput = document.querySelector('input[asp-for="Password"]');
+
+        if (togglePasswordBtn && passwordInput) {
+            togglePasswordBtn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        }
+
+        // Form submission handling
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                }
+            });
+        }
     });
 
     // Password toggle functions
@@ -193,53 +281,4 @@
 
     document.getElementById('password-signup').addEventListener('input', checkPasswordMatch);
     document.getElementById('confirmPassword').addEventListener('input', checkPasswordMatch);
-
-    // Form submission
-    document.getElementById('signupForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const password = document.getElementById('password-signup').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-
-      if (password !== confirmPassword) {
-        alert('Mật khẩu xác nhận không khớp!');
-        return;
-      }
-
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const btnText = submitBtn.querySelector('.btn-text');
-      const btnLoader = submitBtn.querySelector('.btn-loader');
-
-      // Show loading state
-      submitBtn.classList.add('loading');
-      btnText.style.opacity = '0';
-      btnLoader.style.opacity = '1';
-
-      // Simulate API call
-      setTimeout(() => {
-        const userType = document.querySelector('input[name="userType"]:checked').value;
-
-        // Reset loading state
-        submitBtn.classList.remove('loading');
-        btnText.style.opacity = '1';
-        btnLoader.style.opacity = '0';
-
-        // Show success message and redirect
-        alert('Đăng ký thành công!');
-        window.location.href = 'login.html';
-      }, 2000);
-    });
-
-    // User type toggle animation
-    const userTypeInputs = document.querySelectorAll('input[name="userType"]');
-    userTypeInputs.forEach(input => {
-      input.addEventListener('change', function() {
-        const authCard = document.querySelector('.auth-card');
-        if (this.value === 'admin') {
-          authCard.classList.add('admin-mode');
-        } else {
-          authCard.classList.remove('admin-mode');
-        }
-      });
-    });
 </script>

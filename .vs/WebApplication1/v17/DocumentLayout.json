@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\course\\coursepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\course\\coursepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\mylearning.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\my-learning.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,56 +31,16 @@
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\student\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\js\\layoutstudent.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\js\\layoutstudent.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\stylestudent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\stylestudent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|c:\\users\\admin\\desktop\\c#\\ltc#\\qlkh\\webapplication1\\webapplication1\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB406F2-606B-4DFC-BC3A-6C7F513D886A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,97 +50,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 217,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomePage.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Home\\HomePage.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Home\\HomePage.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Home\\HomePage.cshtml",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Home\\HomePage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T03:33:27.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T03:30:44.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T03:19:17.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LayoutStudent.js",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
-              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\js\\LayoutStudent.js",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\js\\LayoutStudent.js",
-              "RelativeToolTip": "WebApplication1\\wwwroot\\js\\LayoutStudent.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-26T03:16:26.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAuwGoAAAAHAAAAAAAAAA==",
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\SignIn.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\SignIn.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T03:03:48.852Z",
+              "WhenOpened": "2025-05-26T15:51:18.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginVM.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\LoginVM.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\ViewModel\\LoginVM.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\LoginVM.cs",
-              "RelativeToolTip": "WebApplication1\\ViewModel\\LoginVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T02:51:56.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAuwCMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T02:30:56.612Z",
+              "DocumentIndex": 2,
+              "Title": "my-learning.css",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\my-learning.css",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\my-learning.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\my-learning.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-26T15:41:17.568Z",
               "EditorCaption": ""
             },
             {
@@ -187,148 +86,100 @@
               "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
               "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
               "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Account\\MyLearning.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAEoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T02:00:46.09Z",
+              "WhenOpened": "2025-05-26T15:04:35.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "login.css",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\login.css",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\login.css",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowEQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-24T16:57:08.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\AppDbContext.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\AppDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T03:08:15.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "WebApplication1\\ViewModel\\HomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T17:25:45.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "KhoaHoc.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\KhoaHoc.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\KhoaHoc.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\KhoaHoc.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\KhoaHoc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:31:04.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CloudinarySettings.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\CloudinarySettings.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\CloudinarySettings.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\CloudinarySettings.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\CloudinarySettings.cs",
+              "DocumentIndex": 4,
+              "Title": "MyAccount.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Account\\MyAccount.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:17:32.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T16:12:50.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\SignIn.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:54:37.899Z",
+              "WhenOpened": "2025-05-26T14:31:31.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:47:35.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CloudinaryService.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Services\\CloudinaryService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Services\\CloudinaryService.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Services\\CloudinaryService.cs",
-              "RelativeToolTip": "WebApplication1\\Services\\CloudinaryService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEgAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T14:59:34.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T19:47:50.473Z",
+              "Title": "styleStudent.css",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\styleStudent.css",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\wwwroot\\css\\styleStudent.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\styleStudent.css",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-26T14:24:13.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "HomePage.cshtml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\HomePage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwDsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T15:48:32.709Z",
+              "WhenOpened": "2025-05-26T14:04:23.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAMwCsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:02:17.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoursePage.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Views\\Course\\CoursePage.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T13:47:34.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:47:32.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\C#\\LTC#\\QLKH\\WebApplication1\\WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebApplication1\\Areas\\Student\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvy8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:47:30.53Z",
               "EditorCaption": ""
             }
           ]

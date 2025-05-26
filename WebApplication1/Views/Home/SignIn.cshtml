@@ -1,4 +1,6 @@
-﻿<main class="auth-page">
+﻿@model WebApplication1.ViewModels.LoginVM
+
+<main class="auth-page">
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
@@ -9,8 +11,8 @@
             <!-- User Type Toggle -->
             <div class="user-type-toggle">
                 <div class="toggle-container">
-                    <input type="radio" id="student" name="userType" value="student" checked>
-                    <input type="radio" id="admin" name="userType" value="admin">
+                    <input type="radio" id="student" name="userTypeRadio" value="student" checked>
+                    <input type="radio" id="admin" name="userTypeRadio" value="admin">
                     <div class="toggle-slider"></div>
                     <label for="student" class="toggle-label">
                         <i class="fas fa-user-graduate"></i>
@@ -23,30 +25,34 @@
                 </div>
             </div>
 
-            <form class="auth-form" id="loginForm" method="post" action="/signin">
+            <form asp-action="SignIn" asp-controller="Home" method="post" class="auth-form" id="loginForm">
+                @Html.AntiForgeryToken()
+                <input type="hidden" id="UserType" asp-for="UserType" value="student" />
                 <div class="form-group">
-                    <label for="phone">Số điện thoại</label>
+                    <label asp-for="DienThoai">Số điện thoại</label>
                     <div class="input-wrapper">
                         <i class="fas fa-phone"></i>
-                        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                        <input asp-for="DienThoai" class="form-control" placeholder="Nhập số điện thoại" required>
                     </div>
+                    <span asp-validation-for="DienThoai" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Mật khẩu</label>
+                    <label asp-for="Password">Mật khẩu</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Nhập mật khẩu" required>
                         <button type="button" class="password-toggle" id="togglePassword">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
                 <div class="form-options">
                     <div class="form-checkbox">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Ghi nhớ đăng nhập</label>
+                        <input asp-for="RememberMe" type="checkbox" id="remember">
+                        <label asp-for="RememberMe">Ghi nhớ đăng nhập</label>
                     </div>
                     <a href="forgot-password.html" class="forgot-password">Quên mật khẩu?</a>
                 </div>
@@ -57,6 +63,7 @@
                         <div class="spinner"></div>
                     </div>
                 </button>
+                <div class="text-danger">@Html.ValidationSummary(false, "", new { @class = "text-danger" })</div>
             </form>
 
             <div class="auth-footer">
@@ -67,69 +74,79 @@
 </main>
 
 <script>
-    // Mobile menu toggle
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.querySelector('.main-nav').classList.toggle('active');
-    });
+    document.addEventListener('DOMContentLoaded', function () {
+        const studentRadio = document.getElementById('student');
+        const adminRadio = document.getElementById('admin');
+        const userTypeInput = document.getElementById('UserType');
 
-    // Password toggle
-    document.getElementById('togglePassword').addEventListener('click', function() {
-      const passwordInput = document.getElementById('password');
-      const icon = this.querySelector('i');
-
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        icon.classList.remove('fa-eye');
-        icon.classList.add('fa-eye-slash');
-      } else {
-        passwordInput.type = 'password';
-        icon.classList.remove('fa-eye-slash');
-        icon.classList.add('fa-eye');
-      }
-    });
-
-    // Form submission
-    // document.getElementById('loginForm').addEventListener('submit', function(e) {
-    //   e.preventDefault();
-
-    //   const submitBtn = this.querySelector('button[type="submit"]');
-    //   const btnText = submitBtn.querySelector('.btn-text');
-    //   const btnLoader = submitBtn.querySelector('.btn-loader');
-
-    //   Show loading state
-    //   submitBtn.classList.add('loading');
-    //   btnText.style.opacity = '0';
-    //   btnLoader.style.opacity = '1';
-
-    //   Simulate API call
-    //   setTimeout(() => {
-    //     const userType = document.querySelector('input[name="userType"]:checked').value;
-    //     const phone = document.getElementById('phone').value;
-
-    //     Reset loading state
-    //     submitBtn.classList.remove('loading');
-    //     btnText.style.opacity = '1';
-    //     btnLoader.style.opacity = '0';
-
-    //     Redirect based on user type
-    //     if (userType === 'admin') {
-    //       window.location.href = 'admin-dashboard.html';
-    //     } else {
-    //       window.location.href = '';
-    //     }
-    //   }, 2000);
-    // });
-
-    // User type toggle animation
-    const userTypeInputs = document.querySelectorAll('input[name="userType"]');
-    userTypeInputs.forEach(input => {
-      input.addEventListener('change', function() {
-        const authCard = document.querySelector('.auth-card');
-        if (this.value === 'admin') {
-          authCard.classList.add('admin-mode');
-        } else {
-          authCard.classList.remove('admin-mode');
+        if (!studentRadio || !adminRadio || !userTypeInput) {
+            console.error('Không tìm thấy các elements cần thiết');
+            return;
         }
-      });
+
+        studentRadio.addEventListener('change', handleToggle);
+        adminRadio.addEventListener('change', handleToggle);
+
+        function handleToggle() {
+            
+            if (studentRadio.checked) {
+                document.body.classList.add("student-mode");
+                document.body.classList.remove("admin-mode");
+                userTypeInput.value = "student";
+                
+                const authCard = document.querySelector('.auth-card');
+                if (authCard) {
+                    authCard.classList.remove('admin-mode');
+                    authCard.classList.add('student-mode');
+                }
+            }
+            else if (adminRadio.checked) {
+                document.body.classList.add("admin-mode");
+                document.body.classList.remove("student-mode");
+                userTypeInput.value = "admin";
+                
+                const authCard = document.querySelector('.auth-card');
+                if (authCard) {
+                    authCard.classList.add('admin-mode');
+                    authCard.classList.remove('student-mode');
+                }
+            }
+        }
+
+        // Khởi động lần đầu
+        handleToggle();
+
+        // Password toggle
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const passwordInput = document.querySelector('input[asp-for="Password"]');
+        
+        if (togglePasswordBtn && passwordInput) {
+            togglePasswordBtn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        }
+
+        // Form submission handling
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                }
+            });
+        }
     });
+
 </script>

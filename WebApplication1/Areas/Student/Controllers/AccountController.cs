@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
 
 namespace WebApplication1.Areas.Student.Controllers
@@ -21,6 +23,31 @@ namespace WebApplication1.Areas.Student.Controllers
         [HttpGet]
         [Route("/student/mylearning")]
         public IActionResult MyLearning()
+        {
+            var maHocSinh = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(maHocSinh))
+            {
+                return RedirectToAction("Login", "Account", new { area = "" });
+            }
+
+            var featuredCourses = _context.KhoaHocHocSinhs
+                .Where(khhs => khhs.MaHocSinh == maHocSinh)
+                .Include(khhs => khhs.MaKhoaHocNavigation)
+                .ThenInclude(kh => kh.MaGiaoVienNavigation)
+                .Select(khhs => khhs.MaKhoaHocNavigation)
+                .ToList();
+
+            var viewModel = new
+            {
+                FeaturedCourses = featuredCourses ?? new List<KhoaHoc>()
+            };
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        [Route("/student/myaccount")]
+        public IActionResult MyAccount()
         {
             return View();
         }
