@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using CloudinaryDotNet;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using WebApplication1.Areas.Student.Middleware;
 using WebApplication1.Models;
 using WebApplication1.Services;
@@ -12,6 +14,11 @@ builder.Services.AddControllersWithViews();
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
+builder.Services.AddSingleton<Cloudinary>(provider =>
+{
+    var settings = provider.GetRequiredService<IOptions<CloudinarySettings>>().Value;
+    return new Cloudinary(new Account(settings.CloudName, settings.ApiKey, settings.ApiSecret));
+});
 builder.Services.AddScoped<CloudinaryService>();
 // Cấu hình DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
