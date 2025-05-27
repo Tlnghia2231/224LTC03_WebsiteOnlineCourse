@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JSAldhkGUh/n5aw3zTFS/3IJV1COV3y1lVu+aOHqc4w=",
+  "Hash": "SMkHNXX9GSXzoz/MkIlYQ0YyomU67A/f0N0Njf8tKks=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "css/course-detail#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l1zty8qbgi",
+      "Integrity": "V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\course-detail.css"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\login.css",
@@ -1467,6 +1488,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/course-detail.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 14:03:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="
+        }
+      ]
+    },
+    {
+      "Route": "css/course-detail.l1zty8qbgi.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 14:03:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l1zty8qbgi"
+        },
+        {
+          "Name": "label",
+          "Value": "css/course-detail.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="
+        }
+      ]
+    },
     {
       "Route": "css/login.css",
       "AssetFile": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\login.css",

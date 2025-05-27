@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WebApplication1/css/course-detail.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\course-detail.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15266"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 14:03:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebApplication1/css/course-detail.l1zty8qbgi.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\course-detail.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l1zty8qbgi"},{"Name":"integrity","Value":"sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="},{"Name":"label","Value":"_content/WebApplication1/css/course-detail.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15266"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 14:03:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WebApplication1/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

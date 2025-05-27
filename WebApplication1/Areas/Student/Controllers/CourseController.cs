@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using WebApplication1.Areas.Student.ViewModels;
 using WebApplication1.Models;
 
 namespace WebApplication1.Areas.Student.Controllers
@@ -10,10 +14,12 @@ namespace WebApplication1.Areas.Student.Controllers
     public class CourseController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly Cloudinary _cloudinary;
 
-        public CourseController(AppDbContext context)
+        public CourseController(AppDbContext context, Cloudinary cloudinary)
         {
             _context = context;
+            _cloudinary = cloudinary;
         }
 
         [HttpGet]
@@ -39,10 +45,47 @@ namespace WebApplication1.Areas.Student.Controllers
         }
 
         [HttpGet]
-        [Route("/student/coursedetail")]
-        public IActionResult CourseDetail()
+        [Route("/student/coursedetail/{id}")]
+        public async Task<IActionResult> CourseDetail(string id)
         {
-            return View();
+            // Tìm khóa học theo MaKhoaHoc
+            var course = await _context.KhoaHocs
+                .Include(c => c.MaGiaoVienNavigation)
+                .Include(c => c.MucTieuKhoaHocs)
+                .Include(c => c.YeuCauKhoaHocs)
+                .Include(c => c.BaiHocs)
+                .FirstOrDefaultAsync(c => c.MaKhoaHoc == id);
+
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            // Lấy các khóa học liên quan (cùng MonHoc, không bao gồm khóa học hiện tại)
+            var relatedCourses = await _context.KhoaHocs
+                .Where(c => c.MonHoc == course.MonHoc && c.MaKhoaHoc != id)
+                .Take(4)
+                .ToListAsync();
+
+            // Dữ liệu tĩnh
+            var includes = new List<string>
+            {
+                "65 giờ video theo yêu cầu",
+                "85 tài liệu có thể tải xuống",
+                "Truy cập trọn đời",
+                "Chứng chỉ hoàn thành"
+            };
+
+            // Tạo view model
+            var viewModel = new CoursePageViewModel
+            {
+                Course = course,
+                RelatedCourses = relatedCourses,
+                Includes = includes
+            };
+
+            return View(viewModel);
         }
+
     }
 }
