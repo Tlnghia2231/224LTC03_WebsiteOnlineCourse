@@ -103,8 +103,8 @@ namespace WebApplication1.Controllers
                     PassHash = _passwordHasher.HashPassword(null, model.Password),
                     NgayDangKy = DateTime.Now
                 };
-
-                _context.HocSinhs.Add(hocSinh);
+                Console.Write("hocsinh", hocSinh.PassHash);
+                await _context.HocSinhs.AddAsync(hocSinh);
                 await _context.SaveChangesAsync();
 
                 var savedHocSinh = await _context.HocSinhs

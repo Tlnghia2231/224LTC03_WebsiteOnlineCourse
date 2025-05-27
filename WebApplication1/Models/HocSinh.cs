@@ -9,7 +9,7 @@ public partial class HocSinh
 
     public string HoTen { get; set; } = null!;
 
-    public string PassHash { get; set; } = null!;
+    public string PassHash { get; set; }
 
     public string? DuongDanAnhDaiDien { get; set; }
 

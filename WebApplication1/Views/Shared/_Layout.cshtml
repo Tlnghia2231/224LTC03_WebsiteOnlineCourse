@@ -65,5 +65,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        // Lưu ý: Đảm bảo bạn có một phần tử với id="menuToggle" trong HTML
+        // để đoạn mã này hoạt động, ví dụ một nút hamburger menu cho di động.
+        var menuToggleButton = document.getElementById('menuToggle');
+        if (menuToggleButton) {
+            menuToggleButton.addEventListener('click', function () {
+                document.querySelector('.main-nav').classList.toggle('active');
+            });
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

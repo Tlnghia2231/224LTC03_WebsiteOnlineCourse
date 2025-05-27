@@ -4,16 +4,16 @@ using WebApplication1.Areas.Student.Middleware;
 using WebApplication1.Models;
 using WebApplication1.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// Cấu hình DbContext
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 builder.Services.AddScoped<CloudinaryService>();
+// Cấu hình DbContext
 
 // Thêm và cấu hình Authentication với Cookie
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -42,19 +42,20 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Thêm middleware cho Authentication và Authorization
+// Thêm middleware cho Authentication và Authorization (ĐÂY LÀ THỨ TỰ ĐÚNG)
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Middleware tùy chỉnh
 app.UseUserInfo();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=HomePage}/{id?}");
 
 // Đảm bảo route cho Areas (nếu có)
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=HomePage}/{id?}");
 
 app.Run();
