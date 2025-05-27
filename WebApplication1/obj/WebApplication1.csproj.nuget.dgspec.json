@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\New folder\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\New folder\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\New folder\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\New folder\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\DH\\224\\224LTC#\\PJCK\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\New folder\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,17 +52,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.0-preview.4.24267.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.0-preview.4.24267.1, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
