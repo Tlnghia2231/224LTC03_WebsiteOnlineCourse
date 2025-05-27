@@ -62,6 +62,7 @@
                         </div>
 
                         <form id="profileForm" class="profile-form" asp-action="Profile" asp-controller="Profile" method="post" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="studentId">Mã học sinh</label>
@@ -399,66 +400,71 @@
         });
 
         // Form submission
-        profileForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            profileForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-            // Validate form
-            const requiredFields = profileForm.querySelectorAll('[required]');
-            let isValid = true;
+        // Validate form
+        const requiredFields = profileForm.querySelectorAll('[required]');
+        let isValid = true;
 
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-            });
-
-            if (!isValid) {
-                alert('Vui lòng điền đầy đủ thông tin bắt buộc');
-                return;
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
             }
-
-            // Handle avatar upload
-            const avatarFile = avatarInput.files[0];
-            const formData = new FormData(profileForm);
-            if (avatarFile) {
-                formData.append('AvatarFile', avatarFile);
-            }
-
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang lưu...';
-            submitBtn.disabled = true;
-
-            fetch('/student/profile', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error('Lỗi khi lưu thông tin');
-            })
-            .then(data => {
-                alert('Cập nhật thông tin thành công!');
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                toggleEditMode();
-
-                // Update display name
-                document.getElementById('displayName').textContent = data.hoTen;
-                document.getElementById('displayStudentId').textContent = data.maHocSinh;
-            })
-            .catch(error => {
-                alert('Có lỗi xảy ra: ' + error.message);
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            });
         });
+
+        if (!isValid) {
+            alert('Vui lòng điền đầy đủ thông tin bắt buộc');
+            return;
+        }
+
+        // Handle avatar upload
+        const avatarFile = avatarInput.files[0];
+        const formData = new FormData(profileForm);
+        if (avatarFile) {
+            formData.append('AvatarFile', avatarFile);
+        }
+
+        // Đảm bảo các trường được gửi đúng
+        formData.set('NgaySinh', document.getElementById('birthDate').value); // Đảm bảo định dạng yyyy-MM-dd
+        formData.set('GioiTinh', document.getElementById('gender').value); // Đảm bảo giá trị hợp lệ
+
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang lưu...';
+        submitBtn.disabled = true;
+
+        fetch('/student/profile', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Lỗi khi lưu thông tin');
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message);
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            toggleEditMode();
+
+            document.getElementById('displayName').textContent = data.hoTen;
+            document.getElementById('displayStudentId').textContent = data.maHocSinh;
+        })
+        .catch(error => {
+            alert('Có lỗi xảy ra: ' + error.message);
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
+    });
 
         // Password modal
         changePasswordBtn.addEventListener('click', function() {

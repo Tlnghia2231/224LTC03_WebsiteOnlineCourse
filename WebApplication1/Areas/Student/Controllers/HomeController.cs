@@ -31,7 +31,7 @@ namespace WebApplication1.Areas.Student.Controllers
                 .Select(g => new { Subject = g.Key, Count = g.Count() })
                 .ToList();
 
-            
+
 
             var viewModel = new
             {
@@ -42,7 +42,7 @@ namespace WebApplication1.Areas.Student.Controllers
             return View(viewModel);
         }
 
-        
+
 
     }
 }
