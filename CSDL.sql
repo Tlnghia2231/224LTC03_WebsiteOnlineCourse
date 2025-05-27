@@ -406,6 +406,20 @@ VALUES (N'Tin học', N'Tin học 12 - Lập trình C++ cơ bản',
 N'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png',
 N'Cấu trúc điều khiển, hàm và mảng trong ngôn ngữ lập trình C++.', 650000, DEFAULT, 'Teacher10');
 
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES ('Course10', 1, N'Không có');
+
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course10', 'Student3', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course13', 'Student3', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course20', 'Student3', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course21', 'Student3', GETDATE());
+
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, NoiDung, ThuTu) VALUES
+('Course10', N'Củng cố kiến thức hình học không gian lớp 11 nâng cao', 1),
+('Course10', N'Phân tích và giải các bài toán về đường thẳng và mặt phẳng trong không gian', 2),
+('Course10', N'Rèn luyện kỹ năng vẽ hình và tưởng tượng không gian tốt hơn', 3),
+('Course10', N'Vận dụng định lý và công thức hình học vào giải bài tập nâng cao', 4),
+('Course10', N'Chuẩn bị cho các kỳ thi học sinh giỏi và kỳ thi THPT quốc gia phần hình học', 5);
+
 
 
 CREATE TABLE Admin(

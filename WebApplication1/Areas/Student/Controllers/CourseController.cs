@@ -15,6 +15,7 @@ namespace WebApplication1.Areas.Student.Controllers
         {
             _context = context;
         }
+
         [HttpGet]
         [Route("/student/coursepage")]
         public IActionResult CoursePage()
@@ -35,6 +36,13 @@ namespace WebApplication1.Areas.Student.Controllers
             };
 
             return View(viewModel);
+        }
+
+        [HttpGet]
+        [Route("/student/coursedetail")]
+        public IActionResult CourseDetail()
+        {
+            return View();
         }
     }
 }

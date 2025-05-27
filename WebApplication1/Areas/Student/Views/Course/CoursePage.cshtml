@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="filter-group">
-                        
+
                         <h3>Môn Học</h3>
                         <div class="checkbox-list">
                             @foreach (var subject in Model.Subjects)
@@ -43,46 +43,45 @@
 
                     <!--<div class="filter-group">
                         <h3>Thời Lượng</h3>
-                         <div class="checkbox-list"> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="duration-1"> 
-                                 <label for="duration-1">0-4 tuần</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="duration-2"> 
-                                 <label for="duration-2">5-8 tuần</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="duration-3"> 
-                                 <label for="duration-3">9-12 tuần</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="duration-4"> 
-                                 <label for="duration-4">13+ tuần</label> 
-                             </div> 
+                         <div class="checkbox-list">
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="duration-1">
+                                 <label for="duration-1">0-4 tuần</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="duration-2">
+                                 <label for="duration-2">5-8 tuần</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="duration-3">
+                                 <label for="duration-3">9-12 tuần</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="duration-4">
+                                 <label for="duration-4">13+ tuần</label>
+                             </div>
                          </div>
                      </div>-->
-
-                    <!--<div class="filter-group"> 
-                         <h3>Đánh Giá</h3> 
-                         <div class="checkbox-list"> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="rating-4"> 
-                                 <label for="rating-4">4+ sao</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="rating-3"> 
-                                 <label for="rating-3">3+ sao</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="rating-2"> 
-                                 <label for="rating-2">2+ sao</label> 
-                             </div> 
-                             <div class="checkbox-item"> 
-                                 <input type="checkbox" id="rating-1"> 
-                                 <label for="rating-1">1+ sao</label> 
-                             </div> 
-                         </div> 
+                    <!--<div class="filter-group">
+                         <h3>Đánh Giá</h3>
+                         <div class="checkbox-list">
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="rating-4">
+                                 <label for="rating-4">4+ sao</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="rating-3">
+                                 <label for="rating-3">3+ sao</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="rating-2">
+                                 <label for="rating-2">2+ sao</label>
+                             </div>
+                             <div class="checkbox-item">
+                                 <input type="checkbox" id="rating-1">
+                                 <label for="rating-1">1+ sao</label>
+                             </div>
+                         </div>
                      </div>-->
 
                     <button class="btn btn-primary btn-block">Áp Dụng Bộ Lọc</button>
@@ -150,7 +149,7 @@
                             </a>
                         }
 
-                        
+
                     </div>
 
                     <!-- Pagination
@@ -189,6 +188,14 @@
                     card.style.display = 'none'; // Ẩn nếu không khớp
                 }
             });
+        });
+    });
+
+    const courseCards = document.querySelectorAll('.course-card');
+    courseCards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = '/student/coursedetail';
         });
     });
 </script>

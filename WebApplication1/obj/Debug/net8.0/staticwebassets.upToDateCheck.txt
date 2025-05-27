@@ -1,5 +1,6 @@
 wwwroot\css\login.css
 wwwroot\css\my-learning.css
+wwwroot\css\profile.css
 wwwroot\css\site.css
 wwwroot\css\styleStudent.css
 wwwroot\favicon.ico
