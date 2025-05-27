@@ -11,8 +11,6 @@ public partial class KhoaHocHocSinh
 
     public DateTime NgayDangKy { get; set; }
 
-    public DateTime NgayHetHan { get; set; }
-
     public virtual HocSinh MaHocSinhNavigation { get; set; } = null!;
 
     public virtual KhoaHoc MaKhoaHocNavigation { get; set; } = null!;

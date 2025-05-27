@@ -11,9 +11,6 @@
                         <a href="courses.html" class="btn btn-primary">
                             Xem Khóa Học <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="categories.html" class="btn btn-outline">
-                            Khám Phá Danh Mục
-                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -88,9 +85,14 @@
                 <p>Tìm khóa học hoàn hảo trong môn học bạn quan tâm.</p>
             </div>
             <div class="categories-grid">
-				@foreach (var subject in Model.Subjects)
-				{
-					<a href="" class="category-card">
+                @{
+                    int i = 0;
+                }
+                @foreach (var subject in Model.Subjects)
+                {
+                    if (i >= 10) break;
+                    i++;
+                    <a href="" class="category-card">
 						<div class="category-icon">
 							<i class="fas fa-book"></i>
 						</div>
