@@ -1,0 +1,772 @@
+﻿@{
+    Layout = "/Areas/Student/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - EduLearn</title>
+    <link rel="stylesheet" href="~/css/course-detail.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<main>
+    <!-- Course Header -->
+    <div class="course-header">
+        <div class="container">
+            <a href="courses.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Quay lại Khóa Học
+            </a>
+
+            <div class="course-header-content">
+                <div class="course-info">
+                    <span class="badge">Lập Trình</span>
+                    <h1>Khóa Học Phát Triển Web Toàn Diện</h1>
+                    <p>Học HTML, CSS, JavaScript, React, Node.js và nhiều hơn nữa để trở thành nhà phát triển web full-stack.</p>
+
+                    <div class="course-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-number">4.8</span>
+                        <span class="reviews-count">(2450 đánh giá)</span>
+                    </div>
+
+                    <div class="course-meta-large">
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>15000+ học viên</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>12 tuần</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-book-open"></i>
+                            <span>120 bài học</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Tiếng Việt</span>
+                        </div>
+                    </div>
+
+                    <div class="instructor-preview">
+                        <p class="instructor-name">Giảng viên: Nguyễn Văn Minh</p>
+                        <p class="instructor-title">Lập Trình Viên Web Senior & Giảng Viên</p>
+                    </div>
+
+                    <!-- Mobile Course Card -->
+                    <div class="course-card-mobile">
+                        <div class="course-preview-image">
+                            <img src="https://placehold.co/600x400" alt="Khóa Học Phát Triển Web Toàn Diện">
+                            <div class="preview-overlay">
+                                <button class="btn btn-outline-light">
+                                    <i class="fas fa-play-circle"></i>
+                                    Xem Trước
+                                </button>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <div class="course-price">1.299.000đ</div>
+                            <button class="btn btn-primary btn-block">
+                                <i class="fas fa-shopping-cart"></i>
+                                Thêm Vào Giỏ
+                            </button>
+                            <button class="btn btn-outline btn-block">Mua Ngay</button>
+                            <div class="course-guarantees">
+                                <p>Đảm Bảo Hoàn Tiền 30 Ngày</p>
+                                <p>Truy Cập Trọn Đời</p>
+                                <p>Chứng Chỉ Hoàn Thành</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Course Card -->
+                <div class="course-card-desktop">
+                    <div class="course-preview-image">
+                        <img src="https://placehold.co/600x400" alt="Khóa Học Phát Triển Web Toàn Diện">
+                        <div class="preview-overlay">
+                            <button class="btn btn-outline-light">
+                                <i class="fas fa-play-circle"></i>
+                                Xem Trước
+                            </button>
+                        </div>
+                    </div>
+                    <div class="course-card-content">
+                        <div class="course-price">1.299.000đ</div>
+                        <button class="btn btn-primary btn-block">
+                            <i class="fas fa-shopping-cart"></i>
+                            Thêm Vào Giỏ
+                        </button>
+                        <button class="btn btn-outline btn-block">Mua Ngay</button>
+                        <div class="course-guarantees">
+                            <p>Đảm Bảo Hoàn Tiền 30 Ngày</p>
+                            <p>Truy Cập Trọn Đời</p>
+                            <p>Chứng Chỉ Hoàn Thành</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content-section">
+        <div class="container">
+            <div class="course-tabs">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="overview">Tổng Quan</button>
+                    <button class="tab-button" data-tab="curriculum">Chương Trình</button>
+                    <button class="tab-button" data-tab="instructor">Giảng Viên</button>
+                    <button class="tab-button" data-tab="reviews">Đánh Giá</button>
+                </div>
+
+                <div class="tab-content active" id="overview">
+                    <div class="tab-content-layout">
+                        <div class="main-content">
+                            <h2>Bạn sẽ học được gì</h2>
+                            <div class="learning-outcomes">
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Xây dựng website responsive sử dụng HTML5, CSS3 và JavaScript</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Tạo ứng dụng web động với React</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Phát triển ứng dụng server-side với Node.js và Express</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Làm việc với cơ sở dữ liệu như MongoDB và MySQL</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Triển khai xác thực và phân quyền trong ứng dụng web</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Deploy ứng dụng lên môi trường production</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Hiểu các best practices và patterns trong phát triển web</span>
+                                </div>
+                                <div class="outcome-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Xây dựng portfolio dự án để giới thiệu với nhà tuyển dụng</span>
+                                </div>
+                            </div>
+
+                            <h2>Mô Tả Khóa Học</h2>
+                            <div class="course-description">
+                                <p>Khóa học phát triển web toàn diện này được thiết kế để đưa bạn từ người mới bắt đầu trở thành lập trình viên chuyên nghiệp. Bạn sẽ học cả công nghệ front-end và back-end, cung cấp cho bạn bộ kỹ năng hoàn chỉnh cần thiết để xây dựng ứng dụng full-stack.</p>
+                                <p>Bắt đầu với những kiến thức cơ bản về HTML, CSS và JavaScript, bạn sẽ dần tiến bộ đến các chủ đề phức tạp hơn như React để xây dựng giao diện người dùng tương tác, Node.js cho lập trình server-side và MongoDB để quản lý cơ sở dữ liệu.</p>
+                                <p>Trong suốt khóa học, bạn sẽ làm việc trên các dự án thực tế giúp bạn xây dựng portfolio chuyên nghiệp để giới thiệu với các nhà tuyển dụng tiềm năng. Khi kết thúc khóa học này, bạn sẽ có kỹ năng và sự tự tin để ứng tuyển vào các vị trí phát triển web hoặc bắt đầu làm freelance.</p>
+                            </div>
+
+                            <h2>Yêu Cầu</h2>
+                            <ul class="requirements-list">
+                                <li>Kiến thức cơ bản về máy tính</li>
+                                <li>Không cần kinh nghiệm lập trình trước đó</li>
+                                <li>Máy tính có kết nối internet (Windows, Mac hoặc Linux)</li>
+                                <li>Nhiệt huyết và quyết tâm học tập</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <div class="course-includes-card">
+                                <h3>Khóa học này bao gồm:</h3>
+                                <div class="includes-list">
+                                    <div class="includes-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>65 giờ video theo yêu cầu</span>
+                                    </div>
+                                    <div class="includes-item">
+                                        <i class="fas fa-download"></i>
+                                        <span>85 tài liệu có thể tải xuống</span>
+                                    </div>
+                                    <div class="includes-item">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Truy cập trọn đời</span>
+                                    </div>
+                                    <div class="includes-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>Chứng chỉ hoàn thành</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3>Kỹ năng bạn sẽ có</h3>
+                                <div class="skills-list">
+                                    <span class="skill-badge">HTML5</span>
+                                    <span class="skill-badge">CSS3</span>
+                                    <span class="skill-badge">JavaScript</span>
+                                    <span class="skill-badge">React</span>
+                                    <span class="skill-badge">Node.js</span>
+                                    <span class="skill-badge">Express</span>
+                                    <span class="skill-badge">MongoDB</span>
+                                    <span class="skill-badge">REST APIs</span>
+                                    <span class="skill-badge">Git</span>
+                                    <span class="skill-badge">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="curriculum">
+                    <h2>Nội Dung Khóa Học</h2>
+                    <div class="curriculum-header">
+                        <p>3 module • 120 bài học • 12 tuần tổng cộng</p>
+                        <button class="btn btn-text">Mở Rộng Tất Cả</button>
+                    </div>
+
+                    <div class="curriculum-accordion">
+                        <!-- Module 1 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <h3>Module 1: Giới Thiệu Phát Triển Web</h3>
+                                    <p>5 bài học • 1 tuần</p>
+                                </div>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="lesson-list">
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Tổng Quan Khóa Học</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <a href="#" class="preview-link">Xem Trước</a>
+                                            <span>10 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Thiết Lập Môi Trường Phát Triển</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <a href="#" class="preview-link">Xem Trước</a>
+                                            <span>15 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Web Hoạt Động Như Thế Nào</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>20 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Giới Thiệu HTML</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>25 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-file-alt"></i>
+                                            <span>Bài Tập Thực Hành HTML</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>30 phút</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <h3>Module 2: Kiến Thức Cơ Bản CSS</h3>
+                                    <p>6 bài học • 1 tuần</p>
+                                </div>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="lesson-list">
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Giới Thiệu CSS</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>20 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>CSS Selectors và Properties</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>25 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Box Model và Layout</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>30 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Flexbox và Grid</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>35 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Responsive Design</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>40 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-file-alt"></i>
+                                            <span>Dự Án Thực Hành CSS</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>60 phút</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Module 3 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <h3>Module 3: JavaScript Cơ Bản</h3>
+                                    <p>10 bài học • 2 tuần</p>
+                                </div>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="lesson-list">
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Giới Thiệu JavaScript</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>20 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Biến và Kiểu Dữ Liệu</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>25 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Toán Tử và Biểu Thức</span>
+                                        </div>
+                                        <div class="lesson-meta">
+                                            <span>20 phút</span>
+                                        </div>
+                                    </div>
+                                    <!-- Thêm các bài học khác ở đây -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="instructor">
+                    <div class="tab-content-layout">
+                        <div class="main-content">
+                            <div class="instructor-profile">
+                                <img src="https://placehold.co/100x100" alt="Nguyễn Văn Minh" class="instructor-avatar">
+                                <div class="instructor-details">
+                                    <h2>Nguyễn Văn Minh</h2>
+                                    <p class="instructor-title">Lập Trình Viên Web Senior & Giảng Viên</p>
+                                    <div class="instructor-stats">
+                                        <div class="stat-item">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.9 Đánh Giá Giảng Viên</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-comment"></i>
+                                            <span>3,200 Đánh Giá</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>42,000 Học Viên</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="instructor-bio">
+                                <p>Xin chào, tôi là Nguyễn Văn Minh, một lập trình viên web full-stack với hơn 10 năm kinh nghiệm trong ngành. Tôi đã làm việc với các công ty từ startup đến các tập đoàn Fortune 500, giúp họ xây dựng các ứng dụng web mạnh mẽ và có thể mở rộng.</p>
+                                <p>Niềm đam mê giảng dạy của tôi bắt đầu khi tôi bắt đầu hướng dẫn các lập trình viên junior tại nơi làm việc. Tôi nhận ra rằng tôi thích chia nhỏ các khái niệm phức tạp thành những phần đơn giản, dễ hiểu mà bất kỳ ai cũng có thể nắm bắt. Điều này đã dẫn tôi đến việc tạo ra khóa học trực tuyến đầu tiên cách đây năm năm, và kể từ đó tôi đã giảng dạy cho hàng nghìn học viên trên toàn thế giới.</p>
+                                <p>Tôi tin rằng bất kỳ ai cũng có thể học lập trình với sự hướng dẫn và thực hành đúng cách. Triết lý giảng dạy của tôi tập trung vào việc học tập thực tế, dựa trên dự án, mang lại cho bạn kinh nghiệm thực tế thay vì chỉ kiến thức lý thuyết. Tôi rất hào hứng được hướng dẫn bạn trong hành trình phát triển web!</p>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <div class="instructor-stats-card">
+                                <h3>Thống Kê Giảng Viên</h3>
+                                <div class="stat-bar">
+                                    <div class="stat-label">
+                                        <span>Khóa Học</span>
+                                        <span>8</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-bar">
+                                    <div class="stat-label">
+                                        <span>Đánh Giá</span>
+                                        <span>3,200</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-bar">
+                                    <div class="stat-label">
+                                        <span>Học Viên</span>
+                                        <span>42,000</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <div class="tab-content-layout">
+                        <div class="main-content">
+                            <h2>Đánh Giá Của Học Viên</h2>
+                            <div class="reviews-list">
+                                <!-- Review 1 -->
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <img src="https://placehold.co/50x50" alt="Trần Văn Nam" class="reviewer-avatar">
+                                        <div class="reviewer-info">
+                                            <h3>Trần Văn Nam</h3>
+                                            <div class="review-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="review-date">2 tháng trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Khóa học này vượt quá mong đợi của tôi! Thầy Minh giải thích các khái niệm phức tạp một cách dễ hiểu, và các dự án giúp tôi xây dựng portfolio mạnh mẽ. Tôi đã tìm được việc làm lập trình viên junior chỉ hai tuần sau khi hoàn thành khóa học này.</p>
+                                </div>
+
+                                <!-- Review 2 -->
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <img src="https://placehold.co/50x50" alt="Lê Thị Hương" class="reviewer-avatar">
+                                        <div class="reviewer-info">
+                                            <h3>Lê Thị Hương</h3>
+                                            <div class="review-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="review-date">3 tháng trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Là người không có kinh nghiệm lập trình, tôi lo lắng điều này sẽ quá khó. Nhưng phương pháp từng bước đã làm cho việc học trở nên thú vị. Giảng viên phản hồi nhanh chóng và cộng đồng rất hỗ trợ. Rất khuyến khích!</p>
+                                </div>
+
+                                <!-- Review 3 -->
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <img src="https://placehold.co/50x50" alt="Phạm Minh Tuấn" class="reviewer-avatar">
+                                        <div class="reviewer-info">
+                                            <h3>Phạm Minh Tuấn</h3>
+                                            <div class="review-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span class="review-date">1 tháng trước</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-text">Khóa học toàn diện tuyệt vời bao gồm tất cả các công nghệ thiết yếu. Lý do tôi cho 4 sao thay vì 5 là một số phần có thể cần thêm bài tập thực hành. Ngoài ra, nội dung và hướng dẫn xuất sắc.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline">Tải Thêm Đánh Giá</button>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <div class="rating-breakdown-card">
+                                <h3>Phân Tích Đánh Giá</h3>
+                                <div class="overall-rating">
+                                    <div class="rating-number">4.8</div>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="rating-label">Đánh Giá Khóa Học</div>
+                                </div>
+
+                                <div class="rating-bars">
+                                    <div class="rating-bar">
+                                        <div class="star-label">
+                                            <span>5</span>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 78%;"></div>
+                                        </div>
+                                        <div class="percentage">78%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="star-label">
+                                            <span>4</span>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 16%;"></div>
+                                        </div>
+                                        <div class="percentage">16%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="star-label">
+                                            <span>3</span>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 4%;"></div>
+                                        </div>
+                                        <div class="percentage">4%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="star-label">
+                                            <span>2</span>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 1%;"></div>
+                                        </div>
+                                        <div class="percentage">1%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="star-label">
+                                            <span>1</span>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 1%;"></div>
+                                        </div>
+                                        <div class="percentage">1%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Courses -->
+    <section class="related-courses">
+        <div class="container">
+            <h2>Học Viên Cũng Đã Mua</h2>
+            <div class="related-courses-grid">
+                <!-- Related Course 1 -->
+                <a href="course-detail.html" class="course-card-small">
+                    <div class="course-image">
+                        <img src="https://placehold.co/300x150" alt="React.js Masterclass">
+                        <span class="badge">Lập Trình</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>React.js Masterclass: Xây Dựng Ứng Dụng Web Hiện Đại</h3>
+                    </div>
+                    <div class="course-footer">
+                        <div class="rating-compact">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>(1850)</span>
+                        </div>
+                        <div class="course-price">1.199.000đ</div>
+                    </div>
+                </a>
+
+                <!-- Related Course 2 -->
+                <a href="course-detail.html" class="course-card-small">
+                    <div class="course-image">
+                        <img src="https://placehold.co/300x150" alt="Advanced JavaScript">
+                        <span class="badge">Lập Trình</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>JavaScript Nâng Cao: Từ Cơ Bản Đến Functional JS</h3>
+                    </div>
+                    <div class="course-footer">
+                        <div class="rating-compact">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>(1240)</span>
+                        </div>
+                        <div class="course-price">999.000đ</div>
+                    </div>
+                </a>
+
+                <!-- Related Course 3 -->
+                <a href="course-detail.html" class="course-card-small">
+                    <div class="course-image">
+                        <img src="https://placehold.co/300x150" alt="Node.js">
+                        <span class="badge">Lập Trình</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Node.js: Hướng Dẫn Hoàn Chỉnh Xây Dựng RESTful APIs</h3>
+                    </div>
+                    <div class="course-footer">
+                        <div class="rating-compact">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>(980)</span>
+                        </div>
+                        <div class="course-price">1.099.000đ</div>
+                    </div>
+                </a>
+
+                <!-- Related Course 4 -->
+                <a href="course-detail.html" class="course-card-small">
+                    <div class="course-image">
+                        <img src="https://placehold.co/300x150" alt="MERN Stack">
+                        <span class="badge">Lập Trình</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>MERN Stack Từ Đầu Đến Cuối: Full Stack React, Redux & Node.js</h3>
+                    </div>
+                    <div class="course-footer">
+                        <div class="rating-compact">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>(2100)</span>
+                        </div>
+                        <div class="course-price">1.399.000đ</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.querySelector('.main-nav').classList.toggle('active');
+    });
+
+    // Tabs functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding content
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        accordionItem.classList.toggle('active');
+
+        const icon = header.querySelector('.accordion-icon');
+        if (accordionItem.classList.contains('active')) {
+          icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+          icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        }
+      });
+    });
+
+    
+</script>
