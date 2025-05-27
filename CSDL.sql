@@ -84,8 +84,7 @@ GO
 CREATE TABLE dbo.KhoaHoc_HocSinh (
     MaKhoaHoc     NVARCHAR(20)  NOT NULL,  -- FK
     MaHocSinh     NVARCHAR(20)  NOT NULL,  -- FK
-    NgayDangKy    DATETIME      NOT NULL DEFAULT GETDATE(),
-    NgayHetHan    DATETIME      NOT NULL,
+    NgayDangKy    DATETIME      NOT NULL DEFAULT GETDATE()
     PRIMARY KEY (MaKhoaHoc, MaHocSinh),
     CONSTRAINT FK_KhoaHocHocSinh_KhoaHoc
         FOREIGN KEY (MaKhoaHoc) REFERENCES dbo.KhoaHoc(MaKhoaHoc)
@@ -130,7 +129,7 @@ BEGIN
 END;
 GO
 
-ALTER TRIGGER trg_HocSinh_InsteadOfInsert
+CREATE TRIGGER trg_HocSinh_InsteadOfInsert
 ON dbo.HocSinh
 INSTEAD OF INSERT
 AS
@@ -207,57 +206,7 @@ BEGIN
     FROM inserted AS i;
 
 END;
-GO
 
-/* --------------------- Dưới đây là phần test SQL bài thầy Phát, đừng xóa để lần sau t check thử-----------------------
-SELECT *
-FROM dbo.GiaoVien
-ORDER BY CAST(SUBSTRING(MaGiaoVien, 8, LEN(MaGiaoVien) - 7) AS INT) ASC;
-
-SELECT MaGiaoVien, HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu, NgayTao FROM GiaoVien
-delete GiaoVien where MaGiaoVien = 'Teacher7'
-
-
-ALTER TABLE dbo.GiaoVien
-DROP COLUMN NgayCapNhat;
-
-SELECT MaKhoaHoc, MonHoc, TieuDe, DuongDanAnhKhoaHoc, HoTen, SoLuongBaiHoc FROM KhoaHoc AS K, GiaoVien AS G WHERE K.MaGiaoVien = G.MaGiaoVien
-
-INSERT INTO KhoaHoc (MonHoc, Tieude, DuongDanAnhKhoaHoc, MoTa, MaGiaoVien, SoLuongBaiHoc) VALUES('English', 'English01', null, 'English01', 'Teacher1', 10)
-delete KhoaHoc where CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaGiaoVien) - 6) AS INT)>=  6
-
-
-SELECT ISNULL(MAX(ThuTu), 0) + 1 AS ind FROM BaiHoc WHERE MaKhoaHoc = 'Course1'
-select * from BaiHoc where MaKhoaHoc = 'Course11'
-
-INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo) VALUES('Course5',1,N'Bài học 1','https://quanlykhoahocstg.blob.core.windows.net/avatars/1746799050017_f9d78987-e8db-4458-b32d-f0bd0b06874b_2025-04-29%2001%2047%2015.png')
-
-SELECT *
-FROM KhoaHoc
-WHERE CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT) = (
-    SELECT MAX(CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT))
-    FROM KhoaHoc
-    WHERE ISNUMERIC(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6)) = 1
-);
-
-INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo)
-VALUES ('Course1', 1, 'Tiêu đề', 'http://video.com')
-
-SELECT MaKhoaHoc, MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, MaGiaoVien, SoLuongBaiHoc FROM KhoaHoc ORDER BY CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaGiaoVien) - 6) AS INT) ASC
-
-SELECT MaKhoaHoc, MonHoc, TieuDe, DuongDanAnhKhoaHoc, MoTa, K.MaGiaoVien, HoTen, SoLuongBaiHoc FROM KhoaHoc AS K, GiaoVien AS G WHERE K.MaGiaoVien = G.MaGiaoVien AND MaKhoaHoc ='Course7'
-
-SELECT * FROM KhoaHoc where MaKhoaHoc = 'Course6'
-SELECT * FROM BaiHoc where MaKhoaHoc = 'Course6'
-
-SELECT TieuDe, LinkVideo FROM BaiHoc WHERE MaKhoaHoc = 'Course7' ORDER BY ThuTu ASC
-delete GiaoVien where MaGiaoVien = 'Teacher5'
-delete KhoaHoc where MaKhoaHoc = 'Course8'
-
-select * from GiaoVien
-select * from KhoaHoc
-select * from BaiHoc
-*/
 
 ----- INSERT GIAOVIEN
 INSERT INTO GiaoVien (HoTen, DuongDanAnhDaiDien, Email, DienThoai, GioiThieu)
@@ -408,10 +357,13 @@ N'Cấu trúc điều khiển, hàm và mảng trong ngôn ngữ lập trình C+
 
 INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES ('Course10', 1, N'Không có');
 
-INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course10', 'Student3', GETDATE());
-INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course13', 'Student3', GETDATE());
-INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course20', 'Student3', GETDATE());
-INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course21', 'Student3', GETDATE());
+insert into HocSinh (MaHocSinh, HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai) 
+values ('Student1', N'Trần Lâm Nghĩa', 'AQAAAAIAAYagAAAAEDcREY4W4mW7mJGN9DbzaVmBbvdazuKXQXVjTwBTf0fBsGXQcvU3MrOrFJKtCM+p+Q==', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg' ,'tranlamnghia@gmail.com', '0353213325');
+
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course10', 'Student1', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course13', 'Student1', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course20', 'Student1', GETDATE());
+INSERT INTO KhoaHoc_HocSinh (MaKhoaHoc, MaHocSinh, NgayDangKy) VALUES ('Course21', 'Student1', GETDATE());
 
 INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, NoiDung, ThuTu) VALUES
 ('Course10', N'Củng cố kiến thức hình học không gian lớp 11 nâng cao', 1),
@@ -419,6 +371,12 @@ INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, NoiDung, ThuTu) VALUES
 ('Course10', N'Rèn luyện kỹ năng vẽ hình và tưởng tượng không gian tốt hơn', 3),
 ('Course10', N'Vận dụng định lý và công thức hình học vào giải bài tập nâng cao', 4),
 ('Course10', N'Chuẩn bị cho các kỳ thi học sinh giỏi và kỳ thi THPT quốc gia phần hình học', 5);
+
+INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo)
+VALUES 
+('Course10', 1, N'Định hướng học hình học không gian nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1747834518/Video_1_cmeebu.mp4'),
+('Course10', 2, N'Phân tích bài toán đường thẳng và mặt phẳng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748355505/Video_3_kejopr.mp4'),
+('Course10', 3, N'Kỹ thuật vẽ hình và tưởng tượng không gian', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748355505/Video_4_qyakil.mp4');
 
 
 
@@ -440,9 +398,13 @@ ORDER BY CAST(SUBSTRING(MaGiaoVien, 8, LEN(MaGiaoVien) - 7) AS INT) ASC;
 SELECT * FROM KhoaHoc
 ORDER BY CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT) ASC;
 
-
 select * from HocSinh
 select * from KhoaHoc
+select * from KhoaHoc_HocSinh
+select * from MucTieuKhoaHoc
+select * from YeuCauKhoaHoc
 delete HocSinh
-insert into HocSinh (MaHocSinh, HoTen, PassHash, Email, DienThoai) values ('temp', 'aihsdou', 'AQAAAAIAAYagAAAAEDqz+C1ThrV2EwBVGwOuS7ErQDo7t6j9uUDNVY+h6bnK1L5Fx8b+9v+sHfle0g1JUA==', 'hasud@gmail.com', '487965');
-update HocSinh set DuongDanAnhDaiDien = 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg' where MaHocSinh = 'Student1'
+
+update HocSinh set DuongDanAnhDaiDien = 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg' where MaHocSinh = 'Student3'
+
+
