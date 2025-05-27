@@ -374,9 +374,284 @@ INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, NoiDung, ThuTu) VALUES
 
 INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo)
 VALUES 
-('Course10', 1, N'Định hướng học hình học không gian nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1747834518/Video_1_cmeebu.mp4'),
-('Course10', 2, N'Phân tích bài toán đường thẳng và mặt phẳng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748355505/Video_3_kejopr.mp4'),
-('Course10', 3, N'Kỹ thuật vẽ hình và tưởng tượng không gian', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748355505/Video_4_qyakil.mp4');
+('Course10', 1, N'Định hướng học hình học không gian nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course10', 2, N'Phân tích bài toán đường thẳng và mặt phẳng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course10', 3, N'Kỹ thuật vẽ hình và tưởng tượng không gian', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4');
+---------INSERT FULL
+-- Course1
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course1', 1, N'Không có');
+
+-- Course2
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course2', 1, N'Đã hoàn thành khóa học Hóa học 10 cơ bản'),
+('Course2', 2, N'Nắm vững bảng tuần hoàn và phản ứng hóa học cơ bản');
+
+-- Course3
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course3', 1, N'Có khả năng giải bài tập vật lý cơ bản');
+
+-- Course4
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course4', 1, N'Không có');
+
+-- Course5
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course5', 1, N'Biết sử dụng bản đồ và đọc số liệu địa lý');
+
+-- Course6
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course6', 1, N'Không có');
+
+-- Course7
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course7', 1, N'Biết sử dụng máy tính và có kiến thức Tin học cơ bản'),
+('Course7', 2, N'Đã làm quen với thuật toán và tư duy logic');
+
+-- Course8
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course8', 1, N'Đã học xong khóa Tiếng Anh cơ bản hoặc tương đương'),
+('Course8', 2, N'Có từ vựng và ngữ pháp trình độ A2 trở lên');
+
+-- Course9
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+('Course9', 1, N'Đã học qua kiến thức GDCD lớp 11');
+
+-- Course11 - Hóa học 12 luyện thi đại học
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course11', 1, N'Đã hoàn thành khóa học Hóa học 11 nâng cao'),
+('Course11', 2, N'Biết cách giải các bài toán phản ứng nâng cao');
+
+-- Course12 - Vật lý 12 lý thuyết trọng tâm
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course12', 1, N'Không có');
+
+-- Course13 - Tiếng Anh 12 luyện đề
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course13', 1, N'Đã hoàn thành Tiếng Anh 10 và 11 nâng cao'),
+('Course13', 2, N'Nắm vững ngữ pháp cơ bản và từ vựng học thuật');
+
+-- Course14 - Sinh học 12 di truyền nâng cao
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course14', 1, N'Hoàn thành Sinh học 10 cơ bản'),
+('Course14', 2, N'Đã học kiến thức nền về tế bào và ADN');
+
+-- Course15 - Ngữ văn 10 cảm thụ văn học
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course15', 1, N'Không có');
+
+-- Course16 - Lịch sử Việt Nam hiện đại
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course16', 1, N'Không có');
+
+-- Course17 - Tin học 12 ứng dụng văn phòng
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course17', 1, N'Đã học Tin học 11 lập trình Pascal'),
+('Course17', 2, N'Có kỹ năng cơ bản sử dụng máy tính');
+
+-- Course18 - Công nghệ 12 - Lâm nghiệp, thủy sản
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course18', 1, N'Không có');
+
+-- Course19 - Toán 11 đại số
+INSERT INTO YeuCauKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course19', 1, N'Không có');
+
+
+
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES 
+-- Course1
+('Course1', 1, N'Nắm vững các kiến thức cơ bản Toán lớp 10'),
+('Course1', 2, N'Rèn luyện kỹ năng giải bài tập cơ bản'),
+
+-- Course2
+('Course2', 1, N'Hiểu sâu kiến thức nâng cao về Hóa học lớp 11'),
+('Course2', 2, N'Giải quyết các bài tập khó và luyện thi chuyên'),
+
+-- Course3
+('Course3', 1, N'Rèn luyện kỹ năng giải bài tập vật lý theo sách giáo khoa'),
+('Course3', 2, N'Củng cố kiến thức cơ bản qua thực hành'),
+
+-- Course4
+('Course4', 1, N'Tổng hợp kiến thức Ngữ văn 12 ôn thi THPT'),
+('Course4', 2, N'Phát triển kỹ năng viết và cảm thụ văn học'),
+
+-- Course5
+('Course5', 1, N'Làm quen với cấu trúc đề thi môn Địa lý'),
+('Course5', 2, N'Tăng khả năng làm bài thi trắc nghiệm'),
+
+-- Course6
+('Course6', 1, N'Tìm hiểu cấu trúc tế bào và di truyền cơ bản'),
+('Course6', 2, N'Hình thành nền tảng Sinh học lớp 10'),
+
+-- Course7
+('Course7', 1, N'Làm quen cú pháp và lệnh cơ bản trong Pascal'),
+('Course7', 2, N'Thực hành viết chương trình đơn giản'),
+
+-- Course8
+('Course8', 1, N'Phát triển khả năng nói và giao tiếp tiếng Anh'),
+('Course8', 2, N'Nâng cao kỹ năng viết và đọc hiểu'),
+
+-- Course9
+('Course9', 1, N'Hiểu rõ quyền và nghĩa vụ công dân trong xã hội'),
+('Course9', 2, N'Sẵn sàng cho kỳ thi THPT môn GDCD');
+
+-- Course11 - Hóa học 12 luyện thi đại học
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course11', 1, N'Nắm vững các chuyên đề Hóa học lớp 12'),
+('Course11', 2, N'Biết cách áp dụng lý thuyết vào bài tập trắc nghiệm'),
+('Course11', 3, N'Luyện kỹ năng giải nhanh để thi THPT Quốc gia'),
+('Course11', 4, N'Tăng cường phản xạ khi gặp câu hỏi lạ');
+
+-- Course12 - Vật lý 12 lý thuyết trọng tâm
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course12', 1, N'Hệ thống lại toàn bộ lý thuyết Vật lý lớp 12'),
+('Course12', 2, N'Hiểu rõ bản chất các hiện tượng vật lý'),
+('Course12', 3, N'Ứng dụng lý thuyết vào giải bài tập nâng cao'),
+('Course12', 4, N'Tự tin ôn luyện cho kỳ thi THPT quốc gia');
+
+-- Course13 - Tiếng Anh 12 luyện đề
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course13', 1, N'Làm quen với các dạng đề thi THPT Quốc gia'),
+('Course13', 2, N'Tăng cường từ vựng và cấu trúc câu học thuật'),
+('Course13', 3, N'Nâng cao khả năng đọc hiểu và ngữ pháp'),
+('Course13', 4, N'Luyện kỹ năng xử lý câu hỏi nhanh và chính xác');
+
+-- Course14 - Sinh học 12 di truyền nâng cao
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course14', 1, N'Hiểu sâu về quy luật di truyền học và biến dị'),
+('Course14', 2, N'Ứng dụng lý thuyết vào giải bài tập phức tạp'),
+('Course14', 3, N'Tăng cường tư duy phân tích và hệ thống kiến thức'),
+('Course14', 4, N'Chuẩn bị tốt cho kỳ thi học kỳ và thi đại học');
+
+-- Course15 - Ngữ văn 10 cảm thụ văn học
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course15', 1, N'Phát triển kỹ năng đọc hiểu văn bản văn học'),
+('Course15', 2, N'Biết cách cảm thụ và phân tích tác phẩm'),
+('Course15', 3, N'Tăng khả năng diễn đạt cảm xúc qua bài viết'),
+('Course15', 4, N'Chuẩn bị tốt cho các bài kiểm tra đọc hiểu');
+
+-- Course16 - Lịch sử Việt Nam hiện đại
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course16', 1, N'Hiểu rõ các sự kiện lịch sử Việt Nam thế kỷ XX'),
+('Course16', 2, N'Liên hệ lịch sử với thực tiễn hiện nay'),
+('Course16', 3, N'Biết cách phân tích, tổng hợp nội dung lịch sử'),
+('Course16', 4, N'Làm quen với các dạng câu hỏi trong đề thi sử');
+
+-- Course17 - Tin học 12 ứng dụng văn phòng
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course17', 1, N'Sử dụng thành thạo Word, Excel, PowerPoint'),
+('Course17', 2, N'Thực hành tạo báo cáo, bảng biểu chuyên nghiệp'),
+('Course17', 3, N'Nắm vững mẹo và kỹ thuật tin học văn phòng'),
+('Course17', 4, N'Ứng dụng trong học tập và công việc hành chính');
+
+-- Course18 - Công nghệ 12 - Lâm nghiệp, thuỷ sản
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course18', 1, N'Tìm hiểu về kỹ thuật nuôi trồng thủy sản, lâm nghiệp'),
+('Course18', 2, N'Tiếp cận các mô hình công nghệ trong sản xuất nông nghiệp'),
+('Course18', 3, N'Hiểu rõ chuỗi sản xuất và bảo quản sản phẩm nông lâm nghiệp'),
+('Course18', 4, N'Ứng dụng kiến thức vào thực tiễn đời sống và nghề nghiệp');
+
+-- Course19 - Toán 11 đại số
+INSERT INTO MucTieuKhoaHoc (MaKhoaHoc, ThuTu, NoiDung) VALUES
+('Course19', 1, N'Nắm vững các chuyên đề đại số lớp 11'),
+('Course19', 2, N'Luyện kỹ năng giải phương trình và bất phương trình'),
+('Course19', 3, N'Phát triển tư duy logic và khả năng suy luận'),
+('Course19', 4, N'Chuẩn bị nền tảng vững chắc cho chương trình lớp 12');
+
+
+-- Course1
+INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo) VALUES
+('Course1', 1, N'Giới thiệu Toán 10 và định hướng học tập', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course1', 2, N'Phương pháp giải phương trình bậc hai', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course1', 3, N'Thực hành các dạng toán cơ bản', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course2
+('Course2', 1, N'Cấu tạo nguyên tử nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course2', 2, N'Phân tích phản ứng oxi hóa khử', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course2', 3, N'Bài tập tổng hợp chương 1-3', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course3
+('Course3', 1, N'Cơ bản về chuyển động cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course3', 2, N'Phân tích đồ thị chuyển động', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course3', 3, N'Giải bài tập sách giáo khoa phần I', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course4
+('Course4', 1, N'Chiến lược ôn tập Ngữ văn 12', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course4', 2, N'Phân tích tác phẩm trọng tâm', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course4', 3, N'Luyện kỹ năng viết đoạn văn nghị luận', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course5
+('Course5', 1, N'Ôn tập Địa lý tự nhiên Việt Nam', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course5', 2, N'Kỹ năng đọc và phân tích bản đồ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course5', 3, N'Thực hành giải đề thi thử', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course6
+('Course6', 1, N'Cấu trúc tế bào', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course6', 2, N'Sinh học phân tử cơ bản', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course6', 3, N'Gen, ADN và di truyền học sơ lược', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course7
+('Course7', 1, N'Giới thiệu ngôn ngữ Pascal', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course7', 2, N'Biến, kiểu dữ liệu và nhập xuất', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course7', 3, N'Cấu trúc điều kiện và lặp', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course8
+('Course8', 1, N'Luyện phát âm tiếng Anh chuẩn', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course8', 2, N'Cấu trúc ngữ pháp nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course8', 3, N'Giao tiếp thực tế theo chủ đề', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course9
+('Course9', 1, N'Công dân với pháp luật', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course9', 2, N'Quyền và nghĩa vụ cơ bản', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course9', 3, N'Bài tập tình huống và tư duy pháp lý', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course11
+('Course11', 1, N'Giới thiệu chuyên đề Hóa 12', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course11', 2, N'Phản ứng oxi hóa khử', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course11', 3, N'Hướng dẫn luyện đề trắc nghiệm', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course12
+('Course12', 1, N'Lý thuyết dao động cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course12', 2, N'Dòng điện xoay chiều', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course12', 3, N'Sóng điện từ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course13
+('Course13', 1, N'Chiến thuật làm bài đọc hiểu', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course13', 2, N'Luyện đề ngữ pháp nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course13', 3, N'Cách chọn đáp án nhanh', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course14
+('Course14', 1, N'Cơ sở di truyền học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course14', 2, N'Bài tập phả hệ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course14', 3, N'Tổng hợp lý thuyết di truyền nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course15
+('Course15', 1, N'Phân tích thơ hiện đại', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course15', 2, N'Cảm thụ tác phẩm tự sự', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course15', 3, N'Tổng hợp các phương pháp đọc hiểu', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course16
+('Course16', 1, N'Khái quát Việt Nam thế kỷ XX', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course16', 2, N'Các cuộc kháng chiến chống Pháp và Mỹ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course16', 3, N'Việt Nam thời kỳ đổi mới', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course17
+('Course17', 1, N'Word căn bản và nâng cao', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course17', 2, N'Excel trong thống kê dữ liệu', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course17', 3, N'PowerPoint trình bày chuyên nghiệp', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course18
+('Course18', 1, N'Nguyên lý kỹ thuật nuôi trồng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course18', 2, N'Ứng dụng công nghệ sinh học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course18', 3, N'Phát triển bền vững trong sản xuất', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course19
+('Course19', 1, N'Hàm số và đồ thị lớp 11', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course19', 2, N'Dãy số và quy nạp toán học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course19', 3, N'Phép biến hình và ứng dụng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4');
+
+
 
 
 
