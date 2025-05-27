@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "css/course-detail.css",
+      "AssetFile": "css/course-detail.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 14:03:26 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="
+        }
+      ]
+    },
+    {
+      "Route": "css/course-detail.l1zty8qbgi.css",
+      "AssetFile": "css/course-detail.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 14:03:26 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l1zty8qbgi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="
+        },
+        {
+          "Name": "label",
+          "Value": "css/course-detail.css"
+        }
+      ]
+    },
+    {
       "Route": "css/login.css",
       "AssetFile": "css/login.css",
       "Selectors": [],

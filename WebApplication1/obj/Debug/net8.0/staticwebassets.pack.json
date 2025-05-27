@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Image\\Logo.png"
     },
     {
+      "Id": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+      "PackagePath": "staticwebassets\\css\\course-detail.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
