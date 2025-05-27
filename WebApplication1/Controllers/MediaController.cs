@@ -55,6 +55,38 @@ namespace WebApplication1.Controllers
             }
             return View();
         }
+//      Dành cho học sinh
+        [HttpPost]
+        public async Task<IActionResult> UploadStudentAvatar(IFormFile file, string maHocSinh)
+        {
+            try
+            {
+                if (file != null && file.Length > 0)
+                {
+                    var avatarUrl = await _cloudinaryService.UploadFileAsync(file, CloudinaryService.UploadType.Avatar);
+                    var student = await _context.HocSinhs.FindAsync(maHocSinh);
+                    if (student != null)
+                    {
+                        student.DuongDanAnhDaiDien = avatarUrl;
+                        await _context.SaveChangesAsync();
+                        TempData["Message"] = "Upload ảnh đại diện thành công!";
+                    }
+                    else
+                    {
+                        TempData["Message"] = "Không tìm thấy giáo viên.";
+                    }
+                }
+                else
+                {
+                    TempData["Message"] = "Vui lòng chọn file để upload.";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = $"Lỗi: {ex.Message}";
+            }
+            return View();
+        }
 
         // Upload ảnh khóa học
         [HttpGet]
