@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\" />
     <Folder Include="Areas\Admin\Views\GiaoViens\" />
-    <Folder Include="Areas\Student\Services\" />
   </ItemGroup>
 
   <ItemGroup>

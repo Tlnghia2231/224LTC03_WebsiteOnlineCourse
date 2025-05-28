@@ -79,6 +79,27 @@ CREATE TABLE dbo.HocSinh (
 );
 GO
 
+CREATE TABLE dbo.GioHang (
+    MaGioHang   NVARCHAR(30)     NOT NULL PRIMARY KEY,         -- VD: Cart_Student001
+    MaHocSinh   NVARCHAR(20)     NOT NULL,              -- Mỗi học sinh chỉ có 1 giỏ hàng
+    NgayTao     DATETIME        NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT FK_GioHang_HocSinh
+		FOREIGN KEY (MaHocSinh) REFERENCES dbo.HocSinh(MaHocSinh)
+        ON UPDATE CASCADE ON DELETE CASCADE
+);
+GO
+
+CREATE TABLE dbo.ChiTietGioHang (
+    MaGioHang   NVARCHAR(30)     NOT NULL,
+    MaKhoaHoc   NVARCHAR(20)     NOT NULL,
+    NgayThem    DATETIME        NOT NULL DEFAULT GETDATE(),
+    PRIMARY KEY (MaGioHang, MaKhoaHoc),
+    FOREIGN KEY (MaGioHang) REFERENCES dbo.GioHang(MaGioHang)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (MaKhoaHoc) REFERENCES dbo.KhoaHoc(MaKhoaHoc)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+GO
 
 
 CREATE TABLE dbo.KhoaHoc_HocSinh (
@@ -138,29 +159,50 @@ BEGIN
 
     DECLARE @MaxID INT;
 
-    -- Tìm số lớn nhất hiện tại từ MaHocSinh
+    -- Lấy số thứ tự lớn nhất hiện tại
     SELECT @MaxID = MAX(CAST(SUBSTRING(MaHocSinh, 8, LEN(MaHocSinh) - 7) AS INT))
     FROM dbo.HocSinh
     WHERE ISNUMERIC(SUBSTRING(MaHocSinh, 8, LEN(MaHocSinh) - 7)) = 1;
 
     SET @MaxID = ISNULL(@MaxID, 0);
 
-    -- Gán số thứ tự tăng dần cho từng dòng inserted
-    ;WITH InsertedWithIndex AS (
-        SELECT *,
-               ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS RowNum
-        FROM inserted
-    )
-    INSERT INTO dbo.HocSinh
-        (MaHocSinh, HoTen, PassHash, Email, DienThoai, NgaySinh, GioiTinh, DiaChi, NgayDangKy)
+    -- Table variable để chứa học sinh mới và dùng lại
+    DECLARE @NewStudents TABLE (
+        MaHocSinh NVARCHAR(20),
+        HoTen NVARCHAR(200),
+        PassHash VARCHAR(MAX),
+        DuongDanAnhDaiDien NVARCHAR(1000),
+        Email NVARCHAR(200),
+        DienThoai NVARCHAR(50),
+        NgaySinh DATE,
+        GioiTinh NVARCHAR(10),
+        DiaChi NVARCHAR(500)
+    );
 
+    -- Tạo danh sách học sinh mới và chèn vào bảng tạm
+    INSERT INTO @NewStudents (MaHocSinh, HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai, NgaySinh, GioiTinh, DiaChi)
     SELECT
-        'Student' + CAST(@MaxID + i.RowNum AS VARCHAR),
-        i.HoTen, i.PassHash, i.Email, i.DienThoai, i.NgaySinh, i.GioiTinh, i.DiaChi,
+        'Student' + CAST(@MaxID + ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS VARCHAR),
+        HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai, NgaySinh, GioiTinh, DiaChi
+    FROM inserted;
+
+    -- Thêm vào bảng HocSinh
+    INSERT INTO dbo.HocSinh (MaHocSinh, HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai, NgaySinh, GioiTinh, DiaChi, NgayDangKy)
+    SELECT
+        MaHocSinh, HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai, NgaySinh, GioiTinh, DiaChi, GETDATE()
+    FROM @NewStudents;
+
+    -- Tạo giỏ hàng tương ứng
+    INSERT INTO dbo.GioHang (MaGioHang, MaHocSinh, NgayTao)
+    SELECT
+        'Cart_' + MaHocSinh,
+        MaHocSinh,
         GETDATE()
-    FROM InsertedWithIndex AS i;
+    FROM @NewStudents;
 END;
 GO
+
+
 
 -- 6. Trigger INSTEAD OF INSERT cho KhoaHoc
 CREATE TRIGGER trg_KhoaHoc_InsteadOfInsert
@@ -653,7 +695,9 @@ INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo) VALUES
 
 
 
-
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course9', 'Student2')
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course5', 'Student2')
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course11', 'Student2')
 
 CREATE TABLE Admin(
 	MaAdmin				NVARCHAR(20)   NOT NULL PRIMARY KEY,  -- StudentXXX
@@ -674,12 +718,49 @@ SELECT * FROM KhoaHoc
 ORDER BY CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT) ASC;
 
 select * from HocSinh
-select * from KhoaHoc
 select * from KhoaHoc_HocSinh
 select * from MucTieuKhoaHoc
 select * from YeuCauKhoaHoc
-delete HocSinh
+
 
 update HocSinh set DuongDanAnhDaiDien = 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg' where MaHocSinh = 'Student3'
 
 
+INSERT INTO Admin (
+    MaAdmin, 
+    HoTen, 
+    PassHash, 
+    DuongDanAnhDaiDien, 
+    Email, 
+    DienThoai
+)
+VALUES (
+    'Admin001',                                                        -- MaAdmin: ID duy nhất cho admin
+    N'Admin',                                         -- HoTen: Tên của admin
+    'AQAAAAIAAYagAAAAEPBTMAOrkabgrzzyPWbupIoCW+A3XEkgDYhkECpIKh+I4MXb/bfXzmvY1cqAtjDA6Q==', -- PassHash: Mật khẩu ĐÃ ĐƯỢC HASH AN TOÀN cho admin này
+    'https://res.cloudinary.com/your_cloud_name/image/upload/default_admin_avatar.png', -- DuongDanAnhDaiDien: URL ảnh đại diện (hoặc NULL nếu cho phép)
+    'admin_chinh@example.com',                                         -- Email: Email của admin
+    '0123456789'                                                    -- DienThoai: Số điện thoại (hoặc NULL)
+
+);
+-- sodienthoai: 0123456789 matkhau: 12345
+
+insert into HocSinh (HoTen, PassHash, DuongDanAnhDaiDien, Email, DienThoai) 
+values (N'Trần Lâm Nghĩa', 'AQAAAAIAAYagAAAAEDcREY4W4mW7mJGN9DbzaVmBbvdazuKXQXVjTwBTf0fBsGXQcvU3MrOrFJKtCM+p+Q==', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg' ,'sdgsdfa@gmail.com', '1353213325');
+
+select * from GioHang
+select * from KhoaHoc_HocSinh where MaHocSinh = 'Student2'
+select * from ChiTietGioHang
+SELECT * FROM KhoaHoc
+ORDER BY CAST(SUBSTRING(MaKhoaHoc, 7, LEN(MaKhoaHoc) - 6) AS INT) ASC;
+
+
+
+
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course4')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course6')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course7')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course13')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course14')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course15')
+insert into ChiTietGioHang (MaGioHang, MaKhoaHoc) VALUES ('Cart_Student2', 'Course16')

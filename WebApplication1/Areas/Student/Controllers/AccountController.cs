@@ -5,6 +5,7 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using WebApplication1.Models;
+using WebApplication1.Models.VNPay;
 using WebApplication1.Services;
 
 namespace WebApplication1.Areas.Student.Controllers
@@ -16,12 +17,14 @@ namespace WebApplication1.Areas.Student.Controllers
         private readonly ILogger<AccountController> _logger;
         private readonly AppDbContext _context;
         private readonly CloudinaryService _cloudinaryService;
+        private readonly IVNPayService _vnPayService;
 
-        public AccountController(ILogger<AccountController> logger, AppDbContext context, CloudinaryService cloudinaryService)
+        public AccountController(ILogger<AccountController> logger, AppDbContext context, CloudinaryService cloudinaryService, IVNPayService vnPayService)
         {
             _logger = logger;
             _context = context;
             _cloudinaryService = cloudinaryService;
+            _vnPayService = vnPayService;
         }
 
         [HttpGet]

@@ -19,33 +19,19 @@ body {
     margin: 0 auto;
 }
 
-/* Back Button */
-.back-button-container {
-    margin-bottom: 1.5rem;
-}
-
-.back-button {
+/* Back Link */
+.back-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: #2563eb;
-    color: white;
+    font-size: 0.875rem;
+    color: #2563eb;
+    margin-bottom: 2rem;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
 }
 
-    .back-button:hover {
-        background: #1d4ed8;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    }
-
-    .back-button i {
-        font-size: 0.875rem;
+    .back-link:hover {
+        text-decoration: underline;
     }
 
 /* Course Info Header */

@@ -16,11 +16,6 @@
     <section class="page-header">
         <div class="container">
             <div class="page-header-content">
-                <div class="breadcrumb">
-                    <a href="index.html">Trang chủ</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Khóa học của tôi</span>
-                </div>
                 <h1>Khóa học của tôi</h1>
                 <p>Tiếp tục hành trình học tập và theo dõi tiến độ của bạn</p>
             </div>
@@ -107,10 +102,9 @@
     <section class="my-courses">
         <div class="container">
             <div class="courses-grid">
-                <!-- Course 1 - In Progress -->
                 @foreach (var course in Model.FeaturedCourses)
                 {
-                    <div class="my-course-card" data-status="in-progress" data-id="@course.MaKhoaHoc">
+                    <div class="my-course-card" data-status="in-progress" >
                         <div class="course-thumbnail">
                             <img src="@course.DuongDanAnhKhoaHoc" alt="">
                         </div>
@@ -123,8 +117,8 @@
                                     <span>@course.ThoiHan Ngày</span>
                                 </div>
                             </div>
-                            <div class="course-actions">
-                                <a href="course-player.html" class="btn btn-primary">
+                            <div class="course-actions" data-id="@course.MaKhoaHoc">
+                                <a class="btn btn-primary">
                                     <i class="fas fa-play"></i>
                                     Tiếp tục học
                                 </a>
@@ -151,7 +145,7 @@
 </main>
 
 <script>
-    const courseCards = document.querySelectorAll('.my-course-card');
+    const courseCards = document.querySelectorAll('.course-actions');
     courseCards.forEach(card => {
         card.addEventListener('click', function (e) {
             e.preventDefault();
