@@ -653,7 +653,9 @@ INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo) VALUES
 
 
 
-
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course9', 'Student2')
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course5', 'Student2')
+INSERT INTO KhoaHoc_HocSinh(MaKhoaHoc, MaHocSinh) VALUES ('Course11', 'Student2')
 
 CREATE TABLE Admin(
 	MaAdmin				NVARCHAR(20)   NOT NULL PRIMARY KEY,  -- StudentXXX

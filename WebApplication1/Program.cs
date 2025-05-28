@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using WebApplication1.Areas.Student.Middleware;
+using WebApplication1.Areas.Student.Services;
 using WebApplication1.Models;
 using WebApplication1.Services;
 
@@ -33,6 +34,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/access-denied"; // Trang khi không có quyền truy cập
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Thời gian hết hạn của cookie
     });
+
+builder.Services.AddLogging(logging =>
+{
+    logging.AddConsole();
+    logging.AddDebug();
+    logging.SetMinimumLevel(LogLevel.Debug);
+});
+
+builder.Services.AddScoped<ICartStudent, ItemCartStudentService>();
+builder.Services.AddScoped<IVNPayService, VNPayService>();
 
 // Thêm Authorization
 builder.Services.AddAuthorization();
