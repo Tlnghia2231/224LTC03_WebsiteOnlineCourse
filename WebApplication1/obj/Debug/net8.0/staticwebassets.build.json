@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SMkHNXX9GSXzoz/MkIlYQ0YyomU67A/f0N0Njf8tKks=",
+  "Hash": "aOTQ/wQYK9nv2ymHSl5FLNmnV2SwnVoCRrNs08ayV+E=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\course-detail.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\lessonPlayer.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "css/lessonPlayer#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bo0tpav95i",
+      "Integrity": "VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\lessonPlayer.css"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\login.css",
@@ -1567,6 +1588,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-V8fh7QqKEQr7N/MVyfxzRQFrbeuZiyzOMefOEmMidAE="
+        }
+      ]
+    },
+    {
+      "Route": "css/lessonPlayer.bo0tpav95i.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\lessonPlayer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 05:53:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bo0tpav95i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/lessonPlayer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU="
+        }
+      ]
+    },
+    {
+      "Route": "css/lessonPlayer.css",
+      "AssetFile": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\lessonPlayer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 05:53:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU="
         }
       ]
     },
@@ -7087,7 +7190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7132,7 +7235,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7177,7 +7280,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7214,7 +7317,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         },
         {
           "Name": "Cache-Control",
