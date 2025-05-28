@@ -111,6 +111,38 @@ namespace WebApplication1.Services
 
             return uploadResult.SecureUrl.ToString();
         }
+        public async Task DeleteFileAsync(string fileUrl)
+        {
+            if (string.IsNullOrEmpty(fileUrl))
+            {
+                return;
+            }
+            var uri = new Uri(fileUrl);
+            var lastSegment = uri.Segments.LastOrDefault();
 
+            if (string.IsNullOrEmpty(lastSegment))
+            {
+                return;
+            }
+            var publicId = Path.GetFileNameWithoutExtension(lastSegment);
+            var resourceType = ResourceType.Video; 
+            if (fileUrl.Contains("/image/upload/"))
+            {
+                resourceType = ResourceType.Image;
+            }
+            else if (fileUrl.Contains("/raw/upload/"))
+            {
+                resourceType = ResourceType.Raw;
+            }
+            var deletionParams = new DeletionParams(publicId)
+            {
+                ResourceType = resourceType
+            };
+            var result = await _cloudinary.DestroyAsync(deletionParams);
+            if (result.Result != "ok")
+            {
+                throw new Exception($"Không thể xóa file trên Cloudinary. Lý do: {result.Error?.Message}");
+            }
+        }
     }
 }

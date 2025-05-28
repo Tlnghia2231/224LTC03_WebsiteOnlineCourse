@@ -241,7 +241,7 @@ namespace WebApplication1.Controllers
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
-                return RedirectToAction("Index", "Home", new { area = "Admin" });
+                return RedirectToAction("Dashboard", "Admin", new { area = "Admin" });
             }
 
             ModelState.AddModelError("", "Loại người dùng không hợp lệ.");
