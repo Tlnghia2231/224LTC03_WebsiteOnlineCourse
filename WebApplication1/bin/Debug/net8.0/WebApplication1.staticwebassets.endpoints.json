@@ -193,7 +193,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         }
       ],
       "EndpointProperties": [
@@ -238,7 +238,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 09:27:00 GMT"
+          "Value": "Wed, 28 May 2025 07:30:50 GMT"
         }
       ],
       "EndpointProperties": [
@@ -327,6 +327,88 @@
         {
           "Name": "label",
           "Value": "css/course-detail.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/lessonPlayer.bo0tpav95i.css",
+      "AssetFile": "css/lessonPlayer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 05:53:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bo0tpav95i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU="
+        },
+        {
+          "Name": "label",
+          "Value": "css/lessonPlayer.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/lessonPlayer.css",
+      "AssetFile": "css/lessonPlayer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 05:53:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQaw6HuiA3yQQ8tnZaCubyy5NsFfOYdg/qrR1oMR9EU="
         }
       ]
     },

@@ -48,7 +48,6 @@ namespace WebApplication1.Areas.Student.Controllers
         [Route("/student/coursedetail/{id}")]
         public async Task<IActionResult> CourseDetail(string id)
         {
-            // Tìm khóa học theo MaKhoaHoc
             var course = await _context.KhoaHocs
                 .Include(c => c.MaGiaoVienNavigation)
                 .Include(c => c.MucTieuKhoaHocs)

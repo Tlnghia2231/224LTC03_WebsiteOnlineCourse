@@ -1,4 +1,5 @@
 wwwroot\css\course-detail.css
+wwwroot\css\lessonPlayer.css
 wwwroot\css\login.css
 wwwroot\css\my-learning.css
 wwwroot\css\profile.css
