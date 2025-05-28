@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using WebApplication1.Areas.Student.Middleware;
+using WebApplication1.Areas.Student.Services;
 using WebApplication1.Models;
 using WebApplication1.Services;
 
@@ -20,6 +21,8 @@ builder.Services.AddSingleton<Cloudinary>(provider =>
     return new Cloudinary(new Account(settings.CloudName, settings.ApiKey, settings.ApiSecret));
 });
 builder.Services.AddScoped<CloudinaryService>();
+builder.Services.AddScoped<ICartStudent, ItemCartStudentService>();
+builder.Services.AddScoped<IVNPayService, VNPayService>();
 // Cấu hình DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

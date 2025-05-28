@@ -10,7 +10,19 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f8fafc;
+    flex-direction: column;
+    height: 100%;
 }
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Chiều cao tối thiểu là toàn bộ viewport */
+}
+
+    .site-wrapper main {
+        flex: 1 0 auto; /* Cho phép main co giãn, nhưng không co nhỏ hơn nội dung */
+    }
 
 .container {
     max-width: 1200px;

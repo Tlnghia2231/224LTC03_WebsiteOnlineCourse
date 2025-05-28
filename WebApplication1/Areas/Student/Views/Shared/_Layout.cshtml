@@ -26,7 +26,7 @@
                 </nav>
 
                 <div class="header-actions">
-                    <a href="/student/cart" class="icon-button cart-button">
+                    <a href="/student/mycart" class="icon-button cart-button">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="sr-only">Giỏ hàng</span>
                     </a>
@@ -101,22 +101,24 @@
         </div>
     </header>
 
-    <main>
-        @RenderBody()
-    </main>
+    <div class="site-wrapper">
+        <main>
+            @RenderBody()
+        </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">© 2025 EduLearn. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="terms.html">Terms</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="contact.html">Contact</a>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p class="copyright">© 2025 EduLearn. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="~/js/LayoutStudent.js"></script>
 </body>
