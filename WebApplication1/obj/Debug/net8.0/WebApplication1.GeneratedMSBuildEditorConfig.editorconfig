@@ -34,7 +34,15 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBY2NvdW50XFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [C:/Users/ASUS/Desktop/v5/224LTC03_WebsiteOnlineCourse/WebApplication1/Areas/Student/Views/Course/CourseDetail.cshtml]
+=======
+[C:/Users/admin/Desktop/224LTC03_WebsiteOnlineCourse/224LTC03_WebsiteOnlineCourse/224LTC03_WebsiteOnlineCourse/WebApplication1/Areas/Student/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xDYXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/224LTC03_WebsiteOnlineCourse/224LTC03_WebsiteOnlineCourse/224LTC03_WebsiteOnlineCourse/WebApplication1/Areas/Student/Views/Course/CourseDetail.cshtml]
+>>>>>>> Stashed changes
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xDb3Vyc2VcQ291cnNlRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 

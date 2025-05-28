@@ -13,7 +13,15 @@
       "PackagePath": "staticwebassets\\Image\\Logo.png"
     },
     {
+<<<<<<< Updated upstream
       "Id": "C:\\Users\\ASUS\\Desktop\\v5\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+=======
+      "Id": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Desktop\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\224LTC03_WebsiteOnlineCourse\\WebApplication1\\wwwroot\\css\\course-detail.css",
+>>>>>>> Stashed changes
       "PackagePath": "staticwebassets\\css\\course-detail.css"
     },
     {
