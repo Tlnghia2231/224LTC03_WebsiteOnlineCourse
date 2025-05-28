@@ -762,3 +762,10 @@
         gap: 0.5rem;
     }
 }
+
+.btn-in-cart, .btn-in-course {
+    background-color: white !important;
+    color: #007bff !important; /* Chữ màu xanh */
+    border: 1px solid #007bff !important;
+    cursor: not-allowed;
+}

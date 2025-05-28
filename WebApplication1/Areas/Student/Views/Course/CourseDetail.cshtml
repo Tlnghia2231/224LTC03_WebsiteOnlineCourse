@@ -65,10 +65,25 @@
                     </div>
                     <div class="course-card-content">
                         <div class="course-price">@Model.Course.GiaKhoaHoc.ToString("N0")đ</div>
-                        <button class="btn btn-primary btn-block">
-                            <i class="fas fa-shopping-cart"></i>
-                            Thêm Vào Giỏ
-                        </button>
+                        @if (Model.InCourse == "false")
+                        {
+                            <button class="btn btn-primary btn-block btn-add-to-cart" data-ma-khoa-hoc="@Model.Course.MaKhoaHoc">
+                                <i class="fas fa-shopping-cart"></i>
+                                Thêm Vào Giỏ
+                            </button>
+                        }
+                        else if (Model.InCourse == "inYourCart")
+                        {
+                            <button class="btn btn-block btn-in-cart" disabled>
+                                Đã có trong giỏ hàng
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-block btn-in-course" disabled>
+                                Đã là khóa học của bạn
+                            </button>
+                        }
                         <div class="course-guarantees">
                             <p>Đảm Bảo Hoàn Tiền 30 Ngày</p>
                             <p>Truy Cập Trọn Đời</p>
@@ -193,6 +208,7 @@
     </section>
 </main>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const tabButtons = document.querySelectorAll(".tab-button");
@@ -222,6 +238,31 @@
 
                 if (courseId) {
                     window.location.href = `/student/coursedetail/${courseId}`;
+                }
+            });
+        });
+
+        $('.btn-add-to-cart').on('click', function () {
+            const maKhoaHoc = $(this).data('ma-khoa-hoc');
+
+            $.ajax({
+                url: '/student/addtocart',
+                type: 'POST',
+                data: { maKhoaHoc: maKhoaHoc },
+                success: function (response) {
+                    if (response.success) {
+                        $('.btn-add-to-cart')
+                            .removeClass('btn-primary btn-add-to-cart')
+                            .addClass('btn-in-cart')
+                            .prop('disabled', true)
+                            .html('Đã có trong giỏ hàng');
+                    } else {
+                        $('#errorAlert').text('Lỗi: ' + response.message).show();
+                    }
+                },
+                error: function (xhr, status, error) {
+                    let errorMessage = xhr.responseJSON?.message || 'Không thể thêm khóa học vào giỏ hàng.';
+                    $('#errorAlert').text('Lỗi: ' + errorMessage).show();
                 }
             });
         });
