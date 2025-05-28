@@ -110,20 +110,9 @@
                 <!-- Course 1 - In Progress -->
                 @foreach (var course in Model.FeaturedCourses)
                 {
-                    <div class="my-course-card" data-status="in-progress">
+                    <div class="my-course-card" data-status="in-progress" data-id="@course.MaKhoaHoc">
                         <div class="course-thumbnail">
                             <img src="@course.DuongDanAnhKhoaHoc" alt="">
-                            @* <div class="course-progress-overlay"> *@
-                            @*     <div class="progress-circle"> *@
-                            @*         <svg class="progress-ring" width="60" height="60"> *@
-                            @*             <circle class="progress-ring-circle" stroke="#2563eb" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" style="stroke-dasharray: 163.36; stroke-dashoffset: 65.34;" /> *@
-                            @*         </svg> *@
-                            @*         <span class="progress-text">60%</span> *@
-                            @*     </div> *@
-                            @* </div> *@
-                            @* <button class="wishlist-btn active"> *@
-                            @*     <i class="fas fa-heart"></i> *@
-                            @* </button> *@
                         </div>
                         <div class="course-info">
                             <div class="course-category">@course.MonHoc</div>
@@ -139,10 +128,10 @@
                                     <i class="fas fa-play"></i>
                                     Tiếp tục học
                                 </a>
-                                <button class="btn btn-outline">
+                                <!--<button class="btn btn-outline">
                                     <i class="fas fa-download"></i>
                                     Tài liệu
-                                </button>
+                                </button>-->
                             </div>
                         </div>
                     </div>
@@ -159,42 +148,15 @@
         </div>
     </section>
 
-    <!--
-    <section class="recent-activity">
-        <div class="container">
-            <h2>Hoạt động gần đây</h2>
-            <div class="activity-list">
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h4>Hoàn thành bài học "Phương trình bậc hai"</h4>
-                        <p>Toán học THPT - Hình học không gian</p>
-                        <span class="activity-time">2 giờ trước</span>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h4>Nhận chứng chỉ hoàn thành khóa học</h4>
-                        <p>Vật lý THPT - Cơ học</p>
-                        <span class="activity-time">1 ngày trước</span>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="activity-content">
-                        <h4>Thêm vào danh sách yêu thích</h4>
-                        <p>Hóa học THPT - Hóa vô cơ</p>
-                        <span class="activity-time">3 ngày trước</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
 </main>
+
+<script>
+    const courseCards = document.querySelectorAll('.my-course-card');
+    courseCards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            e.preventDefault();
+            const courseId = card.getAttribute('data-id');
+            window.location.href = `/student/lessonplayer/${courseId}`;
+        });
+    });
+</script>
