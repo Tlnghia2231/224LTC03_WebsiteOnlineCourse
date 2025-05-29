@@ -1,4 +1,5 @@
-﻿using CloudinaryDotNet;
+﻿using System.Security.Claims;
+using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,8 @@ namespace WebApplication1.Areas.Student.Controllers
         [Route("/student/coursedetail/{id}")]
         public async Task<IActionResult> CourseDetail(string id)
         {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
             var course = await _context.KhoaHocs
                 .Include(c => c.MaGiaoVienNavigation)
                 .Include(c => c.MucTieuKhoaHocs)
@@ -75,12 +78,42 @@ namespace WebApplication1.Areas.Student.Controllers
                 "Chứng chỉ hoàn thành"
             };
 
+            string inCourse = "false";
+            if (!string.IsNullOrEmpty(userId))
+            {
+                var isInYourCourse = await _context.KhoaHocHocSinhs
+            .AnyAsync(khhs => khhs.MaHocSinh == userId && khhs.MaKhoaHoc == id);
+
+                if (isInYourCourse)
+                {
+                    inCourse = "inYourCourse";
+                }
+                else
+                {
+                    var gioHang = await _context.GioHangs
+                        .FirstOrDefaultAsync(gh => gh.MaHocSinh == userId);
+
+                    if (gioHang != null)
+                    {
+                        var query = _context.ChiTietGioHangs
+                            .Where(ctgh => ctgh.MaGioHang == gioHang.MaGioHang && ctgh.MaKhoaHoc == id);
+                        var inCart = await query.AnyAsync();
+
+                        if (inCart)
+                        {
+                            inCourse = "inYourCart";
+                        }
+                    }
+                }
+            }
+
             // Tạo view model
             var viewModel = new CoursePageViewModel
             {
                 Course = course,
                 RelatedCourses = relatedCourses,
-                Includes = includes
+                Includes = includes,
+                InCourse = inCourse
             };
 
             return View(viewModel);
