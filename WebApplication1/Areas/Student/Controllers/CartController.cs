@@ -201,7 +201,7 @@ namespace WebApplication1.Areas.Student.Controllers
             try
             {
                 var maHocSinh = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
+            
                 var gioHang = await _context.GioHangs
                     .FirstOrDefaultAsync(gh => gh.MaHocSinh == maHocSinh);
 
