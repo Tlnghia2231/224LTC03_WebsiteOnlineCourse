@@ -122,6 +122,7 @@ namespace WebApplication1.Controllers
                 var imageUrl = _cloudinaryService.UploadImage(AnhKhoaHoc);
                 khoaHoc.DuongDanAnhKhoaHoc = imageUrl;
             }
+            ModelState.Remove(nameof(KhoaHoc.MaGiaoVienNavigation));
             if (ModelState.IsValid)
             {
                 _context.Add(khoaHoc);
