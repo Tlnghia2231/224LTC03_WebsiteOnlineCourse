@@ -25,6 +25,8 @@ public partial class KhoaHoc
 
     public virtual ICollection<BaiHoc> BaiHocs { get; set; } = new List<BaiHoc>();
 
+    public virtual ICollection<ChiTietGioHang> ChiTietGioHangs { get; set; } = new List<ChiTietGioHang>();
+
     public virtual ICollection<KhoaHocHocSinh> KhoaHocHocSinhs { get; set; } = new List<KhoaHocHocSinh>();
 
     public virtual GiaoVien MaGiaoVienNavigation { get; set; } = null!;

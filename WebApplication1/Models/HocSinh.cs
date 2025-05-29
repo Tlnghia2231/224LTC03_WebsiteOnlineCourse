@@ -25,5 +25,7 @@ public partial class HocSinh
 
     public DateTime NgayDangKy { get; set; }
 
+    public virtual ICollection<GioHang> GioHangs { get; set; } = new List<GioHang>();
+
     public virtual ICollection<KhoaHocHocSinh> KhoaHocHocSinhs { get; set; } = new List<KhoaHocHocSinh>();
 }

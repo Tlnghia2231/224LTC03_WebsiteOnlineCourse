@@ -15,10 +15,14 @@
 <main class="lesson-player">
     <!-- Back Button -->
     <div class="back-button-container">
-        <a href="/student/mylearning" class="back-button">
-            <i class="fas fa-arrow-left"></i>
-            <span>Khóa học của tôi</span>
+        <a href="/student/mylearning" class="back-link">
+            <i class="fas fa-arrow-left"></i>Khóa học của tôi
+            
         </a>
+        @* <a href="@Url.Action("CoursePage", "Course")" class="back-link"> *@
+        @*     <i class="fas fa-arrow-left"></i> *@
+        @*     Quay lại Khóa Học *@
+        @* </a> *@
     </div>
 
     <!-- Course Info Header -->
@@ -35,7 +39,7 @@
         <!-- Video Player Section -->
         <div class="video-section">
             <div class="video-player">
-                <video id="lessonVideo" controls poster="https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4">
+                <video id="lessonVideo" controls poster="">
                     <source src="@Model.CurrentLesson.LinkVideo" type="video/mp4">
                     <p>Trình duyệt của bạn không hỗ trợ video HTML5.</p>
                 </video>
