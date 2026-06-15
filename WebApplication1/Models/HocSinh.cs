@@ -9,6 +9,10 @@ public partial class HocSinh
 
     public string HoTen { get; set; } = null!;
 
+    public string PassHash { get; set; } = null!;
+
+    public string? DuongDanAnhDaiDien { get; set; }
+
     public string Email { get; set; } = null!;
 
     public string? DienThoai { get; set; }
@@ -20,6 +24,8 @@ public partial class HocSinh
     public string? DiaChi { get; set; }
 
     public DateTime NgayDangKy { get; set; }
+
+    public virtual ICollection<GioHang> GioHangs { get; set; } = new List<GioHang>();
 
     public virtual ICollection<KhoaHocHocSinh> KhoaHocHocSinhs { get; set; } = new List<KhoaHocHocSinh>();
 }
