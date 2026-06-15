@@ -1,6 +1,15 @@
+wwwroot\css\course-detail.css
+wwwroot\css\lessonPlayer.css
+wwwroot\css\login.css
+wwwroot\css\myCart.css
+wwwroot\css\my-learning.css
+wwwroot\css\profile.css
 wwwroot\css\site.css
 wwwroot\css\styleStudent.css
 wwwroot\favicon.ico
+wwwroot\Image\HomePageWelcome.png
+wwwroot\Image\Logo.png
+wwwroot\js\LayoutStudent.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
