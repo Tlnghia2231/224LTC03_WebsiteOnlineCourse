@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="admin-dashboard-page" style="padding-top: 40px; padding-bottom: 60px; background: #f8f9fa; min-height: calc(100vh - 70px);">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2>Bảng Điều Khiển Quản Trị</h2>
+                    <p>Tổng quan hệ thống đào tạo EduLearn</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats Grid -->
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 40px;">
+                <!-- Courses Stats -->
+                <div class="stat-card" style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; display: flex; align-items: center; gap: 20px;">
+                    <div style="background: #e0f2fe; color: #0284c7; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.9rem; color: #666; font-weight: 500;">Tổng số khóa học</span>
+                        <h3 id="statCourses" style="margin: 5px 0 0 0; font-size: 1.8rem; font-weight: 700; color: #1e293b;">0</h3>
+                    </div>
+                </div>
+
+                <!-- Students Stats -->
+                <div class="stat-card" style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; display: flex; align-items: center; gap: 20px;">
+                    <div style="background: #dcfce7; color: #15803d; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.9rem; color: #666; font-weight: 500;">Học sinh đăng ký</span>
+                        <h3 id="statStudents" style="margin: 5px 0 0 0; font-size: 1.8rem; font-weight: 700; color: #1e293b;">0</h3>
+                    </div>
+                </div>
+
+                <!-- Teachers Stats -->
+                <div class="stat-card" style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; display: flex; align-items: center; gap: 20px;">
+                    <div style="background: #fef9c3; color: #a16207; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.9rem; color: #666; font-weight: 500;">Giáo viên giảng dạy</span>
+                        <h3 id="statTeachers" style="margin: 5px 0 0 0; font-size: 1.8rem; font-weight: 700; color: #1e293b;">0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management Sections Navigation -->
+            <h3 style="margin-bottom: 20px; font-weight: 600;">Danh mục quản lý</h3>
+            <div class="management-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <!-- Course Manager Link -->
+                <div class="manager-card" style="background: white; border: 1px solid #eee; border-radius: 12px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px;">
+                    <div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 1.25rem; font-weight: 600;"><i class="fas fa-edit" style="color: var(--primary-color);"></i> Quản Lý Khóa Học</h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem; line-height: 1.5;">Thêm, sửa, xóa các khóa học trong hệ thống, cập nhật học phí và thay đổi giáo viên phụ trách.</p>
+                    </div>
+                    <a href="/admin/courses.html" class="btn btn-outline" style="margin-top: 20px; text-align: center; border-color: var(--primary-color); color: var(--primary-color);">Truy cập quản lý</a>
+                </div>
+
+                <!-- Teacher Manager Link -->
+                <div class="manager-card" style="background: white; border: 1px solid #eee; border-radius: 12px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px;">
+                    <div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 1.25rem; font-weight: 600;"><i class="fas fa-users-cog" style="color: var(--primary-color);"></i> Quản Lý Giáo Viên</h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem; line-height: 1.5;">Quản lý hồ sơ giảng viên, thêm tiểu sử, số điện thoại, email và upload ảnh chân dung giảng viên.</p>
+                    </div>
+                    <a href="/admin/teachers.html" class="btn btn-outline" style="margin-top: 20px; text-align: center; border-color: var(--primary-color); color: var(--primary-color);">Truy cập quản lý</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Khóa học - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/course-detail.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="course-detail-page">
+        <!-- Hero section -->
+        <section class="course-hero" style="background: #1e293b; color: white; padding: 50px 0;">
+            <div class="container" style="display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                <div class="hero-left" style="flex: 1; min-width: 320px;" id="courseHeroInfo">
+                    <!-- Loaded dynamically -->
+                    <div class="loading">Đang tải thông tin khóa học...</div>
+                </div>
+                <div class="hero-right" style="width: 360px;" id="courseImagePreview">
+                    <!-- Image will render here for mobile preview, though main actions will reside in the sticky card -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content area -->
+        <div class="container" style="padding-top: 40px; padding-bottom: 60px; display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+            <div class="detail-main-content" style="flex: 1; min-width: 320px;">
+                <!-- Những gì bạn sẽ học -->
+                <section class="learning-objectives" style="background: #f8f9fa; border: 1px solid #eee; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                    <h3 style="margin-top: 0; margin-bottom: 15px;">Những gì bạn sẽ học</h3>
+                    <ul id="objectivesList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding: 0;">
+                        <!-- Populate dynamically -->
+                    </ul>
+                </section>
+
+                <!-- Lộ trình khóa học -->
+                <section class="course-syllabus" style="margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 15px;">Nội dung khóa học</h3>
+                    <div class="syllabus-stats" style="margin-bottom: 15px; color: #666; font-size: 0.9rem;" id="syllabusStats">
+                        <!-- Loaded dynamically -->
+                    </div>
+                    <div class="lesson-list" id="lessonsList" style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </section>
+
+                <!-- Yêu cầu -->
+                <section class="course-requirements" style="margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 15px;">Yêu cầu</h3>
+                    <ul id="requirementsList" style="list-style-type: disc; padding-left: 20px; color: #444;">
+                        <!-- Populate dynamically -->
+                    </ul>
+                </section>
+
+                <!-- Giới thiệu giáo viên -->
+                <section class="teacher-profile" style="margin-bottom: 30px;" id="teacherProfileSection">
+                    <!-- Loaded dynamically -->
+                </section>
+            </div>
+
+            <!-- Sticky Cart Sidebar -->
+            <aside class="detail-sidebar" style="width: 360px; background: white; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 25px; position: sticky; top: 100px; z-index: 10;" id="purchaseCard">
+                <!-- Loaded dynamically -->
+                <div class="loading">Đang tải...</div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/course-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Đăng Ký Tài Khoản</h1>
+                    <p>Đồng hành cùng EduLearn trên con đường chinh phục tương lai</p>
+                </div>
+                
+                <div id="errorMessage" class="alert alert-danger" style="display: none; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.85rem; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;"></div>
+
+                <form id="signupForm" class="auth-form" method="POST">
+                    <!-- Mặc định đăng ký Học sinh -->
+                    <input type="radio" name="UserType" value="student" checked style="display: none;">
+
+                    <!-- Họ và Tên đệm, Tên -->
+                    <div style="display: flex; gap: 15px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="LastName">Họ và Tên lót</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="LastName" class="form-control" name="LastName" placeholder="Nguyễn Văn" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="FirstName">Tên</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="FirstName" class="form-control" name="FirstName" placeholder="A" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="form-group">
+                        <label for="DienThoai">Số điện thoại</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-phone"></i>
+                            <input type="text" id="DienThoai" class="form-control" name="DienThoai" placeholder="Nhập số điện thoại" required>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="Email" class="form-control" name="Email" placeholder="example@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="form-group">
+                        <label for="Password">Mật khẩu</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="Password" class="form-control" name="Password" placeholder="Tối thiểu 6 ký tự" required>
+                            <button type="button" class="password-toggle" id="passwordToggle" style="background: none; border: none; cursor: pointer;">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Xác nhận mật khẩu -->
+                    <div class="form-group">
+                        <label for="ConfirmPassword">Xác nhận mật khẩu</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="ConfirmPassword" class="form-control" name="ConfirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            <button type="button" class="password-toggle" id="confirmPasswordToggle" style="background: none; border: none; cursor: pointer;">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span class="btn-text">Đăng Ký</span>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Đã có tài khoản? <a href="/signin.html">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/signup.js"></script>
+</body>
+</html>

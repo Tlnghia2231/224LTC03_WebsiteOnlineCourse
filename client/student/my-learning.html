@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/my-learning.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="my-learning-page" style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                <h2>Khóa học của tôi</h2>
+                <p>Tiếp tục hành trình chinh phục tri thức của bạn.</p>
+            </div>
+
+            <!-- Trạng thái thanh toán thành công hiển thị tại đây nếu có parameter trên URL -->
+            <div id="paymentSuccessAlert" class="alert alert-success" style="display: none; margin-bottom: 25px; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; padding: 15px; border-radius: 8px;">
+                <i class="fas fa-check-circle"></i> <strong>Thanh toán thành công!</strong> Khóa học mới đã được thêm vào kho học tập của bạn.
+            </div>
+
+            <div class="my-courses-container">
+                <div class="course-grid" id="myCoursesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
+                    <div class="loading">Đang tải danh sách khóa học...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/my-learning.js"></script>
+</body>
+</html>

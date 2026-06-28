@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Nền tảng học trực tuyến</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="badge">Hệ thống khóa học EduLearn</span>
+                        <h1>Bứt phá tri thức<br>Đón đầu tương lai</h1>
+                        <p>EduLearn mang đến các khóa học trực tuyến chuyên sâu, giúp học sinh THPT nắm vững kiến thức, rèn luyện tư duy và đạt thành tích xuất sắc trong học tập. Đồng hành cùng bạn trên con đường chinh phục tương lai!</p>
+                        <div class="hero-buttons">
+                            <a href="/courses.html" class="btn btn-primary">
+                                Xem Khóa Học <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="/Image/HomePageWelcome.png" alt="Học viên học trực tuyến">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Courses -->
+        <section class="featured-courses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Khóa Học Nổi Bật</h2>
+                    <p>Khám phá các khóa học phổ biến nhất của chúng tôi và bắt đầu hành trình học tập của bạn ngay hôm nay.</p>
+                </div>
+
+                <div class="course-grid" id="featuredCoursesGrid">
+                    <!-- Loaded dynamically -->
+                    <div class="loading">Đang tải danh sách khóa học...</div>
+                </div>
+
+                <div class="view-all">
+                    <a href="/courses.html" class="btn btn-outline">Xem Tất Cả Khóa Học</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Duyệt Theo Môn Học</h2>
+                    <p>Tìm khóa học hoàn hảo trong môn học bạn quan tâm.</p>
+                </div>
+                <div class="categories-grid" id="subjectsGrid">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Học Viên Nói Gì Về Chúng Tôi</h2>
+                    <p>Lắng nghe từ các học viên đã thay đổi sự nghiệp của họ với các khóa học của chúng tôi.</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://placehold.co/60x60" alt="Nguyễn Thị Hương" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h3>Nguyễn Thị Hương</h3>
+                                <p>Học sinh lớp 12 chuyên Toán</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Khóa học này đã giúp điểm số môn Toán của em cải thiện rõ rệt, từ mức trung bình khá lên điểm giỏi trong kỳ thi THPT Quốc gia!</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://placehold.co/60x60" alt="Trần Minh Tuấn" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h3>Trần Minh Tuấn</h3>
+                                <p>Học sinh lớp 11</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Bài giảng của các thầy cô cực kỳ chi tiết và dễ hiểu, video xem đi xem lại thoải mái kèm kho tài liệu ôn thi chất lượng.</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://placehold.co/60x60" alt="Lê Thị Minh Anh" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h3>Lê Thị Minh Anh</h3>
+                                <p>Học sinh lớp 12 chuyên Lý</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Lộ trình bài bản, có cả chứng nhận hoàn thành. Em rất thích cách sắp xếp video bài giảng của website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Sẵn Sàng Bắt Đầu Học?</h2>
+                    <p>Tham gia cùng hàng ngàn học viên và bắt đầu hành trình học tập của bạn ngay hôm nay.</p>
+                    <div class="cta-buttons">
+                        <a href="/courses.html" class="btn btn-light">Xem Khóa Học</a>
+                        <a href="/student/my-learning.html" class="btn btn-outline-light">Khóa Học Của Tôi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>

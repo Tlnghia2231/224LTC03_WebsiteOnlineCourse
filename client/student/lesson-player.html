@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học trực tuyến - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/lessonPlayer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="lesson-player-page">
+        <div class="player-container">
+            <!-- Nút quay lại khóa học của tôi -->
+            <div style="margin-bottom: 25px;">
+                <a href="/student/my-learning.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Quay lại khóa học của tôi
+                </a>
+            </div>
+
+            <!-- Grid bố cục hai cột -->
+            <div class="player-grid">
+                
+                <!-- Cột bên trái: Trình phát Video và Chi tiết bài học -->
+                <div class="left-column" style="display: flex; flex-direction: column; gap: 25px;">
+                    <!-- Khung Video Player -->
+                    <div class="video-container">
+                        <video id="lessonVideo" controls autoplay style="width: 100%; height: 100%; object-fit: contain;" src=""></video>
+                    </div>
+
+                    <!-- Thẻ Chi tiết bài học -->
+                    <div class="details-card">
+                        <div class="details-card-tab">Chi tiết bài học</div>
+                        <h3 id="lessonTitle">Đang tải bài giảng...</h3>
+                        <div class="details-meta">
+                            <p id="courseName"><strong>Tên khóa học:</strong> ...</p>
+                            <p id="instructorName"><strong>Giảng viên:</strong> ...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột bên phải: Danh sách bài học & Tài liệu đính kèm -->
+                <div class="right-column" style="display: flex; flex-direction: column; gap: 25px;">
+                    <!-- Thẻ Playlist danh sách bài học -->
+                    <div class="playlist-card">
+                        <div class="playlist-header">
+                            <h3 id="sidebarCourseTitle">Nội dung khóa học</h3>
+                            <i class="fas fa-chevron-down" style="font-size: 0.8rem; opacity: 0.8;"></i>
+                        </div>
+                        <div class="lessons-scroll-list" id="sidebarLessonsList">
+                            <!-- Nạp động bằng JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Thẻ Tài liệu học tập (Resources) -->
+                    <div class="resources-card">
+                        <div class="resources-title">Tài liệu học tập</div>
+                        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; padding: 20px 0; color: #64748b; font-size: 0.9rem;">
+                            <i class="fas fa-folder-open" style="font-size: 2rem; color: #cbd5e1; margin-bottom: 8px;"></i>
+                            <span>Không có tài liệu</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/lesson-player.js"></script>
+</body>
+</html>

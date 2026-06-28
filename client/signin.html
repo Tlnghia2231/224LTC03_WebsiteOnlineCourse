@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-card" id="authCard">
+                <div class="auth-header">
+                    <h1>Đăng Nhập</h1>
+                    <p>Đăng nhập tài khoản của bạn để tiếp tục học tập</p>
+                </div>
+                
+                <div id="errorMessage" class="alert alert-danger" style="display: none; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.85rem; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;"></div>
+
+                <form id="loginForm" class="auth-form" method="POST">
+                    <!-- Loại người dùng -->
+                    <div class="form-group">
+                        <label>Bạn là:</label>
+                        <div class="user-type-toggle" style="margin-top: 5px; margin-bottom: 5px;">
+                            <div class="toggle-container">
+                                <input type="radio" name="UserType" id="student" value="student" checked>
+                                <input type="radio" name="UserType" id="admin" value="admin">
+                                <div class="toggle-slider"></div>
+                                <label for="student" class="toggle-label">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Học sinh</span>
+                                </label>
+                                <label for="admin" class="toggle-label">
+                                    <i class="fas fa-user-shield"></i>
+                                    <span>Quản trị viên</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="form-group">
+                        <label for="DienThoai">Số điện thoại</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-phone"></i>
+                            <input type="text" id="DienThoai" class="form-control" name="DienThoai" placeholder="Nhập số điện thoại" required>
+                        </div>
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="form-group">
+                        <label for="Password">Mật khẩu</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="Password" class="form-control" name="Password" placeholder="Nhập mật khẩu" required>
+                            <button type="button" class="password-toggle" id="passwordToggle" style="background: none; border: none; cursor: pointer;">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ghi nhớ mật khẩu -->
+                    <div class="form-options">
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="RememberMe" name="RememberMe">
+                            <label for="RememberMe">Ghi nhớ đăng nhập</label>
+                        </div>
+                    </div>
+
+                    <!-- Nút đăng nhập -->
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span class="btn-text">Đăng Nhập</span>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Chưa có tài khoản? <a href="/signup.html">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/signin.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="profile-page" style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="profile-layout" style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
+                
+                <!-- Left Card: Avatar and general info -->
+                <div class="profile-side-card" style="width: 300px; background: white; border: 1px solid #eee; border-radius: 12px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <div class="avatar-preview-container" style="position: relative; margin-bottom: 20px;">
+                        <img id="profileAvatarImg" src="https://placehold.co/150x150?text=Avatar" alt="Avatar" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
+                        <label for="AvatarFile" style="position: absolute; bottom: 5px; right: 5px; background: var(--primary-color); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 2px solid white;" title="Đổi ảnh đại diện">
+                            <i class="fas fa-camera" style="font-size: 0.9rem;"></i>
+                        </label>
+                        <input type="file" id="AvatarFile" name="AvatarFile" accept="image/*" style="display: none;">
+                    </div>
+                    <h3 id="profileNameTitle" style="margin: 0 0 5px 0; font-size: 1.2rem; font-weight: 600;">Đang tải...</h3>
+                    <p id="profileRoleTitle" style="margin: 0; font-size: 0.85rem; color: #666; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Học sinh</p>
+                </div>
+
+                <!-- Right Card: Editable Form -->
+                <div class="profile-main-card" style="flex: 1; min-width: 320px; background: white; border: 1px solid #eee; border-radius: 12px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                    <h2 style="margin-top: 0; margin-bottom: 25px; font-size: 1.4rem; font-weight: 600; border-bottom: 1px solid #eee; padding-bottom: 15px;">Thông tin cá nhân</h2>
+                    
+                    <div id="statusMessage" class="alert" style="display: none; margin-bottom: 20px;"></div>
+
+                    <form id="profileForm" enctype="multipart/form-data">
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+                            <!-- Họ tên -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="HoTen">Họ và Tên</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="HoTen" class="form-control" name="HoTen" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="Email">Email</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="Email" class="form-control" name="Email" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+                            <!-- Điện thoại -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="DienThoai">Số điện thoại</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="text" id="DienThoai" class="form-control" name="DienThoai" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Ngày sinh -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="NgaySinh">Ngày sinh</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="NgaySinh" class="form-control" name="NgaySinh">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+                            <!-- Giới tính -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="GioiTinh">Giới tính</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-venus-mars"></i>
+                                    <select id="GioiTinh" class="form-control" name="GioiTinh">
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Địa chỉ -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="DiaChi">Địa chỉ</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="DiaChi" class="form-control" name="DiaChi">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="padding: 12px 25px; min-width: 150px;" id="saveProfileBtn">Lưu thay đổi</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/profile.js"></script>
+</body>
+</html>

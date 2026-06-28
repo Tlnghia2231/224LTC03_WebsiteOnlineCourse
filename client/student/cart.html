@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của tôi - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/myCart.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main class="cart-page" style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                <h2>Giỏ hàng của bạn</h2>
+                <p>Kiểm tra danh sách các khóa học đã đăng ký và hoàn thành thanh toán.</p>
+            </div>
+
+            <!-- Trạng thái thanh toán lỗi hiển thị tại đây nếu có parameter trên URL -->
+            <div id="paymentAlert" class="alert alert-danger" style="display: none; margin-bottom: 25px;"></div>
+
+            <div class="cart-layout" style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
+                <!-- List of items -->
+                <div class="cart-items-container" style="flex: 1; min-width: 320px;" id="cartItemsList">
+                    <div class="loading">Đang tải giỏ hàng...</div>
+                </div>
+
+                <!-- Checkout summary card -->
+                <div class="cart-summary" style="width: 360px; background: white; border: 1px solid #eee; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" id="checkoutSummaryCard">
+                    <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.15rem; font-weight: 600;">Thông tin thanh toán</h3>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #555;">
+                        <span>Số lượng khóa học:</span>
+                        <strong id="summaryCount">0</strong>
+                    </div>
+                    
+                    <div class="dropdown-divider" style="height:1px; background:#eee; margin:15px 0;"></div>
+
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 25px; font-size: 1.1rem;">
+                        <span>Tổng số tiền:</span>
+                        <strong style="color: var(--primary-color); font-weight: 700; font-size: 1.25rem;" id="summaryTotal">0₫</strong>
+                    </div>
+
+                    <form id="checkoutForm">
+                        <button type="submit" class="btn btn-primary btn-block" style="padding: 12px;" id="checkoutBtn" disabled>
+                            <i class="fas fa-credit-card"></i> Thanh Toán Qua VNPay
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/cart.js"></script>
+</body>
+</html>

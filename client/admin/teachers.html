@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giáo viên - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+        .admin-table th, .admin-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        .admin-table th { background: #f8f9fa; font-weight: 600; color: #475569; }
+        .admin-table tr:hover { background: #fdfdfd; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; }
+        .modal-content { background: white; border-radius: 12px; width: 550px; max-width: 90%; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .modal-header h3 { margin: 0; font-size: 1.3rem; }
+        .close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #aaa; }
+        .close-btn:hover { color: #333; }
+        .action-btns { display: flex; gap: 10px; }
+    </style>
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main style="padding-top: 40px; padding-bottom: 60px; background: #f8f9fa; min-height: calc(100vh - 70px);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div>
+                    <h2>Quản Lý Giáo Viên</h2>
+                    <p style="margin: 0; color: #666;">Danh sách giảng viên tham gia hệ thống đào tạo</p>
+                </div>
+                <button id="addTeacherBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm Giáo Viên Mới</button>
+            </div>
+
+            <!-- Data Table -->
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Mã GV</th>
+                            <th>Ảnh đại diện</th>
+                            <th>Họ và Tên</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Giới thiệu</th>
+                            <th style="text-align: center; width: 160px;">Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teacherTableBody">
+                        <!-- Loaded dynamically -->
+                        <tr><td colspan="7" style="text-align: center; padding: 40px; color: #666;">Đang tải danh sách giáo viên...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Modal Overlay -->
+    <div class="modal" id="teacherModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm Giáo Viên Mới</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            
+            <div id="modalAlert" class="alert alert-danger" style="display: none; margin-bottom: 15px;"></div>
+
+            <form id="teacherForm" enctype="multipart/form-data">
+                <input type="hidden" id="formMode" value="create">
+                
+                <!-- Mã giáo viên (chỉ nhập khi tạo) -->
+                <div class="form-group" id="maGiaoVienGroup" style="margin-bottom: 15px;">
+                    <label for="MaGiaoVien">Mã giáo viên</label>
+                    <input type="text" id="MaGiaoVien" name="MaGiaoVien" placeholder="Ví dụ: GV001" required>
+                </div>
+
+                <!-- Họ tên -->
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="HoTen">Họ và Tên</label>
+                    <input type="text" id="HoTen" name="HoTen" required>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                    <!-- Email -->
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" required>
+                    </div>
+                    <!-- Điện thoại -->
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="DienThoai">Số điện thoại</label>
+                        <input type="text" id="DienThoai" name="DienThoai" required>
+                    </div>
+                </div>
+
+                <!-- Giới thiệu -->
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="GioiThieu">Giới thiệu bản thân</label>
+                    <textarea id="GioiThieu" name="GioiThieu" rows="3" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.95rem; resize: vertical;"></textarea>
+                </div>
+
+                <!-- Ảnh đại diện -->
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="AnhDaiDien">Ảnh đại diện</label>
+                    <input type="file" id="AnhDaiDien" name="AnhDaiDien" accept="image/*">
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" class="btn btn-outline" id="cancelModalBtn" style="padding: 10px 20px;">Hủy bỏ</button>
+                    <button type="submit" class="btn btn-primary" id="saveTeacherBtn" style="padding: 10px 20px;">Lưu lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/admin-teachers.js"></script>
+</body>
+</html>

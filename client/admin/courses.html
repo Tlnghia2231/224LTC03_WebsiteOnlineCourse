@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý khóa học - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+        .admin-table th, .admin-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        .admin-table th { background: #f8f9fa; font-weight: 600; color: #475569; }
+        .admin-table tr:hover { background: #fdfdfd; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; }
+        .modal-content { background: white; border-radius: 12px; width: 600px; max-width: 90%; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); max-height: 90vh; overflow-y: auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .modal-header h3 { margin: 0; font-size: 1.3rem; }
+        .close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #aaa; }
+        .close-btn:hover { color: #333; }
+        .action-btns { display: flex; gap: 10px; }
+        .badge-subject { background: #eff6ff; color: #1d4ed8; padding: 3px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main style="padding-top: 40px; padding-bottom: 60px; background: #f8f9fa; min-height: calc(100vh - 70px);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div>
+                    <h2 style="margin: 0 0 5px 0;">Quản Lý Khóa Học</h2>
+                    <p style="margin: 0; color: #666;">Danh sách và công cụ cập nhật các lớp học trực tuyến</p>
+                </div>
+                <button id="addCourseBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm Khóa Học Mới</button>
+            </div>
+
+            <!-- Filter Controls -->
+            <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #eee; display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; align-items: center;">
+                <div style="flex: 1; min-width: 200px;">
+                    <input type="text" id="courseSearch" placeholder="Tìm tên khóa học..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.9rem;">
+                </div>
+                <div style="width: 200px;">
+                    <select id="sortSelect" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.9rem;">
+                        <option value="">Sắp xếp mặc định</option>
+                        <option value="name_desc">Tên Z-A</option>
+                        <option value="price_asc">Giá tăng dần</option>
+                        <option value="price_desc">Giá giảm dần</option>
+                        <option value="date_desc">Mới cập nhật</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Mã KH</th>
+                            <th>Ảnh</th>
+                            <th>Tên Khóa Học</th>
+                            <th>Môn Học</th>
+                            <th>Học Phí</th>
+                            <th>Thời Hạn (Ngày)</th>
+                            <th>Giảng Viên</th>
+                            <th style="text-align: center;">Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courseTableBody">
+                        <!-- Loaded dynamically -->
+                        <tr><td colspan="8" style="text-align: center; padding: 40px; color: #666;">Đang tải danh sách khóa học...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Modal Overlay -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm Khóa Học Mới</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            
+            <div id="modalAlert" class="alert alert-danger" style="display: none; margin-bottom: 15px;"></div>
+
+            <form id="courseForm" enctype="multipart/form-data">
+                <input type="hidden" id="formMode" value="create">
+                
+                <!-- Mã khóa học (chỉ hiển thị khi tạo) -->
+                <div class="form-group" id="maKhoaHocGroup">
+                    <label for="MaKhoaHoc">Mã khóa học</label>
+                    <input type="text" id="MaKhoaHoc" name="MaKhoaHoc" placeholder="Ví dụ: KH001" required>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                    <!-- Tên khóa học -->
+                    <div class="form-group" style="flex: 2; min-width: 250px;">
+                        <label for="TieuDe">Tên khóa học</label>
+                        <input type="text" id="TieuDe" name="TieuDe" required>
+                    </div>
+                    <!-- Môn học -->
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label for="MonHoc">Môn học</label>
+                        <input type="text" id="MonHoc" name="MonHoc" placeholder="Ví dụ: Toán" required>
+                    </div>
+                </div>
+
+                <!-- Mô tả -->
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="MoTa">Mô tả ngắn</label>
+                    <textarea id="MoTa" name="MoTa" rows="3" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.95rem; resize: vertical;"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                    <!-- Giá cả -->
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label for="GiaKhoaHoc">Học phí (VND)</label>
+                        <input type="number" id="GiaKhoaHoc" name="GiaKhoaHoc" required>
+                    </div>
+                    <!-- Thời hạn -->
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label for="ThoiHan">Thời hạn học (ngày)</label>
+                        <input type="number" id="ThoiHan" name="ThoiHan" value="365" required>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <!-- Giảng viên -->
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="MaGiaoVien">Giảng viên</label>
+                        <select id="MaGiaoVien" name="MaGiaoVien" required>
+                            <option value="">Chọn giảng viên...</option>
+                        </select>
+                    </div>
+                    <!-- Ảnh khóa học -->
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="AnhKhoaHoc">Ảnh khóa học</label>
+                        <input type="file" id="AnhKhoaHoc" name="AnhKhoaHoc" accept="image/*">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" class="btn btn-outline" id="cancelModalBtn" style="padding: 10px 20px;">Hủy bỏ</button>
+                    <button type="submit" class="btn btn-primary" id="saveCourseBtn" style="padding: 10px 20px;">Lưu lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/admin-courses.js"></script>
+</body>
+</html>
