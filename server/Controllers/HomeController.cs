@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace WebApplication1.Controllers
 {
@@ -17,12 +20,51 @@ namespace WebApplication1.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext _context;
         private readonly PasswordHasher<object> _passwordHasher;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context, IConfiguration configuration)
         {
             _logger = logger;
             _context = context;
+            _configuration = configuration;
             _passwordHasher = new PasswordHasher<object>();
+        }
+
+        private string GenerateJwtToken(string username, string userId, string role)
+        {
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Name, username),
+                new Claim(ClaimTypes.NameIdentifier, userId),
+                new Claim(ClaimTypes.Role, role)
+            };
+
+            var secretKey = Environment.GetEnvironmentVariable("JWT_SECRET") 
+                ?? _configuration["JwtSettings:Secret"] 
+                ?? "EduLearnSecretKey_VeryLongStringWith32BytesLength!";
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddDays(7),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        private void AppendJwtCookie(string token)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Lax,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+            Response.Cookies.Append("token", token, cookieOptions);
         }
 
         [HttpGet]
@@ -135,23 +177,9 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { success = false, message = "Đã xảy ra lỗi khi lưu thông tin sinh viên." });
                 }
 
-                // Đăng nhập ngay sau khi đăng ký
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, model.HoTen ?? model.DienThoai),
-                    new Claim(ClaimTypes.NameIdentifier, savedHocSinh.MaHocSinh),
-                    new Claim(ClaimTypes.Role, "Student")
-                };
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = false,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
-                };
-
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
+                // Đăng nhập ngay sau khi đăng ký bằng cách lưu JWT token qua HttpOnly Cookie
+                var token = GenerateJwtToken(model.HoTen ?? model.DienThoai, savedHocSinh.MaHocSinh, "Student");
+                AppendJwtCookie(token);
                 return Ok(new { success = true, userType = "student", message = "Đăng ký và đăng nhập thành công." });
             }
             else if (model.UserType == "admin")
@@ -193,23 +221,9 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { success = false, message = "Mật khẩu không đúng." });
                 }
 
-                // Đăng nhập
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, hocSinh.HoTen ?? hocSinh.DienThoai),
-                    new Claim(ClaimTypes.NameIdentifier, hocSinh.MaHocSinh),
-                    new Claim(ClaimTypes.Role, "Student")
-                };
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = model.RememberMe,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
-                };
-
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
+                // Đăng nhập bằng cách lưu JWT token qua HttpOnly Cookie
+                var token = GenerateJwtToken(hocSinh.HoTen ?? hocSinh.DienThoai, hocSinh.MaHocSinh, "Student");
+                AppendJwtCookie(token);
                 return Ok(new { success = true, userType = "student", message = "Đăng nhập thành công." });
             }
             else if (model.UserType == "admin")
@@ -228,23 +242,9 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { success = false, message = "Mật khẩu không đúng." });
                 }
 
-                // Đăng nhập
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, admin.HoTen ?? admin.DienThoai),
-                    new Claim(ClaimTypes.NameIdentifier, admin.MaAdmin),
-                    new Claim(ClaimTypes.Role, "Admin")
-                };
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = model.RememberMe,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
-                };
-
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
+                // Đăng nhập bằng cách lưu JWT token qua HttpOnly Cookie
+                var token = GenerateJwtToken(admin.HoTen ?? admin.DienThoai, admin.MaAdmin, "Admin");
+                AppendJwtCookie(token);
                 return Ok(new { success = true, userType = "admin", message = "Đăng nhập admin thành công." });
             }
 
@@ -253,9 +253,15 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [Route("signout")]
-        public async Task<IActionResult> SignOutUser()
+        public IActionResult SignOutUser()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            // Xóa cookie JWT "token"
+            Response.Cookies.Delete("token", new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Lax
+            });
             return Ok(new { success = true, message = "Đăng xuất thành công." });
         }
     }

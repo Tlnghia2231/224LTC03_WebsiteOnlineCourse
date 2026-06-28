@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const coursesGrid = document.getElementById('coursesGrid');
     const subjectList = document.getElementById('subjectFilterList');
     const searchInput = document.getElementById('searchInput');
+    const paginationContainer = document.getElementById('paginationContainer');
 
-    let allCourses = [];
+    let currentPage = 1;
+    let totalPages = 1;
+    const pageSize = 6;
     let selectedSubject = '';
     let searchQuery = '';
 
@@ -17,44 +20,61 @@ document.addEventListener('DOMContentLoaded', async () => {
         selectedSubject = decodeURIComponent(subjectParam);
     }
 
-    try {
-        const res = await apiFetch('/student/coursepage');
-        if (res && res.ok) {
-            const data = await res.json();
-            allCourses = data.featuredCourses || [];
-            
-            // 1. Populate Subject Filters
-            if (data.subjects && data.subjects.length > 0) {
-                const subjectItemsHtml = data.subjects.map(sub => `
-                    <li style="margin-bottom: 10px;">
-                        <a href="#" class="subject-link ${selectedSubject === sub.subject ? 'active' : ''}" data-subject="${sub.subject}" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span>${sub.subject}</span>
-                            <span style="font-size: 0.8rem; background: #eee; padding: 2px 6px; border-radius: 10px; color: #666;">${sub.count}</span>
-                        </a>
-                    </li>
-                `).join('');
-                
-                subjectList.innerHTML += subjectItemsHtml;
-            }
+    // Initial load
+    await fetchCourses(true); // pass true to load subjects list once
 
-            // Bind click handlers to subject links
-            bindSubjectClickHandlers();
-
-            // 2. Initial Render
-            renderCourses();
-        } else {
-            coursesGrid.innerHTML = '<div class="error">Không thể tải danh sách khóa học.</div>';
-        }
-    } catch (err) {
-        console.error('Courses fetch error:', err);
-        coursesGrid.innerHTML = '<div class="error">Lỗi kết nối máy chủ.</div>';
-    }
-
-    // Bind search inputs
+    // Bind search input with debounce
+    let searchTimeout;
     searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase().trim();
-        renderCourses();
+        searchQuery = e.target.value.trim();
+        currentPage = 1;
+        
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            fetchCourses();
+        }, 400); // 400ms debounce to prevent API thrashing
     });
+
+    async function fetchCourses(loadSubjects = false) {
+        coursesGrid.innerHTML = '<div class="loading" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">Đang tải danh sách khóa học...</div>';
+        
+        try {
+            const endpoint = `/student/coursepage?page=${currentPage}&pageSize=${pageSize}&subject=${encodeURIComponent(selectedSubject)}&search=${encodeURIComponent(searchQuery)}`;
+            const res = await apiFetch(endpoint);
+            if (res && res.ok) {
+                const data = await res.json();
+                
+                currentPage = data.currentPage || 1;
+                totalPages = data.totalPages || 1;
+                
+                // 1. Populate Subject Filters (only once or on initial load)
+                if (loadSubjects && data.subjects && data.subjects.length > 0) {
+                    const subjectItemsHtml = data.subjects.map(sub => `
+                        <li style="margin-bottom: 10px;">
+                            <a href="#" class="subject-link ${selectedSubject === sub.subject ? 'active' : ''}" data-subject="${sub.subject}" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center;">
+                                <span>${sub.subject}</span>
+                                <span style="font-size: 0.8rem; background: #eee; padding: 2px 6px; border-radius: 10px; color: #666;">${sub.count}</span>
+                            </a>
+                        </li>
+                    `).join('');
+                    
+                    subjectList.innerHTML += subjectItemsHtml;
+                    bindSubjectClickHandlers();
+                }
+
+                // 2. Render Courses
+                renderCourses(data.featuredCourses || []);
+
+                // 3. Render Pagination
+                renderPagination();
+            } else {
+                coursesGrid.innerHTML = '<div class="error" style="grid-column: 1/-1; text-align: center; padding: 40px; color: red;">Không thể tải danh sách khóa học.</div>';
+            }
+        } catch (err) {
+            console.error('Courses fetch error:', err);
+            coursesGrid.innerHTML = '<div class="error" style="grid-column: 1/-1; text-align: center; padding: 40px; color: red;">Lỗi kết nối máy chủ.</div>';
+        }
+    }
 
     function bindSubjectClickHandlers() {
         const links = subjectList.querySelectorAll('a');
@@ -65,23 +85,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 link.classList.add('active');
                 selectedSubject = link.getAttribute('data-subject') || '';
-                renderCourses();
+                currentPage = 1; // reset page on filter change
+                fetchCourses();
             });
         });
     }
 
-    function renderCourses() {
-        // Filter in-memory
-        const filtered = allCourses.filter(course => {
-            const matchesSubject = !selectedSubject || course.monHoc === selectedSubject;
-            const matchesSearch = !searchQuery || 
-                                  course.tieuDe.toLowerCase().includes(searchQuery) ||
-                                  (course.moTa && course.moTa.toLowerCase().includes(searchQuery));
-            return matchesSubject && matchesSearch;
-        });
-
-        if (filtered.length > 0) {
-            coursesGrid.innerHTML = filtered.map(course => `
+    function renderCourses(courses) {
+        if (courses.length > 0) {
+            coursesGrid.innerHTML = courses.map(course => `
                 <a href="/course-detail.html?id=${course.maKhoaHoc}" class="course-card">
                     <div class="course-image">
                         <img src="${course.duongDanAnhKhoaHoc || 'https://placehold.co/300x200?text=Course'}" alt="${course.tieuDe}">
@@ -123,5 +135,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             coursesGrid.innerHTML = '<div class="no-data" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">Không tìm thấy khóa học nào phù hợp.</div>';
         }
+    }
+
+    function renderPagination() {
+        if (totalPages <= 1) {
+            paginationContainer.innerHTML = '';
+            return;
+        }
+
+        let html = '';
+        
+        // Prev button
+        html += `<button class="pagination-btn ${currentPage === 1 ? 'disabled' : ''}" data-page="${currentPage - 1}"><i class="fas fa-chevron-left"></i></button>`;
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            html += `<button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+
+        // Next button
+        html += `<button class="pagination-btn ${currentPage === totalPages ? 'disabled' : ''}" data-page="${currentPage + 1}"><i class="fas fa-chevron-right"></i></button>`;
+
+        paginationContainer.innerHTML = html;
+
+        // Bind clicks
+        const buttons = paginationContainer.querySelectorAll('.pagination-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('disabled') || btn.classList.contains('active')) return;
+                const page = parseInt(btn.getAttribute('data-page'), 10);
+                currentPage = page;
+                fetchCourses();
+                
+                // Scroll window to top of course grid smoothly
+                window.scrollTo({
+                    top: coursesGrid.offsetTop - 120,
+                    behavior: 'smooth'
+                });
+            });
+        });
     }
 });

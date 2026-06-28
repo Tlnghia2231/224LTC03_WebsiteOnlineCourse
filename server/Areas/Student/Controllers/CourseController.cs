@@ -27,21 +27,42 @@ namespace WebApplication1.Areas.Student.Controllers
         [HttpGet]
         [Route("coursepage")]
         [AllowAnonymous]
-        public IActionResult CoursePage()
+        public IActionResult CoursePage(int page = 1, int pageSize = 6, string? subject = null, string? search = null)
         {
-            var featuredCourses = _context.KhoaHocs
-                .Include(k => k.MaGiaoVienNavigation)
-                .ToList();
-
             var subjects = _context.KhoaHocs
                 .GroupBy(k => k.MonHoc)
                 .Select(g => new { Subject = g.Key, Count = g.Count() })
                 .ToList();
 
+            var query = _context.KhoaHocs.Include(k => k.MaGiaoVienNavigation).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(subject))
+            {
+                query = query.Where(k => k.MonHoc == subject);
+            }
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var lowerSearch = search.ToLower();
+                query = query.Where(k => k.TieuDe.ToLower().Contains(lowerSearch) || (k.MoTa != null && k.MoTa.ToLower().Contains(lowerSearch)));
+            }
+
+            int totalCourses = query.Count();
+            int totalPages = (int)Math.Ceiling((double)totalCourses / pageSize);
+
+            var featuredCourses = query
+                .OrderBy(k => k.MaKhoaHoc)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
             var viewModel = new
             {
                 FeaturedCourses = featuredCourses,
-                Subjects = subjects
+                Subjects = subjects,
+                TotalPages = totalPages,
+                CurrentPage = page,
+                TotalCourses = totalCourses
             };
 
             return Ok(viewModel);

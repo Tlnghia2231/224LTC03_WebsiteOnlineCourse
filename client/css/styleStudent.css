@@ -1878,11 +1878,40 @@ main {
 
     .mobile-actions {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     .header-actions {
         display: none;
+    }
+
+    .header-actions.logged-in {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: 8px;
+    }
+
+    .cart-button {
+        margin-right: 8px !important;
+    }
+
+    .logo-badge {
+        height: 32px !important;
+    }
+
+    .icon-button {
+        padding: 0.5rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    .avatar-img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .user-avatar {
+        gap: 4px !important;
     }
 
     .cta-content h2 {
@@ -1904,9 +1933,9 @@ main {
     }
 
     .dropdown-menu {
-        right: -1rem;
-        left: -1rem;
-        min-width: auto;
+        right: 0;
+        left: auto;
+        min-width: 250px;
     }
 
     .stats-grid {
@@ -2105,4 +2134,53 @@ main {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+/* Pagination Styling */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    user-select: none;
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 8px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #475569;
+    border-radius: 8px;
+    font-size: 0.925rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.pagination-btn:hover:not(.disabled):not(.active) {
+    border-color: #2563eb;
+    color: #2563eb;
+    background-color: #eff6ff;
+    transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.pagination-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f8fafc;
+    color: #94a3b8;
 }

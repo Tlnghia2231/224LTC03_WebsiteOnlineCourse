@@ -137,6 +137,7 @@ function updateHeaderForUser(session) {
 
     if (session.isAuthenticated && session.userInfo) {
         isAuthenticated = true; // Update global state
+        container.classList.add('logged-in');
         const user = session.userInfo;
 
         let cartHtml = '';
@@ -221,11 +222,10 @@ function updateHeaderForUser(session) {
                 e.preventDefault();
                 try {
                     const logoutRes = await apiFetch('/signout', { method: 'POST' });
-                    if (logoutRes && logoutRes.ok) {
-                        window.location.href = '/signin.html';
-                    }
+                    window.location.href = '/signin.html';
                 } catch (err) {
                     console.error('Logout error:', err);
+                    window.location.href = '/signin.html';
                 }
             });
         }

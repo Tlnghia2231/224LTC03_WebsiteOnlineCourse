@@ -36,10 +36,12 @@
                 </aside>
 
                 <!-- Lưới hiển thị khóa học -->
-                <div class="course-list-container" style="flex: 1;">
+                <div class="course-list-container" style="flex: 1; display: flex; flex-direction: column; gap: 30px;">
                     <div class="course-grid" id="coursesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
                         <div class="loading">Đang tải danh sách khóa học...</div>
                     </div>
+                    <!-- Vùng chứa bộ phân trang -->
+                    <div class="pagination-container" id="paginationContainer" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px;"></div>
                 </div>
             </div>
         </div>

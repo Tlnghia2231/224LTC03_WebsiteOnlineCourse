@@ -8,11 +8,12 @@ export async function apiFetch(endpoint, options = {}) {
     options.credentials = 'include';
     
     // Add default headers for JSON if not uploading files (FormData)
+    options.headers = {
+        ...options.headers
+    };
+
     if (!(options.body instanceof FormData)) {
-        options.headers = {
-            'Content-Type': 'application/json',
-            ...options.headers
-        };
+        options.headers['Content-Type'] = 'application/json';
     }
 
     try {
