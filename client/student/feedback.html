@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hòm thư góp ý - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <!-- Page Header (consistent with profile page) -->
+    <section class="page-header" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 3rem 0; text-align: center; position: relative;">
+        <div class="container">
+            <h1 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem;">Hòm Thư Góp Ý</h1>
+            <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Hãy gửi ý kiến đóng góp hoặc phản hồi của bạn để giúp EduLearn cải thiện chất lượng phục vụ học sinh tốt hơn.</p>
+        </div>
+    </section>
+
+    <main style="padding: 40px 0; background: #f8fafc; min-height: calc(100vh - 280px);">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+            
+            <!-- Feedback Form Card -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                <h2 style="margin-top: 0; margin-bottom: 25px; font-size: 1.4rem; font-weight: 600; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; display: flex; align-items: center; gap: 10px; color: #1e293b;">
+                    <i class="fas fa-paper-plane" style="color: #2563eb;"></i>
+                    <span>Đóng Góp Ý Kiến</span>
+                </h2>
+                
+                <form id="feedbackForm">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+                        <!-- Họ tên -->
+                        <div class="form-group" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+                            <label for="feedbackName" style="font-weight: 500; font-size: 0.9rem; color: #475569;">Họ và Tên</label>
+                            <div class="input-wrapper" style="position: relative; display: flex; align-items: center;">
+                                <i class="fas fa-user" style="position: absolute; left: 14px; color: #64748b;"></i>
+                                <input type="text" id="feedbackName" class="form-control" style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem;" placeholder="Đang tải..." required>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+                            <label for="feedbackEmail" style="font-weight: 500; font-size: 0.9rem; color: #475569;">Email (Không thể thay đổi)</label>
+                            <div class="input-wrapper" style="position: relative; display: flex; align-items: center; opacity: 0.85;">
+                                <i class="fas fa-envelope" style="position: absolute; left: 14px; color: #64748b;"></i>
+                                <input type="email" id="feedbackEmail" class="form-control" style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; background-color: #e2e8f0; cursor: not-allowed;" readonly required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tiêu đề góp ý -->
+                    <div class="form-group" style="margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px;">
+                        <label for="feedbackSubject" style="font-weight: 500; font-size: 0.9rem; color: #475569;">Chủ đề đóng góp</label>
+                        <div class="input-wrapper" style="position: relative; display: flex; align-items: center;">
+                            <i class="fas fa-tag" style="position: absolute; left: 14px; color: #64748b;"></i>
+                            <input type="text" id="feedbackSubject" class="form-control" style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem;" placeholder="Nhập tiêu đề hoặc chủ đề góp ý..." required>
+                        </div>
+                    </div>
+
+                    <!-- Nội dung góp ý -->
+                    <div class="form-group" style="margin-bottom: 25px; display: flex; flex-direction: column; gap: 8px;">
+                        <label for="feedbackContent" style="font-weight: 500; font-size: 0.9rem; color: #475569;">Nội dung góp ý</label>
+                        <textarea id="feedbackContent" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; min-height: 150px; resize: vertical; outline: none; font-family: inherit;" placeholder="Mô tả chi tiết ý kiến đóng góp của bạn..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);">
+                        Gửi Ý Kiến Đóng Góp <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/feedback.js"></script>
+</body>
+</html>

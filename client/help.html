@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ Giúp & FAQ - EduLearn</title>
+    <link rel="stylesheet" href="/css/styleStudent.css">
+    <link rel="stylesheet" href="/css/contact-help.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Trung Tâm Trợ Giúp</h1>
+                <p>Tìm kiếm câu trả lời nhanh chóng cho các câu hỏi thường gặp về tài khoản, thanh toán khóa học và bài giảng.</p>
+            </div>
+        </section>
+
+        <!-- Help Content Section -->
+        <section class="help-wrapper">
+            <div class="container">
+                
+                <!-- Search Box -->
+                <div class="help-search-container">
+                    <div class="help-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="helpSearchInput" class="help-search-input" placeholder="Nhập từ khóa cần tìm kiếm (Ví dụ: thanh toán, đăng ký, video...)" aria-label="Tìm kiếm trợ giúp">
+                        <button type="button" id="helpSearchBtn">Tìm kiếm</button>
+                    </div>
+                </div>
+
+                <!-- Categories Grid -->
+                <div class="help-categories">
+                    <div class="category-card" data-category="taikhoan">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Tài Khoản</h3>
+                        <p>Đăng ký, đăng nhập và bảo mật thông tin cá nhân của bạn.</p>
+                    </div>
+                    <div class="category-card" data-category="thanhtoan">
+                        <i class="fas fa-wallet"></i>
+                        <h3>Thanh Toán</h3>
+                        <p>Các phương thức thanh toán, lỗi VNPay và kích hoạt khóa học.</p>
+                    </div>
+                    <div class="category-card" data-category="baigiang">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Bài Giảng & Video</h3>
+                        <p>Trình phát video, tài liệu bài học và tốc độ truyền tải.</p>
+                    </div>
+                    <div class="category-card" data-category="khac">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Vấn Đề Khác</h3>
+                        <p>Chính sách hoàn tiền, liên hệ giảng viên và đóng góp ý kiến.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion FAQs -->
+                <div class="faq-section">
+                    <h2>Câu Hỏi Thường Gặp (FAQs)</h2>
+                    
+                    <div id="faqContainer">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item" data-category="taikhoan" data-keywords="dang ky hoc sinh dang nhap tao tai khoan">
+                            <button class="accordion-header">
+                                <span>Làm thế nào để đăng ký học trên EduLearn?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Đăng ký tài khoản trên EduLearn rất đơn giản. Bạn chỉ cần click nút "Đăng ký" ở góc trên bên phải màn hình, điền đầy đủ thông tin (Họ tên, Số điện thoại, Email, Mật khẩu) và chọn loại tài khoản Học Sinh. Sau khi đăng ký thành công, hệ thống sẽ tự động đăng nhập và bạn có thể bắt đầu lựa chọn các khóa học yêu thích.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item" data-category="thanhtoan" data-keywords="thanh toan vnpay bank chuyen khoan vi dien tu banking loi">
+                            <button class="accordion-header">
+                                <span>Thanh toán qua cổng VNPay như thế nào?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Sau khi nhấn "Mua ngay" hoặc thêm khóa học vào giỏ hàng, bạn vào mục Giỏ hàng và chọn "Thanh toán qua VNPay". Hệ thống sẽ chuyển tiếp bạn đến giao diện thanh toán an toàn của VNPay Sandbox. Tại đây, bạn có thể chọn quét mã QR bằng ứng dụng ngân hàng hoặc nhập thông tin thẻ nội địa để thanh toán. Sau khi giao dịch hoàn tất thành công, bạn sẽ tự động được chuyển hướng về trang "Khóa học của tôi" với trạng thái khóa học đã kích hoạt.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item" data-category="baigiang" data-keywords="tai video offline download luu bai hoc ban quyen">
+                            <button class="accordion-header">
+                                <span>Tôi có thể tải video bài học về máy không?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Nhằm bảo vệ bản quyền nội dung giảng dạy của các giáo viên và bảo mật hệ thống, EduLearn không hỗ trợ tính năng tải trực tiếp video bài học về thiết bị. Tuy nhiên, bạn có thể xem trực tuyến video bài học không giới hạn số lần và thời gian truy cập trên bất kỳ thiết bị nào (điện thoại, máy tính) khi có kết nối Internet.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item" data-category="taikhoan" data-keywords="cap nhat thong tin ca nhan avatar anh dai dien email dien thoai">
+                            <button class="accordion-header">
+                                <span>Làm sao để thay đổi thông tin cá nhân và ảnh đại diện?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Để cập nhật thông tin cá nhân, bạn hãy đăng nhập vào tài khoản, rê chuột vào phần tên hiển thị ở góc trên bên phải màn hình và chọn "Thông tin cá nhân". Tại đây, bạn có thể chỉnh sửa Họ tên, Email, Số điện thoại, Ngày sinh và tải lên tệp ảnh đại diện mới của mình, sau đó bấm nút "Lưu thay đổi".</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item" data-category="baigiang" data-keywords="tai lieu hoc tap pdf bai tap kem giao trinh">
+                            <button class="accordion-header">
+                                <span>Tài liệu học tập đi kèm bài học nằm ở đâu?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Trong giao diện trình phát bài học (Lesson Player), ở phía dưới hoặc bên cạnh trình xem video sẽ có khu vực tab "Tài liệu học tập". Nếu giảng viên đính kèm tài liệu hỗ trợ cho bài học đó, bạn sẽ thấy danh sách liên kết để tải xuống trực tiếp. Nếu không có tài liệu nào, hệ thống sẽ hiển thị trạng thái "Không có tài liệu".</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="accordion-item" data-category="khac" data-keywords="giang vien hop tac day hoc ban khoa hoc gui mail email">
+                            <button class="accordion-header">
+                                <span>Tôi muốn hợp tác giảng dạy, đăng bán khóa học thì làm thế nào?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Chúng tôi rất mong muốn được hợp tác cùng các thầy cô giáo có chuyên môn cao. Thầy cô vui lòng điều hướng tới trang "Liên hệ", chọn chủ đề "Đăng ký làm Giảng viên" trong form gửi và nhập sơ lược thông tin liên lạc cùng môn học mong muốn giảng dạy. Bộ phận quản trị của EduLearn sẽ liên hệ phản hồi lại với thầy cô trong vòng 24 - 48 giờ làm việc.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results Placeholder -->
+                    <div id="noFaqResults" style="display:none; text-align:center; padding: 2rem; color: #64748b;">
+                        <i class="fas fa-search-minus" style="font-size: 2.5rem; margin-bottom: 1rem; color: #cbd5e1;"></i>
+                        <p>Không tìm thấy câu hỏi nào phù hợp với từ khóa của bạn.</p>
+                    </div>
+
+                </div>
+
+                <!-- Still Need Help Box -->
+                <div class="still-help-box">
+                    <h3>Bạn vẫn cần sự trợ giúp khác?</h3>
+                    <p>Nếu bạn không tìm thấy câu trả lời cho vấn đề của mình ở trên, hãy liên hệ trực tiếp với bộ phận chăm sóc khách hàng của EduLearn.</p>
+                    <a href="/contact.html" class="btn-light">Gửi yêu cầu hỗ trợ</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            // Accordion Toggle Logic
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const content = item.querySelector('.accordion-content');
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other accordion items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                        content.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // Search and Filter Logic
+            const searchInput = document.getElementById('helpSearchInput');
+            const searchBtn = document.getElementById('helpSearchBtn');
+            const faqItems = document.querySelectorAll('.accordion-item');
+            const noResults = document.getElementById('noFaqResults');
+            const categoryCards = document.querySelectorAll('.category-card');
+
+            function filterFaqs() {
+                const query = searchInput.value.trim().toLowerCase();
+                let visibleCount = 0;
+
+                faqItems.forEach(item => {
+                    const title = item.querySelector('.accordion-header span').textContent.toLowerCase();
+                    const content = item.querySelector('.accordion-content p').textContent.toLowerCase();
+                    const keywords = item.getAttribute('data-keywords').toLowerCase();
+                    
+                    const isMatch = title.includes(query) || content.includes(query) || keywords.includes(query);
+                    
+                    if (isMatch) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('active');
+                        item.querySelector('.accordion-content').style.maxHeight = null;
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+
+                // Reset active category styles
+                categoryCards.forEach(c => c.style.borderColor = '');
+            }
+
+            // Bind events for search
+            searchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') filterFaqs();
+            });
+            searchBtn.addEventListener('click', filterFaqs);
+
+            // Category card click filters
+            categoryCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const category = card.getAttribute('data-category');
+                    
+                    // Reset search input
+                    searchInput.value = '';
+                    
+                    // Highlight selected card
+                    categoryCards.forEach(c => c.style.borderColor = '');
+                    card.style.borderColor = '#2563eb';
+
+                    let visibleCount = 0;
+                    faqItems.forEach(item => {
+                        if (item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.remove('active');
+                            item.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    if (visibleCount === 0) {
+                        noResults.style.display = 'block';
+                    } else {
+                        noResults.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

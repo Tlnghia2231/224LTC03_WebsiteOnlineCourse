@@ -1,4 +1,7 @@
 import { apiFetch } from './api.js';
+import Swal from 'sweetalert2';
+
+let isAuthenticated = false;
 
 // Global currency formatting helper
 export function formatPrice(price) {
@@ -9,7 +12,7 @@ export function formatPrice(price) {
 document.addEventListener('DOMContentLoaded', async () => {
     // 1. Render common Header and Footer structures
     setupHeaderFooter();
-    
+
     // 2. Fetch User session
     try {
         const res = await apiFetch('/auth/me');
@@ -26,14 +29,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 function setupHeaderFooter() {
     const header = document.querySelector('.site-header');
     if (header) {
-        const isStudentArea = window.location.pathname.includes('/student/') || 
-                             window.location.pathname.includes('my-learning') ||
-                             window.location.pathname.includes('my-cart') ||
-                             window.location.pathname.includes('profile') ||
-                             window.location.pathname.includes('lesson-player');
+        const isStudentArea = window.location.pathname.includes('/student/') ||
+            window.location.pathname.includes('my-learning') ||
+            window.location.pathname.includes('my-cart') ||
+            window.location.pathname.includes('profile') ||
+            window.location.pathname.includes('lesson-player');
 
         const homeUrl = isStudentArea ? '/index.html' : '/index.html';
-        
+
         header.innerHTML = `
             <div class="container">
                 <div class="header-content">
@@ -43,10 +46,10 @@ function setupHeaderFooter() {
 
                     <nav class="main-nav">
                         <ul>
-                            <li><a href="/courses.html">Khóa Học</a></li>
-                            <li><a href="/categories.html">Môn Học</a></li>
-                            <li><a href="/about.html">Giới Thiệu</a></li>
-                            <li><a href="/contact.html">Liên Hệ</a></li>
+                            <li><a href="/courses.html" id="nav-courses">Khóa Học</a></li>
+                            <li><a href="/student/my-learning.html" id="nav-mylearning">Khóa học của tôi</a></li>
+                            <li><a href="/help.html" id="nav-help">Trợ giúp</a></li>
+                            <li><a href="/contact.html" id="nav-contact">Liên Hệ</a></li>
                         </ul>
                     </nav>
 
@@ -63,6 +66,42 @@ function setupHeaderFooter() {
                 </div>
             </div>
         `;
+
+        // Highlight active link
+        const currentPath = window.location.pathname;
+        if (currentPath.includes('courses.html')) {
+            header.querySelector('#nav-courses')?.classList.add('active');
+        } else if (currentPath.includes('my-learning.html')) {
+            header.querySelector('#nav-mylearning')?.classList.add('active');
+        } else if (currentPath.includes('help.html')) {
+            header.querySelector('#nav-help')?.classList.add('active');
+        } else if (currentPath.includes('contact.html')) {
+            header.querySelector('#nav-contact')?.classList.add('active');
+        }
+
+        // Intercept clicks on My Learning when not logged in
+        const myLearningLink = header.querySelector('#nav-mylearning');
+        if (myLearningLink) {
+            myLearningLink.addEventListener('click', (e) => {
+                if (!isAuthenticated) {
+                    e.preventDefault();
+                    Swal.fire({
+                        title: 'Yêu cầu đăng nhập',
+                        text: 'Bạn phải đăng nhập để xem các khóa học đã mua.',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#2563eb',
+                        cancelButtonColor: '#475569',
+                        confirmButtonText: 'Đăng nhập',
+                        cancelButtonText: 'Đóng'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = '/signin.html';
+                        }
+                    });
+                }
+            });
+        }
 
         // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
@@ -97,8 +136,9 @@ function updateHeaderForUser(session) {
     if (!container) return;
 
     if (session.isAuthenticated && session.userInfo) {
+        isAuthenticated = true; // Update global state
         const user = session.userInfo;
-        
+
         let cartHtml = '';
         if (user.role === 'Student') {
             cartHtml = `
@@ -138,9 +178,9 @@ function updateHeaderForUser(session) {
                             <i class="fas fa-user" style="color:var(--primary-color); width:16px;"></i>
                             <span>Thông tin cá nhân</span>
                         </a>
-                        <a href="/student/my-learning.html" class="dropdown-item" style="display:flex; align-items:center; gap:10px; padding: 10px 20px; color:#333; text-decoration:none; font-size:0.9rem;">
-                            <i class="fas fa-book-open" style="color:var(--primary-color); width:16px;"></i>
-                            <span>Khóa học của tôi</span>
+                        <a href="/student/feedback.html" class="dropdown-item" style="display:flex; align-items:center; gap:10px; padding: 10px 20px; color:#333; text-decoration:none; font-size:0.9rem;">
+                            <i class="fas fa-comment-alt" style="color:var(--primary-color); width:16px;"></i>
+                            <span>Hòm thư góp ý</span>
                         </a>
                     `}
                     

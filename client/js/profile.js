@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             const res = await apiFetch('/student/profile', {
-                method: 'POST',
+                method: 'PATCH',
                 body: formData
             });
 

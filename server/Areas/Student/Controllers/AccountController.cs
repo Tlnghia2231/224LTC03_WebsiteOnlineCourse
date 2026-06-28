@@ -75,9 +75,10 @@ namespace WebApplication1.Areas.Student.Controllers
             return Ok(hocSinh);
         }
 
+        [HttpPatch]
         [HttpPost]
         [Route("profile")]
-        public async Task<IActionResult> Profile([FromForm] HocSinh model, [FromForm] IFormFile? AvatarFile)
+        public async Task<IActionResult> Profile([FromForm] WebApplication1.Areas.Student.ViewModel.UpdateProfileViewModel model, [FromForm] IFormFile? AvatarFile)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var hocSinh = await _context.HocSinhs
@@ -134,10 +135,6 @@ namespace WebApplication1.Areas.Student.Controllers
                     _logger.LogError(ex, "Lỗi khi tải ảnh lên Cloudinary.");
                     return BadRequest(new { success = false, message = $"Lỗi khi tải ảnh lên: {ex.Message}" });
                 }
-            }
-            else if (string.IsNullOrEmpty(model.DuongDanAnhDaiDien))
-            {
-                hocSinh.DuongDanAnhDaiDien = null;
             }
 
             try

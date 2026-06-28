@@ -1,5 +1,6 @@
 import { apiFetch } from './api.js';
 import { formatPrice } from './main.js';
+import Swal from 'sweetalert2';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const cartList = document.getElementById('cartItemsList');
@@ -84,21 +85,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         removeButtons.forEach(btn => {
             btn.addEventListener('click', async () => {
                 const id = btn.getAttribute('data-id');
-                if (confirm('Bạn có chắc muốn xóa khóa học này khỏi giỏ hàng?')) {
-                    try {
-                        const res = await apiFetch(`/student/removefromcart?maKhoaHoc=${id}`, {
-                            method: 'DELETE'
-                        });
-                        if (res && res.ok) {
-                            await loadCart();
-                        } else {
-                            const err = await res.json().catch(() => ({}));
-                            alert(err.message || 'Xóa khóa học thất bại.');
+                
+                Swal.fire({
+                    title: 'Xác nhận xóa',
+                    text: 'Bạn có chắc muốn xóa khóa học này khỏi giỏ hàng?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dc2626',
+                    cancelButtonColor: '#475569',
+                    confirmButtonText: 'Xóa',
+                    cancelButtonText: 'Hủy'
+                }).then(async (result) => {
+                    if (result.isConfirmed) {
+                        try {
+                            const res = await apiFetch(`/student/removefromcart?maKhoaHoc=${id}`, {
+                                method: 'DELETE'
+                            });
+                            if (res && res.ok) {
+                                await loadCart();
+                                Swal.fire({
+                                    title: 'Đã xóa',
+                                    text: 'Khóa học đã được xóa khỏi giỏ hàng.',
+                                    icon: 'success',
+                                    confirmButtonColor: '#2563eb'
+                                });
+                            } else {
+                                const err = await res.json().catch(() => ({}));
+                                Swal.fire({
+                                    title: 'Lỗi',
+                                    text: err.message || 'Xóa khóa học thất bại.',
+                                    icon: 'error',
+                                    confirmButtonColor: '#2563eb'
+                                });
+                            }
+                        } catch (err) {
+                            console.error('Delete cart item error:', err);
                         }
-                    } catch (err) {
-                        console.error('Delete cart item error:', err);
                     }
-                }
+                });
             });
         });
     }
@@ -128,17 +152,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Redirect directly to VNPay page
                     window.location.href = data.paymentUrl;
                 } else {
-                    alert(data.message || 'Không thể tạo cổng thanh toán VNPay.');
+                    Swal.fire({
+                        title: 'Thanh toán thất bại',
+                        text: data.message || 'Không thể tạo cổng thanh toán VNPay.',
+                        icon: 'error',
+                        confirmButtonColor: '#2563eb'
+                    });
                     resetCheckoutBtn();
                 }
             } else {
                 const err = await res.json().catch(() => ({}));
-                alert(err.message || 'Không thể tạo cổng thanh toán VNPay.');
+                Swal.fire({
+                    title: 'Lỗi',
+                    text: err.message || 'Không thể tạo cổng thanh toán VNPay.',
+                    icon: 'error',
+                    confirmButtonColor: '#2563eb'
+                });
                 resetCheckoutBtn();
             }
         } catch (err) {
             console.error('Checkout error:', err);
-            alert('Lỗi kết nối khi chuẩn bị thanh toán.');
+            Swal.fire({
+                title: 'Lỗi',
+                text: 'Lỗi kết nối khi chuẩn bị thanh toán.',
+                icon: 'error',
+                confirmButtonColor: '#2563eb'
+            });
             resetCheckoutBtn();
         }
     });

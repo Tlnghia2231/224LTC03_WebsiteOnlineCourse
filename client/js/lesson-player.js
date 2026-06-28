@@ -1,4 +1,5 @@
 import { apiFetch } from './api.js';
+import Swal from 'sweetalert2';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -65,8 +66,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 lessonTitle.textContent = 'Khóa học chưa có bài giảng nào';
             }
         } else {
-            alert('Không có quyền truy cập khóa học này hoặc không tìm thấy.');
-            window.location.href = '/student/my-learning.html';
+            Swal.fire({
+                title: 'Không thể truy cập',
+                text: 'Không có quyền truy cập khóa học này hoặc không tìm thấy.',
+                icon: 'error',
+                confirmButtonColor: '#2563eb'
+            }).then(() => {
+                window.location.href = '/student/my-learning.html';
+            });
         }
     } catch (e) {
         console.error('Lesson player fetch error:', e);

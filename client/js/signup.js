@@ -42,8 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('Email').value.trim();
         const password = document.getElementById('Password').value;
         const confirmPassword = document.getElementById('ConfirmPassword').value;
-        const userType = form.querySelector('input[name="UserType"]:checked').value;
-
         if (password !== confirmPassword) {
             showError('Mật khẩu và xác nhận mật khẩu không khớp!');
             return;
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Email: email,
             Password: password,
             ConfirmPassword: confirmPassword,
-            UserType: userType
+            UserType: 'student'
         };
 
         try {

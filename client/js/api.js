@@ -21,7 +21,14 @@ export async function apiFetch(endpoint, options = {}) {
         // Handle unauthorized session
         if (response.status === 401) {
             const currentPath = window.location.pathname;
-            if (!currentPath.includes('signin.html') && !currentPath.includes('signup.html') && currentPath !== '/' && !currentPath.includes('index.html')) {
+            if (!currentPath.includes('signin.html') && 
+                !currentPath.includes('signup.html') && 
+                !currentPath.includes('courses.html') && 
+                !currentPath.includes('course-detail.html') && 
+                !currentPath.includes('help.html') && 
+                !currentPath.includes('contact.html') && 
+                currentPath !== '/' && 
+                !currentPath.includes('index.html')) {
                 window.location.href = '/signin.html';
                 return null;
             }

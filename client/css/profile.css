@@ -1,4 +1,4 @@
-﻿/* Profile Page Styles */
+/* Profile Page Styles */
 
 .profile-page {
     background: #f8fafc;
@@ -261,7 +261,7 @@
     align-items: center;
 }
 
-    .input-wrapper i {
+    .input-wrapper > i {
         position: absolute;
         left: 1rem;
         color: #9ca3af;
@@ -725,4 +725,14 @@ textarea.form-control {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* Hide browser default password reveal and clear buttons */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }

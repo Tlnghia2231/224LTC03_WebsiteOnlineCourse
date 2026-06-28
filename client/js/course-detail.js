@@ -1,5 +1,6 @@
 import { apiFetch } from './api.js';
 import { formatPrice } from './main.js';
+import Swal from 'sweetalert2';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -159,35 +160,78 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', async () => {
                 try {
-                    // Check auth first by seeing if we get unauthorized
+                    // Check auth first
+                    const authRes = await apiFetch('/auth/me');
+                    if (authRes && authRes.ok) {
+                        const authData = await authRes.json();
+                        if (!authData.isAuthenticated) {
+                            Swal.fire({
+                                title: 'Yêu cầu đăng nhập',
+                                text: 'Bạn phải đăng nhập trước mới được thêm khóa học vào giỏ hàng.',
+                                icon: 'warning',
+                                confirmButtonColor: '#2563eb'
+                            }).then(() => {
+                                window.location.href = '/signin.html';
+                            });
+                            return;
+                        }
+                    }
+
                     const res = await apiFetch(`/student/addtocart?maKhoaHoc=${course.maKhoaHoc}`, {
                         method: 'POST'
                     });
 
                     if (res && res.status === 401) {
-                        window.location.href = '/signin.html';
+                        Swal.fire({
+                            title: 'Yêu cầu đăng nhập',
+                            text: 'Bạn phải đăng nhập trước mới được thêm khóa học vào giỏ hàng.',
+                            icon: 'warning',
+                            confirmButtonColor: '#2563eb'
+                        }).then(() => {
+                            window.location.href = '/signin.html';
+                        });
                         return;
                     }
 
                     if (res && res.ok) {
                         const resData = await res.json();
                         if (resData.success) {
-                            alert('Đã thêm khóa học vào giỏ hàng thành công!');
+                            Swal.fire({
+                                title: 'Thành công',
+                                text: 'Đã thêm khóa học vào giỏ hàng thành công!',
+                                icon: 'success',
+                                confirmButtonColor: '#2563eb'
+                            });
                             // Replace button with Go to Cart
                             const actionContainer = purchaseCard.querySelector('.action-container');
                             actionContainer.innerHTML = `
                                 <a href="/student/cart.html" class="btn btn-outline btn-block" style="text-align:center; padding:12px; display:block; border-color:var(--primary-color); color:var(--primary-color);">Vào Giỏ Hàng</a>
                             `;
                         } else {
-                            alert(resData.message || 'Lỗi khi thêm vào giỏ hàng.');
+                            Swal.fire({
+                                title: 'Thông báo',
+                                text: resData.message || 'Lỗi khi thêm vào giỏ hàng.',
+                                icon: 'error',
+                                confirmButtonColor: '#2563eb'
+                            });
                         }
                     } else {
                         const err = await res.json().catch(() => ({}));
-                        alert(err.message || 'Có lỗi xảy ra, vui lòng thử lại.');
+                        Swal.fire({
+                            title: 'Lỗi',
+                            text: err.message || 'Có lỗi xảy ra, vui lòng thử lại.',
+                            icon: 'error',
+                            confirmButtonColor: '#2563eb'
+                        });
                     }
                 } catch (e) {
                     console.error('Cart add error:', e);
-                    alert('Lỗi kết nối máy chủ.');
+                    Swal.fire({
+                        title: 'Lỗi',
+                        text: 'Lỗi kết nối máy chủ.',
+                        icon: 'error',
+                        confirmButtonColor: '#2563eb'
+                    });
                 }
             });
         }

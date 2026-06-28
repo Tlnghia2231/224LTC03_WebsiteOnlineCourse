@@ -26,6 +26,7 @@ namespace WebApplication1.Areas.Student.Controllers
 
         [HttpGet]
         [Route("coursepage")]
+        [AllowAnonymous]
         public IActionResult CoursePage()
         {
             var featuredCourses = _context.KhoaHocs
@@ -48,6 +49,7 @@ namespace WebApplication1.Areas.Student.Controllers
 
         [HttpGet]
         [Route("coursedetail/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> CourseDetail(string id)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
