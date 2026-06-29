@@ -181,10 +181,8 @@ app.UseCors("AllowClient");
 
 // Thêm middleware cho Authentication và Authorization (ĐÂY LÀ THỨ TỰ ĐÚNG)
 app.UseAuthentication();
-app.UseAuthorization();
-
-// Middleware tùy chỉnh
 app.UseUserInfo();
+app.UseAuthorization();
 
 // Khớp các Controller API
 app.MapControllers();

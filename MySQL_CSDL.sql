@@ -238,8 +238,12 @@ VALUES
 ('Teacher7', 'Đặng Văn G', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'dangvang715@example.com', '0967890123', NULL),
 ('Teacher8', 'Bùi Thị H', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'buithih289@example.com', '0978901234', NULL),
 ('Teacher9', 'Ngô Văn I', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'nvani390@example.com', '0989012345', NULL),
-('Teacher10', 'Đỗ Thị K', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'dothik178@example.com', '0990123456', NULL);
-
+('Teacher10', 'Đỗ Thị K', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'dothik178@example.com', '0990123456', NULL),
+('Teacher11','Nguyễn Minh Khánh', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'minhkhanh.teacher@example.com', '0908111111', 'Chuyên giảng dạy Toán THPT với hơn 8 năm kinh nghiệm.'),
+('Teacher12','Trần Thu Hà', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'thuha.teacher@example.com', '0908222222', 'Giáo viên Tiếng Anh đạt IELTS 8.0, chuyên luyện thi THPT.'),
+('Teacher13','Phạm Quốc Bảo', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'quocbao.teacher@example.com', '0908333333', 'Thạc sĩ Công nghệ thông tin, yêu thích lập trình và thuật toán.'),
+('Teacher14','Lê Thị Ngọc', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/2_s0bzbb.jpg', 'ngoc.teacher@example.com', '0908444444', 'Giảng viên Hóa học với nhiều năm luyện thi đại học.'),
+('Teacher15','Võ Hoàng Nam', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747840647/1_manaaf.jpg', 'hoangnam.teacher@example.com', '0908555555', 'Giáo viên Vật lý chuyên phát triển tư duy giải bài tập.');
 
 -- INSERT KHOAHOC (Sử dụng TRIGGER để tự động sinh MaKhoaHoc)
 -- Dữ liệu này sẽ tự động sinh từ Course1, Course2,...
@@ -272,7 +276,22 @@ VALUES
 ('Địa lý', 'Địa lý kinh tế xã hội lớp 10', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khái niệm và mối quan hệ giữa các yếu tố địa lý kinh tế.', 450000, 150, 'Teacher5'),         -- Course25
 ('Công nghệ', 'Công nghệ 11 - Vẽ kỹ thuật', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Kỹ thuật vẽ hình chiếu, hình cắt và biểu diễn vật thể.', 500000, 150, 'Teacher8'),      -- Course26
 ('Giáo dục công dân', 'GDCD 11 - Quyền công dân', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Tìm hiểu pháp luật và trách nhiệm của công dân trong xã hội.', 400000, 150, 'Teacher9'),  -- Course27
-('Tin học', 'Tin học 12 - Lập trình C++ cơ bản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Cấu trúc điều khiển, hàm và mảng trong ngôn ngữ lập trình C++.', 650000, 150, 'Teacher10'); -- Course28
+('Tin học', 'Tin học 12 - Lập trình C++ cơ bản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Cấu trúc điều khiển, hàm và mảng trong ngôn ngữ lập trình C++.', 650000, 150, 'Teacher10'), -- Course28
+('Toán','Toán 12 luyện đề chuyên sâu', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khóa học giúp học sinh luyện đề, tổng hợp kiến thức và nâng cao kỹ năng giải nhanh.', 850000, 150, 'Teacher11'),
+('Tiếng Anh', 'Tiếng Anh giao tiếp và ngữ pháp', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Rèn luyện đầy đủ ngữ pháp, phát âm và kỹ năng giao tiếp thực tế.', 780000, 180, 'Teacher12'),
+('Tin học', 'Lập trình C# từ cơ bản đến nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Học lập trình C#, hướng đối tượng, LINQ và xây dựng ứng dụng thực tế.', 990000, 200, 'Teacher13'),
+('Hóa học', 'Hóa học hữu cơ chuyên đề', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Tổng hợp toàn bộ kiến thức hóa hữu cơ phục vụ ôn thi THPT.', 720000, 150, 'Teacher14'),
+('Vật lý', 'Chinh phục Vật lý 12', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Hệ thống toàn bộ chuyên đề Vật lý lớp 12 cùng nhiều bài tập vận dụng.', 880000, 170, 'Teacher15'),
+('Toán', 'Toán 11 - Nền tảng và nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khóa học củng cố toàn bộ kiến thức Toán 11 và chuẩn bị cho chương trình lớp 12.', 690000, 150, 'Teacher11'),
+('Toán', 'Giải tích 12 từ cơ bản đến nâng cao', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Hệ thống kiến thức giải tích, đạo hàm, tích phân và ứng dụng.', 920000, 180, 'Teacher11'),
+('Tiếng Anh', 'Luyện đề IELTS Reading', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Phát triển kỹ năng Reading theo format IELTS mới nhất.', 980000, 200, 'Teacher12'),
+('Tiếng Anh', 'Ngữ pháp tiếng Anh toàn diện', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Tổng hợp đầy đủ ngữ pháp từ cơ bản đến nâng cao.', 650000, 160, 'Teacher12'),
+('Tin học', 'Lập trình Java căn bản', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khóa học giúp người mới bắt đầu làm quen với Java và OOP.', 890000, 180, 'Teacher13'),
+('Tin học', 'Cấu trúc dữ liệu và giải thuật', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khóa học nền tảng cho lập trình viên và phỏng vấn kỹ thuật.', 1190000, 220, 'Teacher13'),
+('Hóa học', 'Hóa vô cơ THPT', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Tổng hợp đầy đủ chuyên đề hóa vô cơ và phương pháp giải nhanh.', 760000, 160, 'Teacher14'),
+('Hóa học', 'Ôn thi Hóa học cấp tốc', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Khóa học dành cho học sinh cần ôn tập trước kỳ thi.', 590000, 90, 'Teacher14'),
+('Vật lý', 'Dao động và Sóng cơ', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Đi sâu vào các chuyên đề dao động điều hòa và sóng cơ.', 830000, 170, 'Teacher15'), 
+('Vật lý', 'Luyện đề Vật lý THPT Quốc gia', 'https://res.cloudinary.com/druj32kwu/image/upload/v1747841841/unknown_g8spau.png', 'Kho đề bám sát cấu trúc đề thi và hướng dẫn giải chi tiết.', 930000, 180, 'Teacher15');
 
 
 -- INSERT YEUCAUKHOAHOC
@@ -494,8 +513,112 @@ INSERT INTO BaiHoc (MaKhoaHoc, ThuTu, TieuDe, LinkVideo) VALUES
 -- Course19
 ('Course19', 1, 'Hàm số và đồ thị lớp 11', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
 ('Course19', 2, 'Dãy số và quy nạp toán học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
-('Course19', 3, 'Phép biến hình và ứng dụng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4');
+('Course19', 3, 'Phép biến hình và ứng dụng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
 
+-- Course21
+('Course21',1,'Giới thiệu khóa học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course21',2,'Ôn tập kiến thức nền', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course21',3,'Các dạng bài trọng tâm', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course21',4,'Luyện đề tổng hợp', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course21',5,'Tổng kết khóa học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course22
+('Course22',1,'Phát âm chuẩn',  'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course22',2,'Các thì trong tiếng Anh', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course22',3,'Cấu trúc câu', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course22',4,'Luyện nghe', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course22',5,'Luyện giao tiếp', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course23
+('Course23',1,'Giới thiệu C#', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course23',2,'Biến và kiểu dữ liệu', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course23',3,'Lập trình hướng đối tượng', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course23',4,'LINQ cơ bản', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course23',5,'Mini Project', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course24
+('Course24',1,'Đại cương hóa hữu cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course24',2,'Ankan và Anken', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course24',3,'Ancol và Phenol', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course24',4,'Este - Lipit', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course24',5,'Luyện đề hữu cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course25
+('Course25',1,'Dao động cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course25',2,'Sóng cơ', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course25',3,'Điện xoay chiều', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course25',4,'Quang học', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course25',5,'Giải đề tổng hợp', 'https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course26
+('Course26',1,'Hàm số và đồ thị','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course26',2,'Lượng giác cơ bản','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course26',3,'Cấp số cộng và cấp số nhân','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course26',4,'Quan hệ vuông góc trong không gian','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course26',5,'Luyện đề tổng hợp','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course27
+('Course27',1,'Khảo sát hàm số','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course27',2,'Ứng dụng đạo hàm','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course27',3,'Nguyên hàm','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course27',4,'Tích phân và ứng dụng','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course27',5,'Đề thi minh họa','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course28
+('Course28',1,'Question Types','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course28',2,'Skimming và Scanning','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course28',3,'Matching Headings','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course28',4,'True False Not Given','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course28',5,'Reading Test hoàn chỉnh','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course29
+('Course29',1,'12 thì cơ bản','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course29',2,'Câu bị động','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course29',3,'Mệnh đề quan hệ','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course29',4,'Câu điều kiện','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course29',5,'Luyện tập tổng hợp','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course30
+('Course30',1,'Giới thiệu Java','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course30',2,'Biến và kiểu dữ liệu','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course30',3,'Vòng lặp và điều kiện','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course30',4,'Lập trình hướng đối tượng','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course30',5,'Project Console','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course31
+('Course31',1,'Big O Notation','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course31',2,'Mảng và Linked List','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course31',3,'Stack và Queue','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course31',4,'Tree và Graph','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course31',5,'Luyện bài HackerRank','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Couse32
+('Course32',1,'Bảng tuần hoàn','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course32',2,'Kim loại','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course32',3,'Phi kim','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course32',4,'Phản ứng oxi hóa khử','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course32',5,'Luyện đề','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Couse33
+('Course33',1,'Ôn tập chương 1','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course33',2,'Ôn tập chương 2','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course33',3,'Ôn tập chương 3','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course33',4,'Đề thi thử','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course33',5,'Chữa đề','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Couse34
+('Course34',1,'Dao động điều hòa','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course34',2,'Con lắc lò xo','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course34',3,'Con lắc đơn','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course34',4,'Sóng cơ','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course34',5,'Bài tập tổng hợp','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+
+-- Course35
+('Course35',1,'Phân tích cấu trúc đề','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course35',2,'Chiến thuật làm bài','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-36_monkyj.mp4'),
+('Course35',3,'Đề số 1','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4'),
+('Course35',4,'Đề số 2','https://res.cloudinary.com/druj32kwu/video/upload/v1748358829/2025-05-27_22-12-29_hm5ri6.mp4'),
+('Course35',5,'Chữa đề tổng hợp','https://res.cloudinary.com/druj32kwu/video/upload/v1748358830/2025-05-27_22-12-42_eufxva.mp4');
 
 -- INSERT CHITIETGIOHANG
 INSERT INTO ChiTietGioHang (MaGioHang, MaKhoaHoc, NgayThem) VALUES
@@ -549,3 +672,4 @@ SELECT * FROM ChiTietGioHang;
 
 -- Select Admin
 SELECT * FROM Admin;
+

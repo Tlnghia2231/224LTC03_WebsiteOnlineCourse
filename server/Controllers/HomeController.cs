@@ -55,15 +55,20 @@ namespace WebApplication1.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private void AppendJwtCookie(string token)
+        private void AppendJwtCookie(string token, bool rememberMe)
         {
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.Lax,
-                Expires = DateTime.UtcNow.AddDays(7)
+                SameSite = SameSiteMode.Lax
             };
+
+            if (rememberMe)
+            {
+                cookieOptions.Expires = DateTime.UtcNow.AddDays(7);
+            }
+
             Response.Cookies.Append("token", token, cookieOptions);
         }
 
@@ -177,9 +182,9 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { success = false, message = "Đã xảy ra lỗi khi lưu thông tin sinh viên." });
                 }
 
-                // Đăng nhập ngay sau khi đăng ký bằng cách lưu JWT token qua HttpOnly Cookie
+                // Đăng nhập ngay sau khi đăng ký bằng cách lưu JWT token qua HttpOnly Cookie (mặc định lưu phiên đăng nhập lâu dài)
                 var token = GenerateJwtToken(model.HoTen ?? model.DienThoai, savedHocSinh.MaHocSinh, "Student");
-                AppendJwtCookie(token);
+                AppendJwtCookie(token, true);
                 return Ok(new { success = true, userType = "student", message = "Đăng ký và đăng nhập thành công." });
             }
             else if (model.UserType == "admin")
@@ -223,7 +228,7 @@ namespace WebApplication1.Controllers
 
                 // Đăng nhập bằng cách lưu JWT token qua HttpOnly Cookie
                 var token = GenerateJwtToken(hocSinh.HoTen ?? hocSinh.DienThoai, hocSinh.MaHocSinh, "Student");
-                AppendJwtCookie(token);
+                AppendJwtCookie(token, model.RememberMe);
                 return Ok(new { success = true, userType = "student", message = "Đăng nhập thành công." });
             }
             else if (model.UserType == "admin")
@@ -244,7 +249,7 @@ namespace WebApplication1.Controllers
 
                 // Đăng nhập bằng cách lưu JWT token qua HttpOnly Cookie
                 var token = GenerateJwtToken(admin.HoTen ?? admin.DienThoai, admin.MaAdmin, "Admin");
-                AppendJwtCookie(token);
+                AppendJwtCookie(token, model.RememberMe);
                 return Ok(new { success = true, userType = "admin", message = "Đăng nhập admin thành công." });
             }
 

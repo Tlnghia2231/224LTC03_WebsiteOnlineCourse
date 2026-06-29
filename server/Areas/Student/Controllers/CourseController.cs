@@ -27,7 +27,7 @@ namespace WebApplication1.Areas.Student.Controllers
         [HttpGet]
         [Route("coursepage")]
         [AllowAnonymous]
-        public IActionResult CoursePage(int page = 1, int pageSize = 6, string? subject = null, string? search = null)
+        public IActionResult CoursePage(int page = 1, int pageSize = 10, string? subject = null, string? search = null)
         {
             var subjects = _context.KhoaHocs
                 .GroupBy(k => k.MonHoc)

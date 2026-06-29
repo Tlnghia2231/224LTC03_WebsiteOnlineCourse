@@ -14,24 +14,54 @@ namespace WebApplication1.Areas.Student.Middleware
 
         public async Task InvokeAsync(HttpContext context, AppDbContext dbContext)
         {
-            if (context.User.Identity.IsAuthenticated)
+            if (context.User.Identity != null && context.User.Identity.IsAuthenticated)
             {
-                var maHocSinh = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var userId = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 var role = context.User.FindFirst(ClaimTypes.Role)?.Value;
 
-                if (!string.IsNullOrEmpty(maHocSinh) && role == "Student")
+                if (!string.IsNullOrEmpty(userId))
                 {
-                    var hocSinh = dbContext.HocSinhs.FirstOrDefault(h => h.MaHocSinh == maHocSinh);
-                    if (hocSinh != null)
+                    if (role == "Student")
                     {
-                        var userInfo = new
+                        var hocSinh = dbContext.HocSinhs.FirstOrDefault(h => h.MaHocSinh == userId);
+                        if (hocSinh != null)
                         {
-                            UserName = hocSinh.HoTen ?? hocSinh.DienThoai,
-                            Email = hocSinh.Email ?? "Không có email",
-                            AvatarUrl = hocSinh.DuongDanAnhDaiDien ?? "https://placehold.co/150x150?text=Avatar",
-                            Role = "Student"
-                        };
-                        context.Items["UserInfo"] = userInfo;
+                            var userInfo = new
+                            {
+                                UserName = hocSinh.HoTen ?? hocSinh.DienThoai,
+                                Email = hocSinh.Email ?? "Không có email",
+                                AvatarUrl = hocSinh.DuongDanAnhDaiDien ?? "https://placehold.co/150x150?text=Avatar",
+                                Role = "Student"
+                            };
+                            context.Items["UserInfo"] = userInfo;
+                        }
+                        else
+                        {
+                            // Stale student token (does not exist in DB anymore). Reject request.
+                            context.User = new ClaimsPrincipal(new ClaimsIdentity());
+                            context.Response.Cookies.Delete("token");
+                        }
+                    }
+                    else if (role == "Admin")
+                    {
+                        var admin = dbContext.Admins.FirstOrDefault(a => a.MaAdmin == userId);
+                        if (admin != null)
+                        {
+                            var userInfo = new
+                            {
+                                UserName = admin.HoTen ?? admin.DienThoai,
+                                Email = admin.Email ?? "Không có email",
+                                AvatarUrl = "https://placehold.co/150x150?text=Admin",
+                                Role = "Admin"
+                            };
+                            context.Items["UserInfo"] = userInfo;
+                        }
+                        else
+                        {
+                            // Stale admin token. Reject request.
+                            context.User = new ClaimsPrincipal(new ClaimsIdentity());
+                            context.Response.Cookies.Delete("token");
+                        }
                     }
                 }
             }

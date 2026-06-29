@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let currentPage = 1;
     let totalPages = 1;
-    const pageSize = 6;
+    const pageSize = 10;
     let selectedSubject = '';
     let searchQuery = '';
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value.trim();
         currentPage = 1;
-        
+
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             fetchCourses();
@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function fetchCourses(loadSubjects = false) {
         coursesGrid.innerHTML = '<div class="loading" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">Đang tải danh sách khóa học...</div>';
-        
+
         try {
             const endpoint = `/student/coursepage?page=${currentPage}&pageSize=${pageSize}&subject=${encodeURIComponent(selectedSubject)}&search=${encodeURIComponent(searchQuery)}`;
             const res = await apiFetch(endpoint);
             if (res && res.ok) {
                 const data = await res.json();
-                
+
                 currentPage = data.currentPage || 1;
                 totalPages = data.totalPages || 1;
-                
+
                 // 1. Populate Subject Filters (only once or on initial load)
                 if (loadSubjects && data.subjects && data.subjects.length > 0) {
                     const subjectItemsHtml = data.subjects.map(sub => `
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </a>
                         </li>
                     `).join('');
-                    
+
                     subjectList.innerHTML += subjectItemsHtml;
                     bindSubjectClickHandlers();
                 }
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 links.forEach(l => l.classList.remove('active'));
-                
+
                 link.classList.add('active');
                 selectedSubject = link.getAttribute('data-subject') || '';
                 currentPage = 1; // reset page on filter change
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         let html = '';
-        
+
         // Prev button
         html += `<button class="pagination-btn ${currentPage === 1 ? 'disabled' : ''}" data-page="${currentPage - 1}"><i class="fas fa-chevron-left"></i></button>`;
 
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const page = parseInt(btn.getAttribute('data-page'), 10);
                 currentPage = page;
                 fetchCourses();
-                
+
                 // Scroll window to top of course grid smoothly
                 window.scrollTo({
                     top: coursesGrid.offsetTop - 120,
