@@ -2,6 +2,20 @@ import { apiFetch } from './api.js';
 import { formatPrice } from './main.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // Disclaimer Modal Logic
+    const disclaimerModal = document.getElementById('disclaimerModal');
+    const acceptDisclaimerBtn = document.getElementById('acceptDisclaimerBtn');
+    if (disclaimerModal && acceptDisclaimerBtn) {
+        const isAccepted = localStorage.getItem('disclaimer_accepted');
+        if (!isAccepted) {
+            disclaimerModal.classList.remove('hidden');
+        }
+        acceptDisclaimerBtn.addEventListener('click', () => {
+            disclaimerModal.classList.add('hidden');
+            localStorage.setItem('disclaimer_accepted', 'true');
+        });
+    }
+
     const featuredGrid = document.getElementById('featuredCoursesGrid');
     const subjectsGrid = document.getElementById('subjectsGrid');
 
