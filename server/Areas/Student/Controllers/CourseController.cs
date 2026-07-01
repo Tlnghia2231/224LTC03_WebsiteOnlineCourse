@@ -43,8 +43,8 @@ namespace WebApplication1.Areas.Student.Controllers
 
             if (!string.IsNullOrWhiteSpace(search))
             {
-                var lowerSearch = search.ToLower();
-                query = query.Where(k => k.TieuDe.ToLower().Contains(lowerSearch) || (k.MoTa != null && k.MoTa.ToLower().Contains(lowerSearch)));
+                var searchPattern = $"%{search.Trim()}%";
+                query = query.Where(k => EF.Functions.Like(k.TieuDe, searchPattern));
             }
 
             int totalCourses = query.Count();

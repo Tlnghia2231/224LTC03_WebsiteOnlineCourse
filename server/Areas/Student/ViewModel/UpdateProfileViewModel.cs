@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace WebApplication1.Areas.Student.ViewModel
 {
@@ -10,5 +11,6 @@ namespace WebApplication1.Areas.Student.ViewModel
         public DateOnly? NgaySinh { get; set; }
         public string? GioiTinh { get; set; }
         public string? DiaChi { get; set; }
+        public IFormFile? AvatarFile { get; set; }
     }
 }

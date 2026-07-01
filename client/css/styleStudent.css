@@ -32,6 +32,8 @@ main {
     position: sticky;
     top: 0;
     z-index: 1001; /* Tăng z-index của header để không che dropdown */
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .header-content {
@@ -1973,6 +1975,82 @@ main {
         flex-direction: column;
         text-align: center;
     }
+
+    /* Compact Mobile Filter and Subject Scroll */
+    .filters-sidebar {
+        order: 1 !important;
+        position: static !important;
+        max-height: none !important;
+        padding: 15px !important;
+        background: white !important;
+        border-radius: 12px !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+        margin-bottom: 0 !important;
+    }
+
+    .filters-sidebar h3 {
+        display: none !important; /* Hide filter titles on mobile to save vertical space */
+    }
+
+    .filters-sidebar .form-group {
+        margin-bottom: 12px !important;
+    }
+
+    .course-list-container {
+        order: 2 !important;
+    }
+
+    .subject-list {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        gap: 8px !important;
+        padding: 4px 0 !important;
+        margin: 0 !important;
+        scrollbar-width: none; /* Hide scrollbar Firefox */
+    }
+
+    .subject-list::-webkit-scrollbar {
+        display: none; /* Hide scrollbar Chrome/Safari */
+    }
+
+    .subject-list li {
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .subject-list li a {
+        display: inline-flex !important;
+        align-items: center !important;
+        background: #f1f5f9 !important;
+        color: #475569 !important;
+        padding: 6px 14px !important;
+        border-radius: 20px !important;
+        font-size: 0.85rem !important;
+        font-weight: 500 !important;
+        transition: all 0.2s ease !important;
+        border: 1px solid transparent !important;
+        text-decoration: none !important;
+    }
+
+    .subject-list li a.active {
+        background: #2563eb !important;
+        color: white !important;
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2) !important;
+    }
+
+    .subject-list li a span:last-child {
+        margin-left: 6px !important;
+        background: rgba(0, 0, 0, 0.08) !important;
+        color: inherit !important;
+    }
+
+    .subject-list li a.active span:last-child {
+        background: rgba(255, 255, 255, 0.25) !important;
+        color: white !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2183,4 +2261,9 @@ main {
     cursor: not-allowed;
     background-color: #f8fafc;
     color: #94a3b8;
+}
+
+#searchInput:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
 }

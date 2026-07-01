@@ -124,12 +124,16 @@ CREATE TABLE Admin (
 -- TRIGGER DEFINITIONS (Sử dụng cú pháp MySQL: BEFORE INSERT)
 -- --------------------------------------------------------
 
+-- Drop triggers if they exist using standard semicolon delimiter first
+DROP TRIGGER IF EXISTS trg_GiaoVien_BeforeInsert;
+DROP TRIGGER IF EXISTS trg_HocSinh_BeforeInsert;
+DROP TRIGGER IF EXISTS trg_HocSinh_AfterInsert;
+DROP TRIGGER IF EXISTS trg_KhoaHoc_BeforeInsert;
+DROP TRIGGER IF EXISTS trg_BaiHoc_BeforeInsert;
+
 DELIMITER $$
 
 -- 1. TRIGGER cho GiaoVien (TeacherXXX)
-DROP TRIGGER IF EXISTS trg_GiaoVien_BeforeInsert;
-DELIMITER $$
-
 CREATE TRIGGER trg_GiaoVien_BeforeInsert
 BEFORE INSERT ON GiaoVien
 FOR EACH ROW
@@ -146,11 +150,7 @@ BEGIN
     SET NEW.NgayTao = IFNULL(NEW.NgayTao, NOW());
 END$$
 
-
 -- 2. TRIGGER cho HocSinh (StudentXXX)
-DROP TRIGGER IF EXISTS trg_HocSinh_BeforeInsert;
-DELIMITER $$
-
 CREATE TRIGGER trg_HocSinh_BeforeInsert
 BEFORE INSERT ON HocSinh
 FOR EACH ROW
@@ -168,10 +168,6 @@ BEGIN
 END$$
 
 -- 3. TRIGGER AFTER INSERT cho HocSinh để tạo Giỏ hàng (Cart_StudentXXX)
--- MySQL không cho phép INSTEAD OF INSERT, nên việc tạo giỏ hàng phụ thuộc phải là AFTER INSERT
-DROP TRIGGER IF EXISTS trg_HocSinh_AfterInsert;
-DELIMITER $$
-
 CREATE TRIGGER trg_HocSinh_AfterInsert
 AFTER INSERT ON HocSinh
 FOR EACH ROW
@@ -180,17 +176,12 @@ BEGIN
     VALUES (CONCAT('Cart_', NEW.MaHocSinh), NEW.MaHocSinh, NOW());
 END$$
 
-
 -- 4. TRIGGER cho KhoaHoc (CourseXXX)
-DROP TRIGGER IF EXISTS trg_KhoaHoc_BeforeInsert;
-DELIMITER $$
-
 CREATE TRIGGER trg_KhoaHoc_BeforeInsert
 BEFORE INSERT ON KhoaHoc
 FOR EACH ROW
 BEGIN
     IF NEW.MaKhoaHoc IS NULL OR NEW.MaKhoaHoc = '' OR NEW.MaKhoaHoc = 'temp' THEN
-        
         SELECT IFNULL(MAX(0 + SUBSTRING(MaKhoaHoc, 7)), 0)
         INTO @max_id
         FROM KhoaHoc
@@ -202,11 +193,7 @@ BEGIN
     SET NEW.NgayCapNhat = IFNULL(NEW.NgayCapNhat, NOW());
 END$$
 
-
 -- 5. TRIGGER cho BaiHoc (CourseXXX_YY)
-DROP TRIGGER IF EXISTS trg_BaiHoc_BeforeInsert;
-DELIMITER $$
-
 CREATE TRIGGER trg_BaiHoc_BeforeInsert
 BEFORE INSERT ON BaiHoc
 FOR EACH ROW
@@ -218,6 +205,7 @@ BEGIN
 
     SET NEW.NgayTao = IFNULL(NEW.NgayTao, NOW());
 END$$
+
 DELIMITER ;
 
 

@@ -78,7 +78,7 @@ namespace WebApplication1.Areas.Student.Controllers
         [HttpPatch]
         [HttpPost]
         [Route("profile")]
-        public async Task<IActionResult> Profile([FromForm] WebApplication1.Areas.Student.ViewModel.UpdateProfileViewModel model, [FromForm] IFormFile? AvatarFile)
+        public async Task<IActionResult> Profile([FromForm] WebApplication1.Areas.Student.ViewModel.UpdateProfileViewModel model)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var hocSinh = await _context.HocSinhs
@@ -117,16 +117,16 @@ namespace WebApplication1.Areas.Student.Controllers
             }
 
             // Xử lý tải lên ảnh đại diện nếu có file
-            if (AvatarFile != null && AvatarFile.Length > 0)
+            if (model.AvatarFile != null && model.AvatarFile.Length > 0)
             {
-                if (AvatarFile.Length > 5 * 1024 * 1024)
+                if (model.AvatarFile.Length > 5 * 1024 * 1024)
                 {
                     return BadRequest(new { success = false, message = "Kích thước file không được vượt quá 5MB" });
                 }
 
                 try
                 {
-                    var avatarUrl = await _cloudinaryService.UploadFileAsync(AvatarFile, CloudinaryService.UploadType.Avatar);
+                    var avatarUrl = await _cloudinaryService.UploadFileAsync(model.AvatarFile, CloudinaryService.UploadType.Avatar);
                     hocSinh.DuongDanAnhDaiDien = avatarUrl;
                     _logger.LogInformation("Avatar uploaded successfully. URL: {Url}", avatarUrl);
                 }

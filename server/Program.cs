@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using WebApplication1.Areas.Student.Middleware;
 using WebApplication1.Areas.Student.Services;
 using WebApplication1.Models;
@@ -67,11 +68,17 @@ builder.Services.AddControllers()
     });
 
 // Cấu hình CORS cho phép Client gọi API
+var clientUrl = Environment.GetEnvironmentVariable("CLIENT_URL");
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowClient", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://127.0.0.1:5173")
+        var allowedOrigins = new List<string> { "http://localhost:5173", "http://127.0.0.1:5173" };
+        if (!string.IsNullOrEmpty(clientUrl))
+        {
+            allowedOrigins.Add(clientUrl.TrimEnd('/'));
+        }
+        policy.WithOrigins(allowedOrigins.ToArray())
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
@@ -98,6 +105,8 @@ builder.Services.AddSingleton<Cloudinary>(provider =>
 builder.Services.AddScoped<CloudinaryService>();
 
 // Cấu hình DbContext sử dụng biến môi trường hoặc fallback
+var dbConnectionStringEnv = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+var mysqlUnixSocket = Environment.GetEnvironmentVariable("MYSQL_UNIX_SOCKET");
 var mysqlServer = Environment.GetEnvironmentVariable("MYSQL_SERVER");
 var mysqlPort = Environment.GetEnvironmentVariable("MYSQL_PORT") ?? "3306";
 var mysqlUser = Environment.GetEnvironmentVariable("MYSQL_USER");
@@ -105,7 +114,15 @@ var mysqlPassword = Environment.GetEnvironmentVariable("MYSQL_PASSWORD");
 var mysqlDatabase = Environment.GetEnvironmentVariable("MYSQL_DATABASE");
 
 string connectionString;
-if (!string.IsNullOrEmpty(mysqlServer) && !string.IsNullOrEmpty(mysqlUser) && !string.IsNullOrEmpty(mysqlDatabase))
+if (!string.IsNullOrEmpty(dbConnectionStringEnv))
+{
+    connectionString = dbConnectionStringEnv;
+}
+else if (!string.IsNullOrEmpty(mysqlUnixSocket) && !string.IsNullOrEmpty(mysqlUser) && !string.IsNullOrEmpty(mysqlDatabase))
+{
+    connectionString = $"server=localhost;unix_socket={mysqlUnixSocket};user={mysqlUser};password={mysqlPassword};database={mysqlDatabase}";
+}
+else if (!string.IsNullOrEmpty(mysqlServer) && !string.IsNullOrEmpty(mysqlUser) && !string.IsNullOrEmpty(mysqlDatabase))
 {
     connectionString = $"server={mysqlServer};port={mysqlPort};user={mysqlUser};password={mysqlPassword};database={mysqlDatabase}";
 }
@@ -114,8 +131,9 @@ else
     connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
                        ?? "server=localhost;port=3306;user=root;password=mysql_root_pw;database=QUANLYKHOAHOC";
 }
+Console.WriteLine(connectionString);
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 4, 0))));
 
 // Thêm và cấu hình Authentication với JWT Bearer
 var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET") ?? builder.Configuration["JwtSettings:Secret"] ?? "EduLearnSecretKey_VeryLongStringWith32BytesLength!";
@@ -162,7 +180,49 @@ builder.Services.AddScoped<IVNPayService, VNPayService>();
 // Thêm Authorization
 builder.Services.AddAuthorization();
 
+// Swagger API Documentation Setup
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.MapType<IFormFile>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+});
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    try
+    {
+        Console.WriteLine("Testing DB...");
+
+        db.Database.OpenConnection();
+
+        Console.WriteLine("Connected OK");
+
+        db.Database.CloseConnection();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("===== EXCEPTION =====");
+        Console.WriteLine(ex.ToString());
+
+        if (ex.InnerException != null)
+        {
+            Console.WriteLine("===== INNER =====");
+            Console.WriteLine(ex.InnerException.ToString());
+        }
+    }
+}
+
+// Enable Swagger UI
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "EduLearn API v1");
+    c.RoutePrefix = "swagger";
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

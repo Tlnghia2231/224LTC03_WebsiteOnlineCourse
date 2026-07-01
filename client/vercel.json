@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-cloud-run-backend-url.run.app/api/:path*"
+      "destination": "https://edulearn-backend-657921071020.asia-southeast1.run.app/api/:path*"
     }
   ]
 }

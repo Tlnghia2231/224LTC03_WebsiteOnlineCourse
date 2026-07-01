@@ -18,12 +18,12 @@
                 <p>Nâng cao tri thức với các bài giảng chi tiết và lộ trình học tập hiệu quả.</p>
             </div>
 
-            <div class="courses-layout" style="display: flex; gap: 30px; align-items: flex-start;">
+            <div class="courses-layout">
                 <!-- Sidebar bộ lọc -->
-                <aside class="sidebar-filter" style="width: 280px; flex-shrink: 0; background: #f8f9fa; padding: 25px; border-radius: 12px; border: 1px solid #eee;">
+                <aside class="filters-sidebar">
                     <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.15rem; font-weight: 600;">Tìm kiếm khóa học</h3>
                     <div class="form-group" style="margin-bottom: 20px;">
-                        <input type="text" id="searchInput" placeholder="Tên khóa học..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.9rem;">
+                        <input type="text" id="searchInput" placeholder="Tên khóa học..." style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd; font-size: 0.95rem; line-height: 1.5; height: 46px; box-sizing: border-box; transition: all 0.3s ease; outline: none;">
                     </div>
 
                     <h3 style="margin-bottom: 15px; font-size: 1.15rem; font-weight: 600;">Môn học</h3>
@@ -36,7 +36,7 @@
                 </aside>
 
                 <!-- Lưới hiển thị khóa học -->
-                <div class="course-list-container" style="flex: 1; display: flex; flex-direction: column; gap: 30px;">
+                <div class="course-list-container" style="display: flex; flex-direction: column; gap: 30px;">
                     <div class="course-grid" id="coursesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
                         <div class="loading">Đang tải danh sách khóa học...</div>
                     </div>
