@@ -30,6 +30,21 @@ namespace WebApplication1.Controllers
             _passwordHasher = new PasswordHasher<object>();
         }
 
+        [HttpGet("test-secrets")]
+        public IActionResult TestSecrets()
+        {
+            return Ok(new
+            {
+                CloudinaryCloudName_Env = Environment.GetEnvironmentVariable("CLOUDINARY_CLOUDNAME") != null ? "HAS_VALUE" : "NULL",
+                CloudinaryApiKey_Env = Environment.GetEnvironmentVariable("CLOUDINARY_APIKEY") != null ? "HAS_VALUE" : "NULL",
+                VnpayTmnCode_Env = Environment.GetEnvironmentVariable("VNPAY_TMNCODE") != null ? Environment.GetEnvironmentVariable("VNPAY_TMNCODE") : "NULL",
+                VnpayCallback_Env = Environment.GetEnvironmentVariable("VNPAY_CALLBACK_URL") != null ? "HAS_VALUE" : "NULL",
+                CloudinaryCloudName_Config = _configuration["CloudinarySettings:CloudName"],
+                VnpayTmnCode_Config = _configuration["Vnpay:TmnCode"]
+            });
+        }
+
+
         private string GenerateJwtToken(string username, string userId, string role)
         {
             var claims = new[]

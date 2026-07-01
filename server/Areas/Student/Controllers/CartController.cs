@@ -97,6 +97,7 @@ namespace WebApplication1.Areas.Student.Controllers
         [Route("mycart/PaymentCallbackVnpay")]
         public async Task<IActionResult> PaymentCallbackVnpay()
         {
+            var clientUrl = Environment.GetEnvironmentVariable("CLIENT_URL") ?? "https://224-ltc-03-website-online-course.vercel.app";
             try
             {
                 var response = _vnPayService.PaymentExecute(Request.Query);
@@ -104,13 +105,13 @@ namespace WebApplication1.Areas.Student.Controllers
                 if (response == null)
                 {
                     _logger.LogWarning("PaymentExecute trả về phản hồi null cho truy vấn: {@Query}", Request.Query);
-                    return Redirect("http://localhost:5173/student/cart.html?payment=error&message=No+valid+payment+data+received");
+                    return Redirect($"{clientUrl}/student/cart.html?payment=error&message=No+valid+payment+data+received");
                 }
 
                 if (!response.Success || response.VnPayResponseCode != "00")
                 {
                     _logger.LogWarning("Thanh toán thất bại hoặc phản hồi không hợp lệ từ VNPay. Phản hồi: {@Response}", response);
-                    return Redirect($"http://localhost:5173/student/cart.html?payment=error&message={Uri.EscapeDataString(response.Message ?? "Payment failed")}");
+                    return Redirect($"{clientUrl}/student/cart.html?payment=error&message={Uri.EscapeDataString(response.Message ?? "Payment failed")}");
                 }
 
                 _logger.LogInformation("Thanh toán VNPay thành công. Phản hồi: {@Response}", response);
@@ -125,7 +126,7 @@ namespace WebApplication1.Areas.Student.Controllers
                     _logger.LogWarning("Không tìm thấy người dùng đã xác thực trong PaymentCallbackVnpay. Cố gắng lấy từ OrderDescription");
                     // VNPay OrderDescription chứa thông tin thanh toán, ta có thể dùng cơ chế khác để lưu userId khi khởi tạo payment.
                     // Cho hiện tại, ta giả định session Cookie vẫn tồn tại khi redirect qua localhost.
-                    return Redirect("http://localhost:5173/student/cart.html?payment=error&message=User+not+authenticated");
+                    return Redirect($"{clientUrl}/student/cart.html?payment=error&message=User+not+authenticated");
                 }
 
                 double amount;
@@ -153,17 +154,17 @@ namespace WebApplication1.Areas.Student.Controllers
 
                 if (success)
                 {
-                    return Redirect("http://localhost:5173/student/my-learning.html?payment=success");
+                    return Redirect($"{clientUrl}/student/my-learning.html?payment=success");
                 }
                 else
                 {
-                    return Redirect("http://localhost:5173/student/cart.html?payment=error&message=Failed+to+process+cart");
+                    return Redirect($"{clientUrl}/student/cart.html?payment=error&message=Failed+to+process+cart");
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Lỗi trong PaymentCallbackVnpay. Truy vấn: {@Query}", Request.Query);
-                return Redirect($"http://localhost:5173/student/cart.html?payment=error&message={Uri.EscapeDataString(ex.Message)}");
+                return Redirect($"{clientUrl}/student/cart.html?payment=error&message={Uri.EscapeDataString(ex.Message)}");
             }
         }
 

@@ -131,7 +131,7 @@ else
     connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
                        ?? "server=localhost;port=3306;user=root;password=mysql_root_pw;database=QUANLYKHOAHOC";
 }
-Console.WriteLine(connectionString);
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 4, 0))));
 
@@ -188,33 +188,6 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-    try
-    {
-        Console.WriteLine("Testing DB...");
-
-        db.Database.OpenConnection();
-
-        Console.WriteLine("Connected OK");
-
-        db.Database.CloseConnection();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("===== EXCEPTION =====");
-        Console.WriteLine(ex.ToString());
-
-        if (ex.InnerException != null)
-        {
-            Console.WriteLine("===== INNER =====");
-            Console.WriteLine(ex.InnerException.ToString());
-        }
-    }
-}
 
 // Enable Swagger UI
 app.UseSwagger();
