@@ -1,6 +1,12 @@
 # Don't commit secrets/configuration
 .env
-.env*.local
+.env.local
+.env.*
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.local.json
+secrets.json
 
 # Node / JS dependencies and build outputs
 node_modules/
@@ -18,10 +24,6 @@ node_modules/
 *.suo
 *.userosscache
 *.sln.docstates
-*.DotSettings.user
-secrets.json
-appsettings.local.json
-
 # Rider / IntelliJ / VS Code IDEs
 .idea/
 .vscode/
